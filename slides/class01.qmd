@@ -1,13 +1,13 @@
 ---
-title: "Ciência aberta e em colaboração"
-subtitle: "Semana 01"
+title: "Planejamento e Controle da Produção"
+subtitle: "Unidade 01 - Funções e planejamento e controle da produção"
 author: "Renata Oliveira"
 #subtitle: "Sejam bem vindos!"
-footer:  "[Ciência aberta e em colaboração](https://open-reproducible-research.github.io/website/)"
+footer:  "[Administração da Produção](https://adm-prod.github.io/site/)"
 #logo: "images/logo.png"
 title-slide-attributes: 
   data-background-size: contain
-  data-background-color: '#5B888C'
+  data-background-color: '#52594E'
 format: 
   revealjs: 
     embed-resources: false
@@ -61,7 +61,13 @@ Exemplo: "Assuma que você é um pesquisador do CEFET_MG em campos das ciências
 
 3. Vamos discutir
 
+## Question
 
+::: {.question}
+
+teste
+
+:::
 
 ## Perguntas e respostas
 
@@ -92,7 +98,7 @@ Exemplo: "Assuma que você é um pesquisador do CEFET_MG em campos das ciências
 
 . . . 
 
-::: {.pol}
+::: {.poll}
 Ciência Aberta implica fazer ciência tradicional com mais **transparência** nas suas várias fases, por exemplo **partilhando de forma aberta código e dados**. Muitos investigadores já fazem isto atualmente, mas não lhe chamam Ciência Aberta.
 :::
 

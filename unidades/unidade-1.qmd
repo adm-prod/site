@@ -1,0 +1,31 @@
+---
+title: "Unidade 1 - Introdução"
+---
+
+Encontros nos dias 04/03, 08/03 e 11/03.
+
+## Prepare-se!
+
+📖 Leia o [programa](/programa.html)
+
+📖 Leia o [suporte](/suporte.html)
+
+## Participe!
+
+🖥️ [Aula 01 - Funções e planejamento e controle da produção.](/slides/class01.html)
+
+🖥️ [Aula 02 - Classificação, caracterização e objetivos da produção, fluxo de informações e materiais e sistemas de controle e sua operacionalização.](/slides/class02.html)
+
+🖥️ [Aula 03 - Atividade em sala 1.](/slides/class03.html)
+
+## Envolva-se!
+
+📋 [Atividade de aprendizagem 1](https://padlet.com/renataoliveira/adm-prod)
+
+📋 [Padlet](https://padlet.com/renataoliveira/adm-prod)
+
+<br><br>
+
+::: {style="font-size: 0.875em;"}
+Voltar para [Planejamento da disciplina](/ "programa") ⏎
+:::

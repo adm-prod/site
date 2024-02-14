@@ -6,10 +6,10 @@ website:
   page-navigation: true
   title: "Administração da produção"
   #description: "Página da disciplina Ciência aberta e em colaboração do PPGA-CEFET-MG - 2023/2"
-  site-url: "https://open-reproducible-research.github.io/website/"
+  site-url: "https://adm-prod.github.io/site"
 
-  # twitter-card:
-  #   creator: "@retaoliveira"
+  twitter-card:
+     creator: "@retaoliveira"
   #   image: "images/twitter-card.png"
 
   page-footer:
@@ -24,8 +24,8 @@ website:
     align: center
     tools:
       - icon: github
-        href: https://github.com/open-reproducible-research
-        text: "GitHub organization"
+        href: https://github.com/retaoliveira
+        text: "GitHub Profa. Renata Oliveira"
     style: "docked"
     search: true
     collapse-level: 1
@@ -34,16 +34,16 @@ website:
         contents:
           - href: programa.qmd
             text: Planejamento do curso
-          - href: links.qmd
-            text: Links
+          #- href: links.qmd
+          #  text: Links
           - href: suporte.qmd
             text: Suporte
-      - section: "Material semanal"
+      - section: "Unidades de estudo"
         contents:
-          - href: weeks/week-1.qmd
-            text: "Semana 1"
-          - href: weeks/week-2.qmd
-            text: "Semana 2"
+          - href: unidades/unidade-1.qmd
+            text: "Unidade 01 - Introdução"
+          # - href: weeks/week-2.qmd
+          #   text: "Semana 2"
           # - href: weeks/week-3.qmd
           #   text: "Semana 3"
           # - href: weeks/week-4.qmd
@@ -100,5 +100,3 @@ format:
     toc: true
 
 freeze: auto
-
-editor: visual

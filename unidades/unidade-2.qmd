@@ -1,7 +1,5 @@
 ---
-title: "Unidade 1 - Ciência em colaboração"
-subtitle: "Introdução a princípios e práticas da ciência aberta e em colaboração"
-editor: visual
+title: "Unidade 02 - Demanda"
 ---
 
 ## Prepare-se!
