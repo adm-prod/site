@@ -4,7 +4,7 @@ project:
 
 website:
   page-navigation: true
-  title: "Administração da produção"
+  title: "Planejamento e Controle da Produção"
   #description: "Página da disciplina Ciência aberta e em colaboração do PPGA-CEFET-MG - 2023/2"
   site-url: "https://adm-prod.github.io/site"
 
@@ -25,7 +25,7 @@ website:
     tools:
       - icon: github
         href: https://github.com/retaoliveira
-        text: "GitHub Profa. Renata Oliveira"
+        text: "Profa. Renata Oliveira"
     style: "docked"
     search: true
     collapse-level: 1
