@@ -7,7 +7,8 @@
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../site_libs/quarto-html/light-border.css" rel="stylesheet">
 <link href="../site_libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-contrib/reveal-auto-agenda-0.0.3/reveal-auto-agenda.css" rel="stylesheet"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.4.549">
 
   <meta name="author" content="Renata Oliveira">
@@ -36,6 +37,7 @@
   <link href="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-chalkboard/font-awesome/css/all.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-chalkboard/style.css" rel="stylesheet">
+  <link href="../site_libs/revealjs/plugin/reveal-pointer/pointer.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
   <style type="text/css">
 
@@ -323,6 +325,8 @@
       margin-right: 0; 
     }
   </style>
+  <link href="../site_libs/countdown-0.4.0/countdown.css" rel="stylesheet">
+  <script src="../site_libs/countdown-0.4.0/countdown.js"></script>
 <meta name="twitter:title" content="Planejamento e Controle da Produção">
 <meta name="twitter:description" content="Unidade 01 - Funções e planejamento e controle da produção">
 <meta name="twitter:creator" content="@retaoliveira">
@@ -332,7 +336,7 @@
   <div class="reveal">
     <div class="slides">
 
-<section id="title-slide" data-background-color="#52594E" data-background-size="contain" class="quarto-title-block center">
+<section id="title-slide" data-background-color="#5B888C" data-background-size="contain" class="quarto-title-block center">
   <h1 class="title">Planejamento e Controle da Produção</h1>
   <p class="subtitle">Unidade 01 - Funções e planejamento e controle da produção</p>
 
@@ -345,30 +349,6 @@ Renata Oliveira
 </div>
 
 </section>
-<section id="agenda" class="slide level2 scrollable">
-<h2>Agenda</h2>
-<ol type="1">
-<li class="fragment">Conhecendo os pares</li>
-<li class="fragment">Aquecimento</li>
-<li class="fragment">Perguntas e respostas</li>
-<li class="fragment">Apresentação de conceitos</li>
-<li class="fragment">Razões para fazer ciência aberta</li>
-<li class="fragment">Reprodutibilidade - iniciativa brasileira</li>
-<li class="fragment">Proposição de temas para desenvolvimento do projeto</li>
-</ol>
-</section>
-<section id="conhecendo-os-pares" class="slide level2">
-<h2>Conhecendo os pares</h2>
-<ul>
-<li class="fragment">Qual o seu sabor de sorvete favorito?</li>
-<li class="fragment">O que vc mais ama no mundo?</li>
-<li class="fragment">Se você fosse para uma ilha deserta e só pudesse levar um objeto e uma pessoa, o que e quem seria?</li>
-<li class="fragment">Você sabe utilizar R ou Python?</li>
-<li class="fragment">Você é mais para gatos ou cachorros?</li>
-<li class="fragment">Você já pensou em algum tema para sua pesquisa?</li>
-<li class="fragment">Você já teve COVID-19?</li>
-</ul>
-</section>
 <section id="aquecimento" class="slide level2 scrollable">
 <h2>Aquecimento</h2>
 <ol type="1">
@@ -380,6 +360,7 @@ Exemplo: “Assuma que você é um pesquisador do CEFET_MG em campos das ciênci
 </section>
 <section id="question" class="slide level2">
 <h2>Question</h2>
+<p></p><div class="countdown" id="timer_21dd88dd" data-update-every="1" data-play-sound="true" tabindex="0" style="right:0;bottom:0;left:0;margin:5%;padding:50px;font-size:6em;"> <div class="countdown-controls"><button class="countdown-bump-down">−</button><button class="countdown-bump-up">+</button></div> <code class="countdown-time"><span class="countdown-digits minutes">00</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">42</span></code> </div><p></p>
 <div class="question">
 <p>teste</p>
 </div>
@@ -431,9 +412,24 @@ Exemplo: “Assuma que você é um pesquisador do CEFET_MG em campos das ciênci
 </div>
 </section>
 <section>
-<section id="apresentação-de-conceitos" class="title-slide slide level1 center">
+<section id="apresentação-de-conceitos" class="title-slide slide level1 agenda-slide center scrollable">
 <h1>Apresentação de conceitos</h1>
-
+<div class="agenda-heading">
+<p>Agenda</p>
+</div>
+<div class="agenda">
+<ol>
+<li class="fragment"><div class="agenda-active">
+<p>Apresentação de conceitos</p>
+</div></li>
+<li class="fragment"><div class="agenda-inactive agenda-post-active">
+<p>A ciência aberta tem o potencial de tornar o processo científico mais transparente, inclusivo e democrático.</p>
+</div></li>
+<li class="fragment"><div class="agenda-inactive agenda-post-active">
+<p>Proposição de temas para desenvolvimento do projeto individual em colaboração.</p>
+</div></li>
+</ol>
+</div>
 </section>
 <section id="ciência-aberta" class="slide level2">
 <h2>Ciência aberta</h2>
@@ -473,9 +469,24 @@ Exemplo: “Assuma que você é um pesquisador do CEFET_MG em campos das ciênci
 
 </section></section>
 <section>
-<section id="a-ciência-aberta-tem-o-potencial-de-tornar-o-processo-científico-mais-transparente-inclusivo-e-democrático." class="title-slide slide level1 center">
+<section id="a-ciência-aberta-tem-o-potencial-de-tornar-o-processo-científico-mais-transparente-inclusivo-e-democrático." class="title-slide slide level1 agenda-slide center scrollable">
 <h1>A ciência aberta tem o potencial de tornar o processo científico mais transparente, inclusivo e democrático.</h1>
-
+<div class="agenda-heading">
+<p>Agenda</p>
+</div>
+<div class="agenda">
+<ol>
+<li class="fragment"><div class="agenda-inactive agenda-pre-active">
+<p>Apresentação de conceitos</p>
+</div></li>
+<li class="fragment"><div class="agenda-active">
+<p>A ciência aberta tem o potencial de tornar o processo científico mais transparente, inclusivo e democrático.</p>
+</div></li>
+<li class="fragment"><div class="agenda-inactive agenda-post-active">
+<p>Proposição de temas para desenvolvimento do projeto individual em colaboração.</p>
+</div></li>
+</ol>
+</div>
 </section>
 <section id="a-ciência-aberta" class="slide level2 scrollable">
 <h2>A ciência aberta:</h2>
@@ -492,12 +503,28 @@ Exemplo: “Assuma que você é um pesquisador do CEFET_MG em campos das ciênci
 <iframe width="1257" height="707" src="https://www.youtube.com/embed/s49F3UmLs2M" title="Iniciativa Brasileira de Reprodutibilidade: chamada para laboratórios" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="">
 </iframe>
 </section></section>
-<section id="proposição-de-temas-para-desenvolvimento-do-projeto-individual-em-colaboração." class="title-slide slide level1 center">
+<section id="proposição-de-temas-para-desenvolvimento-do-projeto-individual-em-colaboração." class="title-slide slide level1 agenda-slide center scrollable">
 <h1>Proposição de temas para desenvolvimento do projeto individual em colaboração.</h1>
+<div class="agenda-heading">
+<p>Agenda</p>
+</div>
+<div class="agenda">
+<ol>
+<li class="fragment"><div class="agenda-inactive agenda-pre-active">
+<p>Apresentação de conceitos</p>
+</div></li>
+<li class="fragment"><div class="agenda-inactive agenda-pre-active">
+<p>A ciência aberta tem o potencial de tornar o processo científico mais transparente, inclusivo e democrático.</p>
+</div></li>
+<li class="fragment"><div class="agenda-active">
+<p>Proposição de temas para desenvolvimento do projeto individual em colaboração.</p>
+</div></li>
+</ol>
+</div>
 
 <div class="quarto-auto-generated-content">
 <div class="footer footer-default">
-<p><a href="https://adm-prod.github.io/site/">Administração da Produção</a></p>
+<p><a href="https://adm-prod.github.io/site/">Planejamento e Controle da Produção</a></p>
 </div>
 </div>
 </section>
@@ -516,6 +543,8 @@ Exemplo: “Assuma que você é um pesquisador do CEFET_MG em campos das ciênci
   <script src="../site_libs/revealjs/plugin/reveal-chalkboard/plugin.js"></script>
   <script src="../site_libs/revealjs/plugin/multiplex/socket.io.js"></script>
   <script src="../site_libs/revealjs/plugin/multiplex/multiplex.js"></script>
+  <script src="../site_libs/revealjs/plugin/reveal-pointer/pointer.js"></script>
+  <script src="../site_libs/revealjs/plugin/reveal-confetti/confetti.js"></script>
   <script src="../site_libs/revealjs/plugin/quarto-support/support.js"></script>
   
 
@@ -539,6 +568,8 @@ Exemplo: “Assuma que você é um pesquisador do CEFET_MG em campos das ciênci
 'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleChalkboard(event)\"><kbd>b</kbd> Toggle Chalkboard</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleNotesCanvas(event)\"><kbd>c</kbd> Toggle Notes Canvas</a></li>\n<li class=\"slide-tool-item\" data-item=\"6\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.downloadDrawings(event)\"><kbd>d</kbd> Download Drawings</a></li>\n<li class=\"slide-tool-item\" data-item=\"7\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
 'chalkboard': {"buttons":true},
 'multiplex': {"secret":null,"id":"06ceb188ca29fe4e","url":"https://reveal-multiplex.glitch.me/"},
+'pointer': {"key":"q","color":"red","pointerSize":16,"alwaysVisible":false},
+'confetti': {"particleCount":50,"angle":90,"spread":45,"startVelocity":45,"decay":0.9,"gravity":1,"drift":0,"ticks":200,"colors":null,"shapes":null,"scalar":1,"zIndex":100,"disableForReducedMotion":false},
 'smaller': false,
  
         // Display controls in the bottom right corner
@@ -549,7 +580,7 @@ Exemplo: “Assuma que você é um pesquisador do CEFET_MG em campos das ciênci
         controlsTutorial: false,
 
         // Determines where controls appear, "edges" or "bottom-right"
-        controlsLayout: 'edges',
+        controlsLayout: 'bottom-right',
 
         // Visibility rule for backwards navigation arrows; "faded", "hidden"
         // or "visible"
@@ -709,7 +740,7 @@ Exemplo: “Assuma que você é um pesquisador do CEFET_MG em campos das ciênci
         },
 
         // reveal.js plugins
-        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, RevealChalkboard, QuartoSupport,
+        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, RevealChalkboard, RevealPointer, RevealConfetti, QuartoSupport,
 
           RevealMath,
           
@@ -718,6 +749,44 @@ Exemplo: “Assuma que você é um pesquisador do CEFET_MG em campos das ciênci
         ]
       });
     </script>
+    
+    <script>
+      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
+      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
+      // slide changes (different for each slide format).
+      (function () {
+        // dispatch for htmlwidgets
+        function fireSlideEnter() {
+          const event = window.document.createEvent("Event");
+          event.initEvent("slideenter", true, true);
+          window.document.dispatchEvent(event);
+        }
+
+        function fireSlideChanged(previousSlide, currentSlide) {
+          fireSlideEnter();
+
+          // dispatch for shiny
+          if (window.jQuery) {
+            if (previousSlide) {
+              window.jQuery(previousSlide).trigger("hidden");
+            }
+            if (currentSlide) {
+              window.jQuery(currentSlide).trigger("shown");
+            }
+          }
+        }
+
+        // hookup for slidy
+        if (window.w3c_slidy) {
+          window.w3c_slidy.add_observer(function (slide_num) {
+            // slide_num starts at position 1
+            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
+          });
+        }
+
+      })();
+    </script>
+
     <script id="quarto-html-after-body" type="application/javascript">
     window.document.addEventListener("DOMContentLoaded", function (event) {
       const toggleBodyColorMode = (bsSheetEl) => {

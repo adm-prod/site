@@ -2,35 +2,12 @@
 title: "Programação da disciplina"
 ---
 
-## Ementa da disciplina
-
--   Funções do planejamento e controle da produção;
--   Objetivos da produção;
--   Classificação e caracterização dos sistemas de produção;
--   Fluxo de informações e materiais;
--   Previsão de demanda;
--   Planejamento e controle de estoque: dimensionamento dos lotes de reposição e modelos de controle de estoque;
--   Planejamento da Capacidade;
--   Planejamento agregado da produção;
--   Planejamento mestre da produção;
--   Planejamento das necessidades de materiais;
--   Programação e sequenciamento na produção de lotes;
--   Programação de projetos: redes PERT/CPM.
-
-## Objetivos de aprendizagem
-
-Por meio desta disciplina, os estudantes desenvolverão competências para:
-
-1.  entender os processos administrativos como instrumentos fundamentais de orientação da ação administrativa, aplicando-se os métodos e processos de planejamento, organização, direção e controle.
-2.  Desenvolver habilidades fundamentais para o planejamento, estrutura e operacionalização de um sistema produtivo, compatibilizando a demanda com os recursos disponíveis.
-3.  Identificar e avaliar os impactos econômico-financeiros referentes às decisões produtivas.
-
 ## Planejamento de encontros síncronos
 
 Os encontros acontecerão nas **segundas-feiras**, de **20:50 às 22:30** E nas **sextas-feiras**, de **18:50 às 20:30**.
 
 | **Unidade**                                       | **Data** | **CH** | **Assunto**                                                                                                                            |
-|---------------------------------------------------|----------|--------|----------------------------------------------------------------------------------------------------------------------------------------|
+|-----------|-----------|-----------|---------------------------------------|
 | Unidade 01 - Introdução                           | 04/03    | 2h     | Funções e planejamento e controle da produção                                                                                          |
 | Unidade 01 - Introdução                           | 08/03    | 2h     | Classificação, caracterização e objetivos da produção, fluxo de informações e materiais e sistemas de controle e sua operacionalização |
 | Unidade 01 - Introdução                           | 11/03    | 2h     | Atividade em sala 1                                                                                                                    |
@@ -72,24 +49,3 @@ A aprendizagem na disciplina será avaliada por meio da consolidação de ativid
 | 30     | 3 (três) atividades avaliativas individuais   |
 | 10     | Presença e participação                       |
 | TOTAL: | 100 pontos                                    |
-
-## Recursos necessários
-
-[Site da disciplina](https://www.places.education/disciplinas/adm_prod)
-
-## Bibliografia recomendada
-
-1.  SLACK, N. et al. Administração da Produção. São Paulo: Editora Atlas, 2009.
-2.  TUBINO, Dalvio Ferrari. Planejamento e Controle da Produção - Teoria e Prática. São Paulo: Atlas, 2009.
-3.  CORRÊA, L.H., GIANESI I.G.N., CAON, M. Planejamento, Programação e Controle da Produção MRP II/ERP: Conceitos, Uso e Implantação. São Paulo: Editora Atlas, 2007.
-4.  KRAJEWSKI, L.,RITZMAN, L. MALHOTRA, M. Administração de Produção e Operações. São Paulo: Pearson, 2009.
-5.  CHOPRA, S., MEINDL P. Gestão da Cadeia de Suprimentos estratégia, planejamento e operação. São Paulo: Pearson, 2011.
-6.  FOGLIATTO, Flávio Sanson; FAGUNDES, Paulo Ricardo Motta. Troca rápida de ferramentas: proposta metodológica e estudo de caso. Gestão & Produção, v. 10, p. 163-181, 2003.
-7.  JEONG, Ki‐Young; PHILLIPS, Don T. Operational efficiency and effectiveness measurement. International Journal of Operations & Production Management, v. 21, n. 11, p. 1404-1416, 2001.
-8.  MESQUITA, Daytta Cristina Vieira; MESQUITA, Wisner Gonçalves; DA SILVA SOUZA, Leandro Rodrigues. Implementação do mapeamento de fluxo de valor de uma montadora de veículos, denominada empresa Beta. Exacta, v. 12, n. 2, p. 197-208, 2014.
-9.  PELLEGRINI, Fernando R.; FOGLIATTO, Flávio S. Passos para implantação de sistemas de previsão de demanda: técnicas e estudo de caso. Production, v. 11, p. 43-64, 2001.
-10. REGO, José Roberto do; MESQUITA, Marco Aurélio de. Controle de estoque de peças de reposição em local único: uma revisão da literatura. Production, v. 21, p. 645-666, 2011.
-
-## Organização das atividades em grupos
-
-**Composição dos grupos de trabalho:** A turma deverá ser dividida em **grupos**. Esses grupos devem se manter para realização de todas as atividades de aprendizagem.

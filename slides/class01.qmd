@@ -3,14 +3,26 @@ title: "Planejamento e Controle da Produção"
 subtitle: "Unidade 01 - Funções e planejamento e controle da produção"
 author: "Renata Oliveira"
 #subtitle: "Sejam bem vindos!"
-footer:  "[Administração da Produção](https://adm-prod.github.io/site/)"
+footer:  "[Planejamento e Controle da Produção](https://adm-prod.github.io/site/)"
 #logo: "images/logo.png"
 title-slide-attributes: 
   data-background-size: contain
-  data-background-color: '#52594E'
+  data-background-color: '#5B888C'
 format: 
   revealjs: 
+    # confetti:
+    #   particleCount: 150
+    #   angle: 90
+    #   spread: 360
+    #   startVelocity: 25
+    #   gravity: 0.65
+    #   drift: 0
+    #   ticks: 400
+    #   colors: ["#0366fc", "#f54281", "#1fd14f"]
+    #   scalar: 0.7
     embed-resources: false
+    speaker_notes_style: minimal_style.css
+    menu: true
     theme: 
       - dark
       - slides.scss
@@ -20,37 +32,35 @@ format:
     slide-number: c/t
     width: 1600
     height: 900
+    margin: 0.1
     echo: false
+    overview: true
+    touch: true
+    keyboard: true
+    controls-layout: bottom-right
+    margin-left: 1em
     scrollable: true
     preview-links: auto
     chalkboard: true
     highlight-style: github
+    code-fold: true
 editor: source
 execute:
   freeze: auto
+filters:
+  - style-speaker-note
+  - reveal-auto-agenda
+auto-agenda:
+  bullets: numbered
+  heading: Agenda
+revealjs-plugins:
+  - pointer
+  - confetti
 ---
 
-
-## Agenda
-1. Conhecendo os pares
-2. Aquecimento
-3. Perguntas e respostas
-4. Apresentação de conceitos
-5. Razões para fazer ciência aberta
-6. Reprodutibilidade - iniciativa brasileira
-7. Proposição de temas para desenvolvimento do projeto 
-
-
-## Conhecendo os pares
-
-- Qual o seu sabor de sorvete favorito?
-- O que vc mais ama no mundo?
-- Se você fosse para uma ilha deserta e só pudesse levar um objeto e uma pessoa, o que e quem seria?
-- Você sabe utilizar R ou Python?
-- Você é mais para gatos ou cachorros?
-- Você já pensou em algum tema para sua pesquisa?
-- Você já teve COVID-19?
-
+```{r, include=FALSE}
+library(countdown)
+```
 
 ## Aquecimento
 
@@ -62,6 +72,8 @@ Exemplo: "Assuma que você é um pesquisador do CEFET_MG em campos das ciências
 3. Vamos discutir
 
 ## Question
+
+`r countdown(minutes = 0, seconds = 42, left = 0, right = 0, padding = "50px", margin = "5%", font_size = "6em", play_sound = TRUE)`
 
 ::: {.question}
 
