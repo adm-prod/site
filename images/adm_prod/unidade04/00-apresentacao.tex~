@@ -1,0 +1,1911 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Apresentação da Qualificação de Mestrado
+%% Copyright 2010 Elisangela Martins de Sá
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[9pt]{beamer}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Configurando o idioma e os acentos
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[english]{babel}
+%\usepackage[brazil]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+
+%\usepackage{footnote}
+\usepackage{threeparttable}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Configurando as Fontes
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{times} % Usa fonte Times New Roman
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Configurando Símbolos Matemáticos e outros símbolos
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{amsmath}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Configurando as Figuras
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\usepackage[pdftex]{color,graphicx} % Utilizado para colocar figuras jpg, png e gif
+%\usepackage{float} % Força a inserção da figura no local especificado (coloque um H no figure)
+%\usepackage{subfigure}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Configurando as Tabelas
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{multirow} % Permite tabelas com multiplas linhas colapsadas.
+\usepackage{booktabs} % Permite o uso de tabelas profissionais (\toprule,\bottomrule, etc).
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Configurando o caption (Legendas) das tabelas e figuras
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\usepackage[scriptsize,bf,up]{caption} % Diminui o tamanho da letra e faz o texto (Figura N ou Tabela N) em negrito
+%\usepackage{caption}
+%\captionsetup[table]{justification=justified,singlelinecheck=false} % Justifica as legendas (captions) das tabelas.
+%\captionsetup[figure]{justification=justified,singlelinecheck=false} % Justifica as legendas (captions) das figuras.
+%\setlength{\belowcaptionskip}{2pt} % Configura o espaçamento entre a legenda e a tabela ou figura
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Outros pacotes
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\usepackage{texshade} % Usado para formatar alinhamento de seqüências (apêndice)
+%\usepackage{pdflscape} % Permite rotacionar a página para Paisagem (landscape)
+%\usepackage{rotating} % Permite rotacionar tabelas (sideways)
+\usepackage{verbatim}  % permite a inserção de comentários 
+\usepackage{ragged2e} % Utilizado para justificar o texto no Beamer (\justifying)
+\usepackage{beamerprosper}
+\usepackage{algorithmic}
+\usepackage{color, colortbl}
+
+\usepackage[ruled,portugues]{algorithm2e}
+%\usepackage{algpseudocode}
+%\usepackage{paralist}
+%\usepackage[active,tightpage]{preview}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Referências bibliográficas e afins
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\usepackage{sbc}
+%\usepackage[alf]{abntcite}
+\usepackage{natbib}
+\usepackage{subfigure} 
+\usepackage{pgf,tikz}
+\usetikzlibrary{backgrounds}
+\usetikzlibrary{shapes}
+\usetikzlibrary{decorations.pathreplacing}
+\usepackage{scalefnt}
+
+
+%\usepackage[natbib=true, bibstyle=authoryear, citestyle=authoryear-comp]{biblatex}
+\def\newblock{}
+
+%****************************************************************
+% C O N F I G U R A Ç Õ E S  D O  B E A M E R
+%****************************************************************
+
+\mode<presentation>
+{
+ %\usetheme{Darmstadt}
+% \usetheme{Warsaw}
+% \usetheme{Antibes}
+%\usetheme{AnnArbor}
+% \usetheme{bars}
+%\usetheme{Berkeley} %o índice fica a esquerda
+%\usetheme{Boadilla}
+% \usetheme {CambridgeUS}
+% \usetheme{Copenhagen}
+% \usetheme{Darmstadt}
+% \usetheme{Dresden} % Simples
+% \usetheme{Frankfurt}
+% \usetheme{Goettingen} %o índice fica a direita (sem cor) 
+% \usetheme{Hannover} %o  índice fica a esquerda (sem cor)
+% \usetheme{Ilmenau}
+% \usetheme{JuanLesPins}
+% \usetheme{Luebeck}
+    \usetheme{Madrid}
+% \usetheme{Malmoe} % Simples
+% \usetheme{Marburg} %o índice fica a direita degrade (sem cor) 
+% \usetheme{Montpellier} % Mais simples
+% \usetheme{PaloAlto}
+% \usetheme{Pittsburgh}
+% \usetheme[height=0.5cm]{Rochester}
+% \usetheme{Singapore} % Mais simples
+ % \usetheme{Malmoe}
+  % or ...
+ % \usecolortheme{dolphin}
+ % \usecolortheme{whale}
+    \setbeamercovered{transparent}
+ % \setbeamercolor{background canvas}{bg=black}
+  % or whatever (possibly just delete it)
+  %\setbeamersize{text margin left=0.5cm, text margin right=0.5cm}
+ % \usefonttheme{serif}
+%   \usecolortheme{lily}
+
+    \setbeamercolor{alerted text}{fg=blue} 
+    \usepackage{pgf,pgfarrows,pgfnodes,pgfautomata,pgfheaps,pgfshade}
+
+    % Configurando o caption da tabelas e figuras apenas no beamer
+    \setbeamertemplate{caption}[numbered]
+    \setbeamerfont{caption}{size=\tiny}
+}
+
+
+
+%****************************************************************
+% CONFIGURANDO O PRIMEIRO SLIDE 
+%****************************************************************
+
+
+\title[]{Administração da produção \\ Gestão da capacidade}
+
+\author[Elisangela Martins de Sá]{Profª: Elisangela Martins de Sá}
+
+
+
+\institute[CEFET] 
+{CEFET MG \\ }
+
+\date[2º semestre, 2016] 
+{2º semestre, 2016}
+
+
+\pgfdeclareimage[height=0.9cm]{university-logo}{figuras/cefet-logo.jpg}
+\logo{\pgfuseimage{university-logo}}
+
+\begin{comment}
+    \AtBeginSubsection[]
+    {
+        \begin{frame}<beamer>{Sumário}
+            \tableofcontents[currentsection,currentsubsection]
+        \end{frame}
+    }
+\end{comment}
+
+
+% If you wish to uncover everything in a step-wise fashion, uncomment
+% the following command: 
+
+%\beamerdefaultoverlayspecification{<+->}
+%\def\supertiny{\fontsize{5pt}{5pt}\selectfont}
+
+\begin{document}
+
+
+\pdfpkresolution=1200
+\pdfimageresolution=1200
+
+\justifying
+
+\begin{frame}
+    \titlepage
+\end{frame}
+
+
+\begin{frame}{Capacidade produtiva}
+
+    \begin{tabular}{cc}
+        \begin{minipage}{180pt}
+        \begin{block}{Definição}
+        Capacidade é o volume máximo potencial de atividade de agregação de valor que pode ser atingindo por uma unidade produtiva sob condições normais de operação.
+        \end{block}
+            
+        \end{minipage}
+        &
+        \begin{minipage}{160pt}
+            \begin{center}
+                \includegraphics[width=2in]{../00-figuras/03-Aulas/Capacidade.jpg}
+            \end{center}
+        \end{minipage}
+    \end{tabular}
+\end{frame}
+
+
+
+
+\begin{frame}{Capacidade produtiva}
+Medidas de capacidade:
+
+\begin{itemize}
+\item Capacidade deve ser associada a volume (ou escala) e unidades de tempo:
+\begin{itemize}
+\item Número de passageiros transportados por dia.
+\item Quantidade de clientes atendidos por dia.
+\item Número de caminhões produzidos por ano.
+\item Quantidade de cirúrgias feitas por dia.
+\end{itemize}
+\item Capacidade pode ser medida pela quantidade de saída
+\begin{itemize}
+\item Lavagens de carros em um lava-jato por hora.
+\end{itemize}
+\item Capacidade pode ser medida pela quantidade de insumos
+\begin{itemize}
+\item Número de salas cirúrgicas em um hospital.
+\end{itemize}
+
+\end{itemize}
+
+\end{frame}
+
+
+\begin{frame}{Capacidade produtiva}
+
+    \begin{tabular}{cc}
+        \begin{minipage}{180pt}
+\begin{itemize}
+\item Por que gerenciar a capacidade produtiva?
+\item Quais decisões estão envolvidas na gestão da capacidade?
+
+\end{itemize}
+            
+        \end{minipage}
+        &
+        \begin{minipage}{160pt}
+            \begin{center}
+                \includegraphics[width=2in]{../00-figuras/03-Aulas/Capacidade.jpg}
+            \end{center}
+        \end{minipage}
+    \end{tabular}
+\end{frame}
+
+
+
+\begin{frame}{Capacidade produtiva: recortes}
+            \begin{center}
+                \includegraphics[width=4.7in]{./figuras/Fiat-a.jpg}
+            \end{center}
+\end{frame}
+
+
+\begin{frame}{Capacidade produtiva: recortes}
+            \begin{block}{}
+               Betim (MG) - Os pilares imponentes ao longo de 504 mil metros quadrados lembram a construção de uma ala de shopping center. \textbf{A nova linha de pintura que está em construção na fábrica da Fiat em Betim (MG) é oito vezes maior que a atual e estratégica para ampliar a capacidade produtiva de 800 mil para 950 mil automóveis por ano}. Com esse volume, a fábrica mineira manterá a posição de segunda maior do mundo em capacidade instalada, atrás da russa AvtoVAZ.
+            \end{block}
+\end{frame}
+
+
+
+\begin{frame}{Capacidade produtiva: recortes}
+            \begin{block}{}
+               Ao mesmo tempo em que investe R\$ 7 bilhões numa nova fábrica em Pernambuco, a ser inaugurada no próximo ano, \textbf{o grupo Fiat aplica R\$ 6 bilhões em Betim} para modernizar a unidade, inaugurada há 38 anos. \textbf{Só a nova linha de pintura, que ficará pronta em dois anos, poderá pintar 180 carros por hora, ante 100 a 130 na instalação atual.}
+            \end{block}
+            
+            \begin{block}{}
+            Os aportes nas fábricas de Betim e de Goiana (PE) estão incluídos no programa de investimento de R\$ 15 bilhões que o grupo fará entre 2013 e 2016.
+            \end{block}
+\end{frame}
+
+
+\begin{frame}{Capacidade produtiva: recortes}
+            \begin{block}{}
+               A ampliação em Betim coincide com um momento crítico para o setor automobilístico, que \textbf{deve encerrar o ano com sobra de 1,1 milhão de veículos}. As empresas têm capacidade produtiva para 4,5 milhões, mas apenas 3,3 milhões devem deixar as linhas de montagem, segundo projeções das montadoras.
+            \end{block}
+            
+                        \begin{block}{}
+Esse cenário, no entanto, não altera os planos da Fiat, diz Cledorvino Belini, presidente do grupo Fiat/Chrysler para a América Latina e da Fiat do Brasil. "Estou há 41 anos no setor e já vi todo tipo de crise, mas nosso \textbf{investimento é para longo prazo.}"
+            \end{block}
+
+\end{frame}
+
+
+
+\begin{frame}{Capacidade produtiva: recortes}
+            \begin{block}{}
+Além da nova cabine de pintura, \textbf{a fábrica de Betim recebeu duas linhas de prensas} que podem estampar mais de 115 mil peças por dia, ou mais de 40 milhões por ano, \textbf{dobrando a produtividade em relação às 17 linhas convencionais que já existiam}, a maioria desde a inauguração da fábrica, em 1976.
+\end{block}
+
+
+            \begin{block}{}
+
+"São prensas totalmente automatizadas, de última geração, capazes de operar 16 golpes por minuto, enquanto as mais antigas são para cinco a sete golpes", diz Alfredo Leggero, diretor de manufatura para a região da América Latina da Fiat/Chrysler.
+\end{block}
+\end{frame}
+
+
+
+\begin{frame}{Capacidade produtiva: recortes}
+            \begin{block}{}
+Para José Roberto Ferro, presidente do Lean Institute Brasil e estudioso do setor, megafábricas são "um pesadelo" para se administrar logística e pessoal e o risco de operar com ociosidade é maior. \textbf{O ideal, diz ele, é funcionar em dois turnos.} "A empresa pode manter custos mais baixos, administrando melhor a ocupação com a produção real."
+\end{block}
+
+
+            \begin{block}{}
+
+Belini diz que \textbf{um dos objetivos é justamente evitar horas extras e trabalho nos fins de semana}, o que ocorreu em 2013, quando a fábrica produziu acima da capacidade. Ferro, contudo, \textbf{avalia que há riscos de a alta ociosidade no setor resultar em aumento de custos}, queda de rentabilidade, prejuízos nas operações e queda de investimentos.
+\end{block}
+\end{frame}
+
+
+
+% 
+% \begin{frame}{Capacidade produtiva: recortes}
+%             \begin{block}{}
+% Para José Roberto Ferro, presidente do Lean Institute Brasil e estudioso do setor, megafábricas são "um pesadelo" para se administrar logística e pessoal e o risco de operar com ociosidade é maior. O ideal, diz ele, é funcionar em dois turnos. "A empresa pode manter custos mais baixos, administrando melhor a ocupação com a produção real."
+% \end{block}
+% 
+% 
+%             \begin{block}{}
+% 
+% Belini diz que um dos objetivos é justamente evitar horas extras e trabalho nos fins de semana, o que ocorreu em 2013, quando a fábrica produziu acima da capacidade. Ferro, contudo, avalia que há riscos de a alta ociosidade no setor resultar em aumento de custos, queda de rentabilidade, prejuízos nas operações e queda de investimentos.
+% \end{block}
+% \end{frame}
+
+
+
+
+
+\begin{frame}{Capacidade produtiva}
+
+\begin{itemize}
+\item Que nível global de capacidade necessitaremos no longo prazo?
+\pause
+\item Quais padrões de decisões devemos adotar para alteração dos níveis globais de capacidade?
+\pause
+\item Devemos utilizar produção nivelada ou acompanhar a demanda com a produção?
+\pause
+\item Que composto de funcionários próprios e de terceiros usar para atender a flutuação de demanda?
+\pause
+\item Quais recursos alocar para quais tarefas?
+\pause
+\item Como acomodar flutuações de demanda no curtíssimo prazo?
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Capacidade produtiva}
+Decisões sobre capacidade, em geral, envolve:
+
+\begin{enumerate}
+\item Avaliação da capacidade existente.
+\item Previsão de necessidades futuras de capacidade.
+\item Identificação de diferentes formas de alterar a capacidade a curto, médio e longo prazo.
+\item Identificação de diferentes formas de alterar a demanda.
+\item Avaliação do impacto da  decisão a respeito de capacidade sobre o desempenho da operação.
+\item Avaliação econômica, operacional e tecnológica de alternativas de incrementar capacidade.
+\item Seleção de alternativas para a obtenção de capacidade adicional.
+
+\end{enumerate}
+
+\end{frame}
+
+
+
+\begin{frame}{Atividade}
+
+Em grupos de até três pessoas:
+
+\begin{enumerate}
+\item Selecione uma empresa   que você conhece (uma empresa por integrante).
+\item Identifique as diferentes formas de alterar a capacidade a curto, médio e longo prazo.
+\end{enumerate}
+
+\end{frame}
+
+
+
+
+
+\begin{frame}{Capacidade produtiva: utilização e eficiência (Slack et. (2002)}
+
+\begin{itemize}
+\item Capacidade instalada: capacidade máxima que uma unidade produtora pode produzir se trabalhar ininterruptamente, sem que seja considerada nenhuma perda.
+\item Capacidade de projeto ou disponível: quantidade máxima que uma unidade produtiva pode produzir durante a jornada de trabalho disponível
+\item Capacidade efetiva:  representa a capacidade disponível subtraindo-se as perdas planejadas desta capacidade
+\item Capacidade real (volume de produção real):  o volume de produção que realmente aconteceu em determinado período. 
+$$ \textrm{Volume de produção real = Capacidade de projeto - perdas planejadas - perdas não planejadas}$$
+
+
+\item A quantidade real de saída (capacidade para planejamento) depende de duas medidas: utilização e eficiência.
+\newline
+\newline
+Exemplo:  Considere um processo de prestação de serviços que trabalhe $8$ horas por dia. Um funcionário bem treinado, trabalhando com eficiência-padrão, teria atendido, por exemplo, 4 clientes por hora. 
+
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Capacidade produtiva: utilização e eficiência (Slack et. (2002))
+}
+
+\begin{itemize}
+\item Utilização: quanto da capacidade teórica tem sido feita disponível.
+
+$$ \textrm{Utilização} = \frac{\textrm{Volume de produção real}}{\textrm{Capacidade de projeto}}$$
+
+
+Exemplo: Em um processo de prestação de serviços que trabalhe $8$ horas por dia. Dessas 8 horas teóricas o setor trabalhou ontem, 6 horas. Então sua utilização pode ser dada por 
+$$ \textrm{Utilização} = \frac{\textrm{6}}{\textrm{8}} = 0,750 = 75\%$$
+
+
+\end{itemize}
+
+\end{frame}
+
+
+
+\begin{frame}{Capacidade produtiva: utilização e eficiência (Slack et. (2002))}
+
+\begin{itemize}
+\item Eficiência: reflete quão bem o período de disponibilidade do processo está sendo usado.
+
+% $$ \textrm{Utilização} = \frac{\textrm{Capacidade efetivamente disponível}}{\textrm{Capacidade total teórica}}$$
+
+$$ \textrm{Eficiência} =  \frac{\textrm{volume de produção real}}{\textrm{capacidade efetiva}}$$
+
+Exemplo: Em 6 horas trabalhadas, um funcionário bem treinado, trabalhando com eficiência-padrão, teria atendido, por exemplo, 24 clientes (4 clientes por hora). No entanto, o funcionário, ontem, atendeu nas 6 horas apenas 21 clientes (3,5 clientes por hora). 
+
+$$ \textrm{Eficiência} = \frac{\textrm{3,5}}{\textrm{4}}=0,875 = 87,5\%$$
+
+% \item Capacidade planejada = Capacidade nominal $\times $ Utilização $\times$ Eficiência
+% \item Será usado a suposição de Slack et. (2002) de que a capacidade efetiva diz respeito a capacidade real após deduzir as perdas planejadas.
+\end{itemize}
+
+\end{frame}
+
+
+
+\begin{frame}{Exercício}
+
+Considere os registros  de ocorrências de um dado setor (em uma dada semana):
+
+\begin{center}
+\begin{tabular}{ll}
+\hline
+Set-up  &  2 h\\
+Inspeção & 1h \\
+Manutenção preventiva & 3h \\ 
+Falta de MP & 2h \\
+Falta de funcionários & 1h \\ \hline
+\end{tabular}
+\end{center}
+Considerando que a saida-padrão de uma determinada atividade não leva em conta perdas não planejadas e que este setor tem capacidade para produzir 200 peças hora em dois turnos de oito horas, cinco dias por semana, definir os graus de utilização e de eficiência,  capacidade nominal e  capacidade para planejamento.
+\end{frame}
+
+
+\begin{frame}{Exercício}
+
+Suponha que um fabricante de papel fotográfico tenha uma linha de cobertura cuja capacidade de projetos seja 200 metros quadrados
+por hora e que a linha opera 24 horas por dia, 7 dias por semana (168 horas por semana).
+
+Os registros para uma semana de produção mostram o seguinte tempo de produção perdido:
+\newline
+\begin{center}
+\begin{tabular}{cll} \hline
+1 & Mudanças de produto (set-ups) & 20h \\
+2 & Faltas do pessoal & 6h \\
+3 & Nenhum trabalho programado & 8 h \\
+4 & Paradas para manutenção corretiva & 18h \\
+5 & Investigação de falhas de qualidade & 20h \\
+6 & Manutenção preventiva regurar & 16 h \\
+7 & Falta de estoque de material de cobertura & 8h \\
+8 & Amostragens de qualidade & 8h \\
+9 & Tempos de troca de turnos & 7h \\  
+10 & Espera pelos rolos de papel & 6h \\ \hline
+& Total & 117 \\ \hline
+\end{tabular}
+\end{center}
+
+\end{frame}
+
+
+
+\begin{frame}{Exercício}
+
+Suponha que um fabricante de papel fotográfico tenha uma linha de cobertura cuja capacidade de projetos seja 200 metros quadrados
+por hora e que a linha opera 24 horas por dia, 7 dias por semana (168 horas por semana).
+
+Os registros para uma semana de produção mostram o seguinte tempo de produção perdido:
+\newline
+\begin{center}
+\begin{tabular}{cll} \hline
+1 & Mudanças de produto (set-ups) & 20h \\
+2 & Manutenção preventiva regurar & 16 h \\
+3 & Nenhum trabalho programado & 8 h \\
+4 & Amostragens de qualidade & 8h \\
+5 & Tempos de troca de turnos & 7h \\ \hline
+& & 59 \\ \hline
+6 & Paradas para manutenção corretiva & 18h \\
+7 & Investigação de falhas de qualidade & 20h \\
+8 & Falta de estoque de material de cobertura & 8h \\
+9 & Faltas do pessoal & 6h \\
+10 & Espera pelos rolos de papel & 6h \\ \hline
+& & 58 \\ \hline
+& Total & 117 \\ \hline
+\end{tabular}
+\end{center}
+
+\end{frame}
+% \end{comment}
+
+\begin{frame}{Capacidade produtiva: Eficácia geral de equipamento (Slack et. (2002))}
+\begin{block}{Definição}
+Eficácia geral de equipamento (OEE) é um método para avaliar a eficácia de equipamentos de operações produtivas baseado
+em três aspectos de desempenho:
+\begin{itemize}
+\item Disponibilidade  (índice de disponibilidade $a$)
+\begin{itemize}
+\item Trocas ou quebras de equipamentos
+\end{itemize}
+\item Velocidade (índice de desempenho $p$)
+\begin{itemize}
+\item tempo ocioso ou equipamento abaixo de sua índice ótima de trabalho.
+\end{itemize}
+\item Qualidade (índice de qualidade $q$)
+\begin{itemize}
+\item perdas na qualidade
+\end{itemize}
+\end{itemize}
+
+$$ \textrm{OEE =} a \times p \times q $$
+\end{block}
+Exemplo: Compute o OEE considerando uma índice de disponibilidade $a=0,8,$ índice de desempenho $p=0,7$ e índice de qualidade $q=0,9$ 
+
+$$ OEE =? $$
+
+\end{frame}
+
+
+\begin{frame}{Capacidade produtiva: Eficácia geral de equipamento (Slack et. (2002))}
+\begin{block}{Definição}
+Eficácia geral de equipamento (OEE) é um método para avaliar a eficácia de equipamentos de operações produtivas baseado
+em três aspectos de desempenho:
+\begin{itemize}
+\item Disponibilidade  (índice de disponibilidade $a$)
+\begin{itemize}
+\item Trocas ou quebras de equipamentos
+\end{itemize}
+\item Velocidade (índice de desempenho $p$)
+\begin{itemize}
+\item tempo ocioso ou equipamento abaixo de sua índice ótima de trabalho.
+\end{itemize}
+\item Qualidade (índice de qualidade $q$)
+\begin{itemize}
+\item perdas na qualidade
+\end{itemize}
+\end{itemize}
+
+$$ \textrm{OEE =} a \times p \times q $$
+\end{block}
+Exemplo: Compute o OEE considerando uma índice de disponibilidade $a=0,8,$ índice de desempenho $p=0,7$ e índice de qualidade $q=0,9$ 
+
+$$ OEE = 0,8 \times 0,7 \times 0,9 =  0.504 = 50,4\%$$
+
+\end{frame}
+
+\begin{comment}
+\begin{frame}{Exercício}
+Em um período típico de sete dias,   uma máquina particular tem capacidade teórica para trabalhar 150 horas. O tempo médio de trocas (Set-ups) é de 10 horas e, para quebras, o tempo médio é de 5 horas a cada sete dias. O tempo em que a máquina não pode trabalhar porque está esperando material ser entregue de outras partes do processo é de 5 horas em média a cada sete dias, e durante o período em que a máquina está funcionando ela alcança em média 90\% de sua taxa de velocidade. Subsequentemente, 3\% das peças processadas pela máquina mostram algum tipo de defeito. 
+
+\begin{enumerate}
+\item Determine o OEE desta máquina.
+% \item Determine a utilização e a eficiência desta máquina.
+\end{enumerate}
+
+\end{frame}
+
+
+
+\begin{frame}{Exercício}
+Associe cada perda de capacidade abaixo aos índices de disponibilidade, velocidade e qualidade:
+\begin{enumerate}
+\item A velocidade nominal de produção é de 100 etiquetas por minuto. Porém, devido a vários fatores, estimou-se que a máquina trabalhou, em média, a uma velocidade de 80 etiquetas por minuto. 
+\item Manutenção preventiva prevista que  durou 6 horas.
+\item O processo de impressão exige preparações e ajustes constantes, já que a variação dos produtos é muito grande. 
+\item Pequenas paradas/ociosidades = 120 minutos.
+\item A empresa concede a seus colaboradores dois intervalos de 15 minutos cada, para o café.
+\item Perdas por qualidade deficiente são:
+\begin{itemize}
+\item 
+Qualidade insatisfatória  = 0,90\%
+\end{itemize}
+\end{enumerate}
+\end{frame}
+
+
+
+
+\begin{frame}{Exercício}
+Calcular o índice de disponibilidade de uma impressora flexográfica, no mês de novembro, sabendo-se que a empresa trabalha em um único turno de 8 horas/dia e que o mês dispunha de 20 dias úteis. A empresa concede a seus colaboradores dois intervalos de 15 minutos cada, para o café. Estava prevista para o mês de novembro uma manutenção preventiva que, quando realizada, durou 6 horas. O processo de impressão exige preparações e ajustes constantes, já que a variação dos produtos é muito grande. Um levantamento dos registros de novembro mostrou que, para a impressora em referência, foram gastos 425 minutos a título de preparação/ajustes.
+\end{frame}
+
+
+
+\begin{frame}{Exercício}
+Com referência à impressora flexográfica do exemplo anterior, no mês de novembro, os registros apontaram as seguintes perdas:
+\begin{itemize}
+\item 
+Pequenas paradas/ociosidades = 120 minutos.
+
+\item 
+A velocidade nominal de produção é de 100 etiquetas por minuto. Porém, devido a vários fatores, estimou-se que a máquina trabalhou, em média, a uma velocidade de 80 etiquetas por minuto. Deixaram de ser produzidas 20 etiquetas por minuto. 
+\end{itemize}
+Apresente o índice de velocidade.
+\end{frame}
+
+
+\begin{frame}{Exercício}
+A impressora flexográfica é um equipamento que produz etiquetas de alta qualidade quando operando em regime. Durante a partida as perdas por não-conformidades são um pouco maiores. Levantamentos estatísticos têm demonstrado que as perdas por qualidade deficiente são:
+\begin{itemize}
+\item 
+Qualidade insatisfatória  = 0,90\%
+\end{itemize}
+Calcule o índice de qualidade e o OEE.
+\end{frame}
+\end{comment}
+
+\begin{frame}{Capacidade produtiva}
+
+Gestão estratégica da capacidade:
+
+\begin{itemize}
+\item Expansões/reduções da unidade de operação ou por aquisição.
+\begin{itemize}
+\item Capacidade antecipa-se a demanda
+\item Capacidade segue a demanda
+\item Política mista
+\end{itemize}
+% \item Redução por venda de ativos.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Capacidade produtiva}
+Gestão estratégica da capacidade: Capacidade antecipa-se a demanda
+
+\begin{center}
+              \includegraphics[width=3in]{../00-figuras/03-Aulas/antecipacao.jpg}
+\end{center}
+
+\end{frame}
+
+
+
+
+\begin{frame}{Capacidade produtiva}
+Gestão estratégica da capacidade: Capacidade segue a demanda
+
+\begin{center}
+              \includegraphics[width=3in]{../00-figuras/03-Aulas/Segue.jpg}
+\end{center}
+\end{frame}
+
+
+
+\begin{frame}{Capacidade produtiva}
+Gestão estratégica da capacidade: Política mista
+\begin{center}
+
+              \includegraphics[width=3in]{../00-figuras/03-Aulas/Mista.jpg}
+\end{center}
+\end{frame}
+
+\begin{frame}{Capacidade produtiva: gestão estratégica}
+
+Influência das políticas de aumento de capacidade:
+
+\begin{tabular}{p{8cm}ccc}
+\hline
+Política & CAD & CSD & PM \\ \hline
+Instante do desembolso & ant. & pos. & médio \\ 
+Flexibilidade de volumes & alta & baixa & média \\  
+Ocupação de recursos & baixa & alta & média \\  
+Custo unitário decorrente de utilização da capacidade & alto & baixo & médio \\   
+Risco ao desempenho em velocidade e ao nível de serviços & baixo & alto & mod. \\ \hline
+\end{tabular}
+\begin{itemize}
+\item CAD: Capacidade Antecipa a Demanda
+\item CSD: Capacidade Segue a Demanda
+\item PM: Política Mista
+\end{itemize}
+
+
+
+\end{frame}
+
+\begin{frame}{Capacidade produtiva: gestão tática da capacidade}
+\begin{itemize}
+\item Dada certa política estratégica de capacidade produtiva, a gestão tática de capacidade ocupa-se de ajustar da melhor forma possível o nível global de capacidade produtiva disponibilizado pelas políticas estratégicas às flutuações da demanda de mais curto prazo da demanda.
+
+\item Como resultado das decisões estratégicas no âmbito da produção, é elaborado um plano de longo prazo que têm por meta direcionar os recursos produtivos no sentido das estratégias escolhidas.
+\item 
+Este plano servirá de base para equacionar os níveis de produção, estoques, recursos humanos, máquinas e instalações necessários para atender a demanda prevista de bens e serviços.
+\end{itemize}
+\end{frame}
+
+
+% 
+% \begin{frame}{Planejamento da capacidade: gestão tática}
+% Como resultado das decisões estratégicas no âmbito da produção, é elaborado um plano de longo prazo que têm por meta direcionar os recursos produtivos no sentido das estratégias escolhidas.
+% \begin{itemize}
+% \item 
+% Este plano servirá de base para equacionar os níveis de produção, estoques, recursos humanos, máquinas e instalações necessários para atender a demanda prevista de bens e serviços.
+% \end{itemize}
+% 
+% \end{frame}
+% 
+% 
+% \begin{frame}{Plano agregado de produção ou plano agregado de produção}
+% O plano de produção trabalha com informações agregadas de vendas e produção, normalmente com o agrupamento de produtos em famílias afins.
+% \begin{itemize}
+% % \item 
+% % Os produtos são medidos em valores financeiros;
+% \item 
+% Os períodos de planejamento são de meses ou trimestres, abrangendo um, ou mais anos, para frente; 
+% \item A nível tático, o plano de produção servirá de base para desenvolver o planejamento mestre da produção, onde as informações serão desmembradas;
+% \item 
+% Há necessidade de desenvolver uma dinâmica de replanejamento que seja empregada sempre que uma variável importante do plano se alterar substancialmente
+% \end{itemize}
+% \end{frame}
+
+
+\begin{frame}{Capacidade produtiva: gestão tática da capacidade}
+
+Desenvolver um plano de produção de uma família de produtos, para os próximos dois anos com períodos trimestrais. 
+%Os dados de estoques, previsão de demanda e custos são os seguintes:
+
+
+% \resizebox{12cm}{!}{
+% {\scalefont{2}
+\begin{center}
+\begin{tabular}{|l|ccccccccc|}
+\hline
+Periodo &  & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8   \\ \hline
+ Prev. Dem.&  & 200 & 200 & 200 & 300 & 400 & 300 & 200 & 200   \\ 
+% Turno normal &  & 250 & 250 & 250 & 250 & 250 & 250 & 250 & 250 & 2000 & 4 & 8.000 \\ 
+% Turno Extra &  &  &  &  &  &  &  &  &  &  & 6 & 0 \\ 
+% Subcontratação &  &  &  &  &  &  &  &  &  &  & 10 & 0 \\ 
+% Estoque inicial &  & 50 & 100 & 150 & 200 & 150 & 0 & 0 & 50 &  &  &  \\ 
+% Estoque final & 50 & 100 & 150 & 200 & 150 &  0 & 0 & 50 & 100 &  &  &  \\ 
+% Estoque medio &  & 75 & 125 & 175 & 175 & 75 &  0 & 25 & 75 & 725 & 2 & 1.450 \\ 
+% Atraso &  &   &   &   &   &   & 50 &   &   & 50 & 20 & 1.000 \\ \hline
+%  &  &  &  &  &  &  &  &  &  &  &  & 10.450 \\
+ \hline
+\end{tabular}
+\end{center}
+% }
+% }
+% 
+% 
+%             \begin{center}
+%                 \includegraphics[width=4in]{../00-figuras/03-Aulas/Exemplo.jpg}
+%             \end{center}
+       %     $$ \textrm{Estoque médio} = \frac{\textrm{Estoque inicial $+$ Estoque Final}}{2}$$
+\end{frame}
+
+
+\begin{frame}{Capacidade produtiva: gestão tática da capacidade}
+Há uma série de informações necessárias para a elaboração de um plano:
+\begin{itemize}
+\item 
+Recursos : Equipamentos, instalações, força de trabalho, taxa de produção.
+\item Previsão da demanda : Demanda prevista para as famílias de itens.
+\item Políticas alternativas : Sub-contratações, turnos extras, postergar a produção, estoques, etc.
+\item Dados de custos : Produção normal, armazenagem, sub-contratações, turno extra, etc.
+\end{itemize}
+\end{frame}
+
+
+
+\begin{frame}{Capacidade produtiva: gestão tática da capacidade}
+Várias técnicas podem ser utilizadas para auxiliar na elaboração de um plano de produção. Algumas delas procuram soluções otimizadas, outras aproveitam-se da experiência e do bom senso dos planejadores. 
+\begin{itemize}
+\item 
+As técnicas matemáticas empregam modelos matemáticos (programação linear, programação por objetivos, simulação, algoritmos genéticos, etc.) para buscar a melhor alternativa. 
+\item 
+As técnicas informais de tentativa e erro empregam tabelas e gráficos para visualizar as situações planejadas e decidir pela mais viável. 
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Capacidade produtiva: gestão tática da capacidade}
+Tentativa e erro: análise das seguintes alternativas:
+\begin{enumerate}
+\item  Manter uma produção nivelada;
+\item Acompanhar a demanda;
+\item Manter um nivelamento por blocos.
+\end{enumerate}
+\end{frame}
+
+
+
+\begin{comment}
+\begin{frame}{Capacidade produtiva: gestão tática da capacidade}
+
+Os passos básicos para gerar um plano de produção são os seguintes:
+\begin{enumerate}
+\item Agrupar os produtos;
+\item Estabelecer o horizonte e períodos de tempo;
+\item Determinar a previsão da demanda para cada periodo;
+\item Determinar a capacidade de produção pretendida por período;
+\item Definir as políticas de produção e estoques que balizarão o plano;
+\item Determinar os custos de cada alternativa de produção disponível;
+\item Desenvolver planos de produção alternativos e calcular os custos decorrentes;
+\item Analisar as restrições de capacidade produtiva;
+\item Eleger o plano mais viável estrategicamente.
+\end{enumerate}
+\end{frame}
+
+
+% 
+% 
+% \begin{frame}{Capacidade produtiva: gestão tática da capacidade}
+
+% % Os passos básicos para gerar um plano de produção são os seguintes:
+% \begin{enumerate}
+% 
+% 
+% \end{enumerate}
+% \end{frame}
+
+\begin{frame}{Capacidade produtiva: gestão tática da capacidade}
+
+
+Desenvolver um plano de produção de uma família de produtos, para os próximos dois anos com períodos trimestrais. Os dados de estoques, previsão de demanda e custos são os seguintes:
+
+            \begin{center}
+                \includegraphics[width=4in]{../00-figuras/03-Aulas/Exemplo.jpg}
+            \end{center}
+            $$ \textrm{Estoque médio} = \frac{\textrm{Estoque inicial $+$ Estoque Final}}{2}$$
+\end{frame}
+
+
+\begin{frame}{Capacidade produtiva: gestão tática da capacidade}
+
+
+\resizebox{12cm}{!}{
+{\scalefont{2}
+\begin{tabular}{|l|ccccccccc|c|c|c|}
+\hline
+Periodo &  & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & Total & Custo unit. & Custo  \\ \hline
+ Prev. Dem.&  & 200 & 200 & 200 & 300 & 400 & 300 & 200 & 200 & 2000 &  &  \\ 
+Turno normal &  & 150 & 200 & 200 & 300 & 400 & 300 & 200 & 200 & 1950 & 4 & 7.800 \\ 
+Turno Extra &  &  &  &  &  &  &  &  &  &  & 6 &   \\ 
+Subcontratação &  &  &  &  &  &  &  &  &  &  & 10 &   \\ 
+% Estoque inicial &  & 50 &  &  &  &  &  &  &   & 50 &  &   \\ 
+Estoque projetado & 50 &  &  &  &  &  &  &  &    &   &  &   \\ 
+Estoque medio &  & 25 &  &  &  &  &  &  &  &  25 & 2 & 50 \\ 
+Atraso &  &  &  &  &  &  &  &  &    &  & 20 &   \\ \hline
+ &  &  &  &  &  &  &  &  &  &  &  & 7.850 \\ \hline
+\end{tabular}
+}
+}
+
+\end{frame}
+
+
+
+\begin{frame}{Capacidade produtiva: gestão tática da capacidade}
+
+
+\resizebox{12cm}{!}{
+{\scalefont{2}
+\begin{tabular}{|l|ccccccccc|c|c|c|}
+\hline
+Periodo &  & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & Total & Custo unit. & Custo  \\ \hline
+ Prev. Dem.&  & 200 & 200 & 200 & 300 & 400 & 300 & 200 & 200 & 2000 &  &  \\ 
+Turno normal &  & 150 & 200 & 200 & 300 & 400 & 300 & 200 & 200 & 1950 & 4 & 7.800 \\ 
+Turno Extra &  &  &  &  &  &  &  &  &  &  & 6 &   \\ 
+Subcontratação &  &  &  &  &  &  &  &  &  &  & 10 &   \\ 
+% Estoque inicial &  & 50 &  &  &  &  &  &  &   & 50 &  &   \\ 
+Estoque final & 50 &  &  &  &  &  &  &  &    &   &  &   \\ 
+Estoque medio &  & 25 &  &  &  &  &  &  &  &  25 & 2 & 50 \\ 
+Atraso &  &  &  &  &  &  &  &  &    &  & 20 &   \\ \hline
+ &  &  &  &  &  &  &  &  &  &  &  & 7.850 \\ \hline
+\end{tabular}
+}
+}
+\begin{itemize}
+\item
+Esta solução é viável quanto a capacidade instalada?
+\pause
+\item Capacidade de produzir 250 em horas normais e 40 em turnos extras.
+\item Dois tipos de família de produto devem ser produzidas.
+\end{itemize}
+PLANO É INVIÀVEL!!!!
+\end{frame}
+
+
+% 
+% \begin{frame}{Capacidade produtiva: gestão tática da capacidade}
+
+% 
+% \resizebox{12cm}{!}{
+% {\scalefont{2}
+% \begin{tabular}{|l|ccccccccc|c|c|c|}
+% \hline
+% Periodo &  & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & Total & Custo unit. & Custo  \\ \hline
+% Prev. Dem. &  & 200 & 200 & 200 & 200 & 200 & 200 & 200 & 200 & 1600 &  &  \\ 
+% Turno normal &  & 200 & 200 & 200 & 200 & 200 & 200 & 200 & 200 & 1600 & 4 & 6.400 \\ 
+% Turno Extra &  &  &  &  &  &  &  &  &  &  & 6 & 0 \\ 
+% Subcontratação &  &  &  &  &  &  &  &  &  &  & 10 & 0 \\ 
+% % Estoque inicial &  &  &  &  &  &  &  &  &  &  &  &  \\ 
+% Estoque final &  &  &  &  &  &  &  &  &  &  &  &  \\ 
+% Estoque medio &  &  &  &  &  &  &  &  &  &  & 2 & 0 \\ 
+% Atraso &  &  &  &  &  &  &  &  &  &  & 20 & 0 \\ \hline
+%  &  &  &  &  &  &  &  &  &  &  &  & 6.400 \\  \hline
+% \end{tabular}
+% }
+% }
+% \begin{itemize}
+% \item
+% Esta solução é viável quanto a capacidade instalada?
+% \pause
+% \item Capacidade de produzir 450 em horas normais e 40 em turnos extras.
+% \item Dois tipos de família de produto devem ser produzidas.
+% \end{itemize}
+% \end{frame}
+
+
+% 
+% \begin{frame}{Capacidade produtiva: gestão tática da capacidade}
+
+% 
+% \resizebox{12cm}{!}{
+% {\scalefont{2}
+% \begin{tabular}{|l|ccccccccc|c|c|c|}
+% \hline
+% Periodo &  & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & Total & Custo unit. & Custo  \\ \hline
+% Turno normal F1 &  & 200 & 200 & 200 & 300 & 400 & 300 & 200 & 200 & 2000 &  &  \\ 
+% Turno normal F2 &  & 200 & 200 & 200 & 200 & 200 & 200 & 200 & 200 & 1600 &   &  \\
+% Turno normal total &  & 400 & 400 & 400 & 500 & 600 & 500 & 400 & 400 & 3600 & 4 & \$14,400.00 \\ \hline
+% \end{tabular}
+% }
+% }
+% \begin{itemize}
+% \item
+% Esta solução é viável quanto a capacidade instalada?
+% \pause
+% \item Capacidade 
+% \begin{itemize}
+% \item Turno normal até 450 unidades
+% \item Turnos extras até 40 unidades
+% \item Subcontração em múltiplos de 25.
+% \end{itemize}
+% \item Dois tipos de família de produto devem ser produzidas.
+% \end{itemize}
+% \end{frame}
+\end{comment}
+
+\begin{frame}{Capacidade produtiva: gestão tática da capacidade}
+            \begin{center}
+                \includegraphics[width=4in]{../00-figuras/03-Aulas/Demanda.jpg}
+            \end{center}
+            
+            \begin{enumerate}
+\item  Manter uma produção nivelada;
+\item Acompanhar a demanda;
+\item Manter um nivelamento por blocos.
+\end{enumerate}
+
+\end{frame}
+
+
+
+\begin{frame}{Capacidade produtiva: gestão tática da capacidade}
+            \begin{center}
+                \includegraphics[width=3in]{../00-figuras/03-Aulas/Planos.jpg}
+            \end{center}
+            
+            \begin{enumerate}
+\item  Manter uma produção nivelada;
+\item Acompanhar a demanda;
+\item Manter um nivelamento por blocos.
+\end{enumerate}
+
+\end{frame}
+
+
+
+\begin{frame}{Capacidade produtiva: gestão tática da capacidade}
+Exemplo:
+Desenvolver um plano de produção de uma família de produtos, para os próximos dois anos com períodos trimestrais. 
+Os dados de estoques, previsão de demanda e custos são os seguintes:
+
+
+% \resizebox{12cm}{!}{
+% {\scalefont{2}
+\begin{center}
+\begin{tabular}{|l|ccccccccc|}
+\hline
+Periodo &  & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8   \\ \hline
+ Prev. Dem.&  & 200 & 200 & 200 & 300 & 400 & 300 & 200 & 200   \\ 
+% Turno normal &  & 250 & 250 & 250 & 250 & 250 & 250 & 250 & 250 & 2000 & 4 & 8.000 \\ 
+% Turno Extra &  &  &  &  &  &  &  &  &  &  & 6 & 0 \\ 
+% Subcontratação &  &  &  &  &  &  &  &  &  &  & 10 & 0 \\ 
+% Estoque inicial &  & 50 & 100 & 150 & 200 & 150 & 0 & 0 & 50 &  &  &  \\ 
+% Estoque final & 50 & 100 & 150 & 200 & 150 &  0 & 0 & 50 & 100 &  &  &  \\ 
+% Estoque medio &  & 75 & 125 & 175 & 175 & 75 &  0 & 25 & 75 & 725 & 2 & 1.450 \\ 
+% Atraso &  &   &   &   &   &   & 50 &   &   & 50 & 20 & 1.000 \\ \hline
+%  &  &  &  &  &  &  &  &  &  &  &  & 10.450 \\
+ \hline
+\end{tabular}
+\end{center}
+\begin{itemize}
+\item Custo unitário de estoque: R\$2
+      $$ \textrm{Estoque médio} = \frac{\textrm{Estoque inicial $+$ Estoque Final}}{2}$$
+\item Custo unitário de produção (normal): R\$4
+\item Custo unitário de produção (extra): R\$6
+\begin{itemize}
+\item Limitado a 50 unidades
+\end{itemize}
+\item Custo unitário de subcontração:R\$10
+\item Custo unitário de atraso: R\$12
+\end{itemize}
+
+
+
+% \end{itemize}
+% }
+% }
+% 
+% 
+%             \begin{center}
+%                 \includegraphics[width=4in]{../00-figuras/03-Aulas/Exemplo.jpg}
+%             \end{center}
+       %     $$ \textrm{Estoque médio} = \frac{\textrm{Estoque inicial $+$ Estoque Final}}{2}$$
+\end{frame}
+
+
+\begin{frame}{Capacidade produtiva: gestão tática da capacidade}
+
+Alternativas 1:
+\begin{itemize}
+\item Na primeira alternativa a ser analisada, vamos supor
+que a estratégia adotada seja de manter a
+capacidade produtiva constante de 250 unidades
+(2000/8 = 250) por trimestre, e utilizar os estoques
+para absorver as variações da demanda. Nesta
+primeira alternativa de plano vamos admitir atrasos e
+transferências de entregas para os períodos
+seguintes.
+
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Capacidade produtiva: gestão tática da capacidade}
+
+
+
+\resizebox{12cm}{!}{
+{\scalefont{2}
+\begin{tabular}{|l|ccccccccc|c|c|c|}
+\hline
+Periodo &  & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & Total & Custo unit. & Custo  \\ \hline
+ Prev. Dem.&  & 200 & 200 & 200 & 300 & 400 & 300 & 200 & 200 & 2000 &  &  \\ 
+Turno normal &  & 250 & 250 & 250 & 250 & 250 & 250 & 250 & 250 & 2000 & 4 & 8.000 \\ 
+Turno Extra &  &  &  &  &  &  &  &  &  &  &   &   \\ 
+Subcontratação &  &  &  &  &  &  &  &  &  &  &   &   \\ 
+% Estoque inicial &  & 50 & 100 & 150 & 200 & 150 & 0 & 0 & 50 &  &  &  \\ 
+Estoque final & 0 & 50 & 100 & 150 & 100 &  0 & 0 & 0 & 0 & 400 &  &  \\ 
+Estoque medio & &&&&&&&&&&&\\% & 25 & 75 & 125 & 125 & 50 &  0 & 0 & 0 & 400 & 2 & 800 \\ 
+Atraso &  &   &   &   &   & 50  & 100 & 50  &   & 200 & 10 & 2.000 \\ \hline
+ &  &  &  &  &  &  &  &  &  &  &  &  \\ \hline
+\end{tabular}
+}
+}
+
+
+
+\end{frame}
+
+
+
+\begin{frame}{Capacidade produtiva: gestão tática da capacidade}
+
+
+
+\resizebox{12cm}{!}{
+{\scalefont{2}
+\begin{tabular}{|l|ccccccccc|c|c|c|}
+\hline
+Periodo &  & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & Total & Custo unit. & Custo  \\ \hline
+ Prev. Dem.&  & 200 & 200 & 200 & 300 & 400 & 300 & 200 & 200 & 2000 &  &  \\ 
+Turno normal &  & 250 & 250 & 250 & 250 & 250 & 250 & 250 & 250 & 2000 & 4 & 8.000 \\ 
+Turno Extra &  &  &  &  &  &  &  &  &  &  & 7 & 0 \\ 
+Subcontratação &  &  &  &  &  &  &  &  &  &  & 12 & 0 \\ 
+% Estoque inicial &  & 50 & 100 & 150 & 200 & 150 & 0 & 0 & 50 &  &  &  \\ 
+Estoque final & 0 & 50 & 100 & 150 & 100 &  0 & 0 & 0 & 0 &  &  &  \\ 
+Estoque medio &  & 25 & 75 & 125 & 125 & 50 &  0 & 0 & 0 & 400 & 2 & 800 \\ 
+Atraso &  &   &   &   &   & 50  & 100 & 50  &   & 200 & 10 & 2.000 \\ \hline
+ &  &  &  &  &  &  &  &  &  &  &  & 10.400 \\ \hline
+\end{tabular}
+}
+}
+
+%     $$ \textrm{Estoque médio} = \frac{\textrm{Estoque inicial $+$ Estoque Final}}{2}$$
+
+\end{frame}
+
+\begin{frame}{Capacidade produtiva: gestão tática da capacidade}
+
+Exercício:
+\begin{itemize}
+\item Na segunda alternativa vamos  acompanhar a demanda: produção normal de 200 unidades e incremento na
+demanda atraveś de turnos extras de até 50 unidades por trimestres e restante sub-contratado
+de terceiros.
+
+
+\item Para uma terceira alternativa, manter um nivelamento por blocos de três trimestres.
+
+\end{itemize}
+\end{frame}
+
+
+
+\begin{frame}{Plano agregado de produção: Alternativa 2}
+
+
+\resizebox{12cm}{!}{
+{\scalefont{2}
+\begin{tabular}{|l|ccccccccc|c|c|c|}
+\hline
+Periodo &  & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & Total & Custo unit. & Custo  \\ \hline
+ Prev. Dem.&  & 200 & 200 & 200 & 300 & 400 & 300 & 200 & 200 & 2000 &  &  \\ 
+Turno normal &  & 200 & 200 & 200 & 200 & 200 & 200 & 200 & 200 & 1600 & 4 & 6400 \\ 
+Turno Extra &    &  &  &  & 50 & 50 &  50&  &  &  150& 7 & 1050 \\ 
+Subcontratação &  &  &  &  &  50& 150 & 50 &  &  &  250& 12 & 300 \\ 
+% Estoque inicial &  & 50 & 100 & 150 & 200 & 150 & 0 & 0 & 50 &  &  &  \\ 
+Estoque final &  &  &   &   &   &    &   &   &  &  &  &  \\ 
+Estoque medio &  &   &  &   &   &   &    &   &   &   & 2 &  \\ 
+Atraso &  &   &   &   &   &   & &   &   &   & 20 &   \\ \hline
+ &  &  &  &  &  &  &  &  &  &  &  & 10450 \\ \hline
+\end{tabular}
+}
+}
+
+\end{frame}
+
+% 
+% \begin{frame}{Plano agregado de produção: Alternativa 2}
+% 
+% 
+% \resizebox{12cm}{!}{
+% {\scalefont{2}
+% \begin{tabular}{|l|ccccccccc|c|c|c|}
+% \hline
+% Periodo &  & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & Total & Custo unit. & Custo  \\ \hline
+%  Prev. Dem.&  & 200 & 200 & 200 & 300 & 400 & 300 & 200 & 200 & 2000 &  &  \\ 
+% Turno normal &  & 230 & 230 & 230 & 230 & 230 & 230 & 230 & 230 & 1840 & 4 & 7360 \\ 
+% Turno Extra &  &  &  &  &  &  &  &  &  &  & 6 & 0 \\ 
+% Subcontratação &  &  &  &  &  &  &  &  &  &  & 10 & 0 \\ 
+% % Estoque inicial &  & 50 & 100 & 150 & 200 & 150 & 0 & 0 & 50 &  &  &  \\ 
+% Estoque final & 50 &  &   &   &   &    &   &   &  &  &  &  \\ 
+% Estoque medio &  &   &  &   &   &   &   &   &   &   & 2 &  \\ 
+% Atraso &  &   &   &   &   &   & &   &   &   & 20 &   \\ \hline
+%  &  &  &  &  &  &  &  &  &  &  &  &   \\ \hline
+% \end{tabular}
+% }
+% }
+% 
+% \end{frame}
+
+
+\begin{frame}{Plano agregado de produção: Alternativa 3}
+
+
+\resizebox{12cm}{!}{
+{\scalefont{2}
+\begin{tabular}{|l|ccccccccc|c|c|c|}
+\hline
+Periodo &  & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & Total & Custo unit. & Custo  \\ \hline
+ Prev. Dem.&  & 200 & 200 & 200 & 300 & 400 & 300 & 200 & 200 & 2000 &  &  \\ 
+Turno normal &  & 200 & 200 & 200 & 200 & 200 & 200 & 200 & 200 & 1600 & 4 & 6400 \\ 
+Turno Extra &  &    &  & 50 & 50 & 50 & 50 & &  & 200  & 7 & 1400 \\ 
+Subcontratação &  &  &  &  &  & 100  & 100 &  &  & 200 & 12 & 2400 \\ 
+% Estoque inicial &  & 50 & 100 & 150 & 200 & 150 & 0 & 0 & 50 &  &  &  \\ 
+Estoque final & 0 & 0 & 0  &  50  & 0  & -50   &  0 & 0  & 0 &  &  &  \\ 
+Estoque medio &  &   &  &   &   &   &   &   &   &   & 2 &  \\ 
+Atraso &  &   &   &   &   &  50 & &   &   &   & 10 & 500  \\ \hline
+ &  &  &  &  &  &  &  &  &  &  &  & 10800  \\ \hline
+\end{tabular}
+}
+}
+
+
+\pause
+\begin{itemize}
+\item Este plano pode melhorar?
+\pause
+\item Analise o caso, que evita atrasos.
+\end{itemize}
+\end{frame}
+
+\begin{comment}
+
+\begin{frame}{Plano agregado de produção: Alternativa 2}
+
+
+\resizebox{12cm}{!}{
+{\scalefont{2}
+\begin{tabular}{|l|ccccccccc|c|c|c|}
+\hline
+Periodo &  & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & Total & Custo unit. & Custo  \\ \hline
+ Prev. Dem.&  & 200 & 200 & 200 & 300 & 400 & 300 & 200 & 200 & 2000 &  &  \\ 
+Turno normal &  & 230 & 230 & 230 & 230 & 230 & 230 & 230 & 230 & 1840 & 4 & 7360 \\ 
+Turno Extra &  &  &  &  & 30 & 40 & 40 &  &  & 110  & 6 & 660 \\ 
+Subcontratação &  &  &  &  &  &  &  &  &  &  & 10 & 0 \\ 
+% Estoque inicial &  & 50 & 100 & 150 & 200 & 150 & 0 & 0 & 50 &  &  &  \\ 
+Estoque final & 50 & 80  &   &   &   &    &   &   &  &  &  &  \\ 
+Estoque medio &  &   &  &   &   &   &   &   &   &   & 2 &  \\ 
+Atraso &  &   &   &   &   &   & &   &   &   & 20 &   \\ \hline
+ &  &  &  &  &  &  &  &  &  &  &  &   \\ \hline
+\end{tabular}
+}
+}
+
+\end{frame}
+
+
+
+\begin{frame}{Plano agregado de produção: Alternativa 2}
+
+
+\resizebox{12cm}{!}{
+{\scalefont{2}
+\begin{tabular}{|l|ccccccccc|c|c|c|}
+\hline
+Periodo &  & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & Total & Custo unit. & Custo  \\ \hline
+ Prev. Dem.&  & 200 & 200 & 200 & 300 & 400 & 300 & 200 & 200 & 2000 &  &  \\ 
+Turno normal &  & 230 & 230 & 230 & 230 & 230 & 230 & 230 & 230 & 1840 & 4 & 7360 \\ 
+Turno Extra &  &  &  &  & 30 & 40 & 40 &  &  & 110  & 6 & 660 \\ 
+Subcontratação &  &  &  &  &  &  &  &  &  &  & 10 & 0 \\ 
+% Estoque inicial &  & 50 & 100 & 150 & 200 & 150 & 0 & 0 & 50 &  &  &  \\ 
+Estoque final & 50 & 80  & 110  &   &   &    &   &   &  &  &  &  \\ 
+Estoque medio &  &   &  &   &   &   &   &   &   &   & 2 &  \\ 
+Atraso &  &   &   &   &   &   & &   &   &   & 20 &   \\ \hline
+ &  &  &  &  &  &  &  &  &  &  &  &   \\ \hline
+\end{tabular}
+}
+}
+
+\end{frame}
+
+
+\begin{frame}{Plano agregado de produção: Alternativa 2}
+
+
+\resizebox{12cm}{!}{
+{\scalefont{2}
+\begin{tabular}{|l|ccccccccc|c|c|c|}
+\hline
+Periodo &  & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & Total & Custo unit. & Custo  \\ \hline
+ Prev. Dem.&  & 200 & 200 & 200 & 300 & 400 & 300 & 200 & 200 & 2000 &  &  \\ 
+Turno normal &  & 230 & 230 & 230 & 230 & 230 & 230 & 230 & 230 & 1840 & 4 & 7360 \\ 
+Turno Extra &  &  &  &  & 30 & 40 & 40 &  &  & 110  & 6 & 660 \\ 
+Subcontratação &  &  &  &  &  &  &  &  &  &  & 10 & 0 \\ 
+% Estoque inicial &  & 50 & 100 & 150 & 200 & 150 & 0 & 0 & 50 &  &  &  \\ 
+Estoque final & 50 & 80 & 110  & 140   &   &    &   &   &  &  &  &  \\ 
+Estoque medio &  &   &  &   &   &   &   &   &   &   & 2 &  \\ 
+Atraso &  &   &   &   &   &   & &   &   &   & 20 &   \\ \hline
+ &  &  &  &  &  &  &  &  &  &  &  &   \\ \hline
+\end{tabular}
+}
+}
+
+\end{frame}
+
+
+
+\begin{frame}{Plano agregado de produção: Alternativa 2}
+
+
+\resizebox{12cm}{!}{
+{\scalefont{2}
+\begin{tabular}{|l|ccccccccc|c|c|c|}
+\hline
+Periodo &  & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & Total & Custo unit. & Custo  \\ \hline
+ Prev. Dem.&  & 200 & 200 & 200 & 300 & 400 & 300 & 200 & 200 & 2000 &  &  \\ 
+Turno normal &  & 230 & 230 & 230 & 230 & 230 & 230 & 230 & 230 & 1840 & 4 & 7360 \\ 
+Turno Extra &  &  &  &  & 30 & 40 & 40 &  &  & 110  & 6 & 660 \\ 
+Subcontratação &  &  &  &  &  &  &  &  &  &  & 10 & 0 \\ 
+% Estoque inicial &  & 50 & 100 & 150 & 200 & 150 & 0 & 0 & 50 &  &  &  \\ 
+Estoque final & 50 & 80 & 110   & 140   &  100 &    &   &   &  &  &  &  \\ 
+Estoque medio &  &   &  &   &   &   &   &   &   &   & 2 &  \\ 
+Atraso &  &   &   &   &   &   & &   &   &   & 20 &   \\ \hline
+ &  &  &  &  &  &  &  &  &  &  &  &   \\ \hline
+\end{tabular}
+}
+}
+
+\end{frame}
+
+
+
+\begin{frame}{Plano agregado de produção: Alternativa 2}
+
+
+\resizebox{12cm}{!}{
+{\scalefont{2}
+\begin{tabular}{|l|ccccccccc|c|c|c|}
+\hline
+Periodo &  & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & Total & Custo unit. & Custo  \\ \hline
+ Prev. Dem.&  & 200 & 200 & 200 & 300 & 400 & 300 & 200 & 200 & 2000 &  &  \\ 
+Turno normal &  & 230 & 230 & 230 & 230 & 230 & 230 & 230 & 230 & 1840 & 4 & 7360 \\ 
+Turno Extra &  &  &  &  & 30 & 40 & 40 &  &  & 110  & 6 & 660 \\ 
+Subcontratação &  &  &  &  &  &  &  &  &  &  & 10 & 0 \\ 
+% Estoque inicial &  & 50 & 100 & 150 & 200 & 150 & 0 & 0 & 50 &  &  &  \\ 
+Estoque final & 50 & 80 & 110   & 140   &  100 &    &   &   &  &  &  &  \\ 
+Estoque medio &  &   &  &   &   &   &   &   &   &   & 2 &  \\ 
+Atraso &  &   &   &   &   & 30  &  &     &   &   & 20 &    \\ \hline
+ &  &  &  &  &  &  &  &  &  &  &  &   \\ \hline
+\end{tabular}
+}
+}
+
+\end{frame}
+
+
+
+\begin{frame}{Plano agregado de produção: Alternativa 2}
+
+
+\resizebox{12cm}{!}{
+{\scalefont{2}
+\begin{tabular}{|l|ccccccccc|c|c|c|}
+\hline
+Periodo &  & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & Total & Custo unit. & Custo  \\ \hline
+ Prev. Dem.&  & 200 & 200 & 200 & 300 & 400 & 300 & 200 & 200 & 2000 &  &  \\ 
+Turno normal &  & 230 & 230 & 230 & 230 & 230 & 230 & 230 & 230 & 1840 & 4 & 7360 \\ 
+Turno Extra &  &  &  &  & 30 & 40 & 40 &  &  & 110  & 6 & 660 \\ 
+Subcontratação &  &  &  &  &  &  &  &  &  &  & 10 & 0 \\ 
+% Estoque inicial &  & 50 & 100 & 150 & 200 & 150 & 0 & 0 & 50 &  &  &  \\ 
+Estoque final & 50 & 80 & 110   & 140   &  100 &    &   &   &  &  &  &  \\ 
+Estoque medio &  &   &  &   &   &   &   &   &   &   & 2 &  \\ 
+Atraso &  &   &   &   &   & 30  & 60  &     &   &   & 20 &    \\ \hline
+ &  &  &  &  &  &  &  &  &  &  &  &   \\ \hline
+\end{tabular}
+}
+}
+
+\end{frame}
+
+
+
+\begin{frame}{Plano agregado de produção: Alternativa 2}
+
+
+\resizebox{12cm}{!}{
+{\scalefont{2}
+\begin{tabular}{|l|ccccccccc|c|c|c|}
+\hline
+Periodo &  & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & Total & Custo unit. & Custo  \\ \hline
+ Prev. Dem.&  & 200 & 200 & 200 & 300 & 400 & 300 & 200 & 200 & 2000 &  &  \\ 
+Turno normal &  & 230 & 230 & 230 & 230 & 230 & 230 & 230 & 230 & 1840 & 4 & 7360 \\ 
+Turno Extra &  &  &  &  & 30 & 40 & 40 &  &  & 110  & 6 & 660 \\ 
+Subcontratação &  &  &  &  &  &  &  &  &  &  & 10 & 0 \\ 
+% Estoque inicial &  & 50 & 100 & 150 & 200 & 150 & 0 & 0 & 50 &  &  &  \\ 
+Estoque final & 50 & 80 & 110   & 140   &  100 &    &   &   &  &  &  &  \\ 
+Estoque medio &  &   &  &   &   &   &   &   &   &   & 2 &  \\ 
+Atraso &  &   &   &   &   & 30  &  60 & 30    &   &   & 20 &    \\ \hline
+ &  &  &  &  &  &  &  &  &  &  &  &   \\ \hline
+\end{tabular}
+}
+}
+
+\end{frame}
+
+\begin{frame}{Plano agregado de produção: Alternativa 2}
+
+
+\resizebox{12cm}{!}{
+{\scalefont{2}
+\begin{tabular}{|l|ccccccccc|c|c|c|}
+\hline
+Periodo &  & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & Total & Custo unit. & Custo  \\ \hline
+ Prev. Dem.&  & 200 & 200 & 200 & 300 & 400 & 300 & 200 & 200 & 2000 &  &  \\ 
+Turno normal &  & 230 & 230 & 230 & 230 & 230 & 230 & 230 & 230 & 1840 & 4 & 7360 \\ 
+Turno Extra &  &  &  &  & 30 & 40 & 40 &  &  & 110  & 6 & 660 \\ 
+Subcontratação &  &  &  &  &  &  &  &  &  &  & 10 & 0 \\ 
+% Estoque inicial &  & 50 & 100 & 150 & 200 & 150 & 0 & 0 & 50 &  &  &  \\ 
+Estoque final & 50 & 80 & 110  & 140  & 100  &    &   &   &  &  &  &  \\ 
+Estoque medio &  &   &  &   &   &   &   &   &   & 455  & 2 & 910 \\ 
+Atraso &  &   &   &   &   & 30  & 60 &  30  &   &  120 & 20 & 2400   \\ \hline
+ &  &  &  &  &  &  &  &  &  &  &  & 11.330 \\ \hline
+\end{tabular}
+}
+}
+
+\pause
+\begin{itemize}
+\item Este plano pode melhorar?
+\pause
+\item Analise o caso, que evita atrasos.
+\end{itemize}
+\end{frame}
+
+
+
+\begin{frame}{Plano agregado de produção: Alternativa 2}
+
+
+\resizebox{12cm}{!}{
+{\scalefont{2}
+\begin{tabular}{|l|ccccccccc|c|c|c|}
+\hline
+Periodo &  & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & Total & Custo unit. & Custo  \\ \hline
+ Prev. Dem.&  & 200 & 200 & 200 & 300 & 400 & 300 & 200 & 200 & 2000 &  &  \\ 
+Turno normal &  & 230 & 230 & 230 & 230 & 230 & 230 & 230 & 230 & 1840 & 4 & 7360 \\ 
+Turno Extra &  &  &  & 10 & 40 & 40 & 40 &  &  &    & 6 &   \\ 
+Subcontratação &  &  &  &  &  &  &  &  &  &  & 10 &   \\ 
+% Estoque inicial &  & 50 & 100 & 150 & 200 & 150 & 0 & 0 & 50 &  &  &  \\ 
+Estoque final &   &   &    &    &    &    &   &   &  &  &  &  \\ 
+Estoque medio &  &   &  &   &   &   &   &   &   &    & 2 &   \\ 
+Atraso &  &   &   &   &   &    &   &     &   &    & 20 &     \\ \hline
+ &  &  &  &  &  &  &  &  &  &  &  & 11.330 \\ \hline
+\end{tabular}
+}
+}
+
+\vspace{1cm}
+Alternativa 2 sem atraso!
+
+\end{frame}
+
+
+\begin{frame}{Plano agregado de produção: Alternativa 2}
+
+
+\resizebox{12cm}{!}{
+{\scalefont{2}
+\begin{tabular}{|l|ccccccccc|c|c|c|}
+\hline
+Periodo &  & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & Total & Custo unit. & Custo  \\ \hline
+ Prev. Dem.&  & 200 & 200 & 200 & 300 & 400 & 300 & 200 & 200 & 2000 &  &  \\ 
+Turno normal &  & 230 & 230 & 230 & 230 & 230 & 230 & 230 & 230 & 1840 & 4 & 7360 \\ 
+Turno Extra &  &  &  10 & 40 & 40 & 40 & 40 &  &  &    & 6 & 1020   \\ 
+Subcontratação &  &  &  &  &  &  &  &  &  &  & 10 &   \\ 
+% Estoque inicial &  & 50 & 100 & 150 & 200 & 150 & 0 & 0 & 50 &  &  &  \\ 
+Estoque final & 50 & 80 & 120  & 190  & 160  & 30   &   &  30 & 60 &  &  &  \\ 
+Estoque medio &  &   &  &   &   &   &   &   &   & 665  & 2 & 1330 \\ 
+Atraso &  &   &   &   &   &    &   &     &   &    & 20 & 0    \\ \hline
+ &  &  &  &  &  &  &  &  &  &  &  & 9710 \\ \hline
+\end{tabular}
+}
+}
+
+\vspace{1cm}
+Alternativa 2 sem atraso!
+
+\end{frame}
+
+
+
+\begin{frame}{Plano agregado de produção: Alternativa 3 - sem atraso}
+
+
+\resizebox{12cm}{!}{
+{\scalefont{2}
+\begin{tabular}{|l|ccccccccc|c|c|c|}
+\hline
+Periodo &  & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & Total & Custo unit. & Custo  \\ \hline
+ Prev. Dem.&  & 200 & 200 & 200 & 300 & 400 & 300 & 200 & 200 & 2000 &  &  \\ 
+Turno normal &  & 200 & 200 & 200 & 200 & 200 & 200 & 200 & 200 & 1600 & 4 & 7360 \\ 
+Turno Extra &  &  &    &   &   &   &   &  &  &    & 6 &    \\ 
+Subcontratação &  &  &  &  &  &  &  &  &  &  & 10 &   \\ 
+% Estoque inicial &  & 50 & 100 & 150 & 200 & 150 & 0 & 0 & 50 &  &  &  \\ 
+Estoque final & 50   &   &    &    &    &     &   &    &   &  &  &  \\ 
+Estoque medio &  &   &  &   &   &   &   &   &   &    & 2 &   \\ 
+Atraso &  &   &   &   &   &    &   &     &   &    & 20 & 0    \\ \hline
+ &  &  &  &  &  &  &  &  &  &  &  &   \\ \hline
+\end{tabular}
+}
+}
+
+\vspace{1cm}
+Alternativa 2 sem atraso!
+
+\end{frame}
+
+
+
+\begin{frame}{Plano agregado de produção: Alternativa 3 - sem atraso}
+
+
+\resizebox{12cm}{!}{
+{\scalefont{2}
+\begin{tabular}{|l|ccccccccc|c|c|c|}
+\hline
+Periodo &  & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & Total & Custo unit. & Custo  \\ \hline
+ Prev. Dem.&  & 200 & 200 & 200 & 300 & 400 & 300 & 200 & 200 & 2000 &  &  \\ 
+Turno normal &  & 200 & 200 & 200 & 200 & 200 & 200 & 200 & 200 & 1600 & 4 & 6400 \\ 
+Turno Extra &  &  &    &   & 25  &  25 &  25 &  &  &    & 6 & 450   \\ 
+Subcontratação &  &  &  &  & 25  & 175  & 75  &  &  &  & 10 & 2750   \\ 
+% Estoque inicial &  & 50 & 100 & 150 & 200 & 150 & 0 & 0 & 50 &  &  &  \\ 
+Estoque final & 50  &  50 & 50   & 50    &    &     &   &    &   &  &  &  \\ 
+Estoque medio &  &   &  &   &   &   &   &   &   &  175  & 2 & 350  \\ 
+Atraso &  &   &   &   &   &    &   &     &   &    & 20 & 0    \\ \hline
+ &  &  &  &  &  &  &  &  &  &  &  & 9950   \\ \hline
+\end{tabular}
+}
+}
+
+\vspace{1cm}
+Alternativa 2 sem atraso!
+
+\end{frame}
+\end{comment}
+
+\begin{frame}{Capacidade produtiva}
+Gestão da capacidade em operação depende do grau de estocabilidade:
+\begin{itemize}
+\item Alterar a capacidade disponível, ajustando-a às variações da demanda;
+\item Influenciar a demanda para ajustá-la à capacidade disponível;
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Alternativas para influenciar a demanda}
+            \begin{center}
+                \includegraphics[width=4in]{figuras/1-cinema.jpg}
+            \end{center}
+
+\end{frame}
+
+
+\begin{frame}{Alternativas para influenciar a demanda}
+            \begin{center}
+                \includegraphics[width=4in]{figuras/2-restaurantecafe.jpg}
+            \end{center}
+\end{frame}
+
+
+\begin{frame}{Alternativas para influenciar a demanda}
+            \begin{center}
+                \includegraphics[width=4in]{figuras/3-natal.jpeg}
+            \end{center}
+\end{frame}
+
+\begin{frame}{Alternativas para influenciar a demanda}
+            \begin{center}
+                \includegraphics[width=4in]{figuras/4-itau.jpg}
+            \end{center}
+\end{frame}
+
+\begin{frame}{Alternativas para influenciar a demanda}
+            \begin{center}
+                \includegraphics[width=4in]{figuras/5-unimed.jpg}
+            \end{center}
+\end{frame}
+
+\begin{frame}{Alternativas para influenciar a demanda}
+Alternativas para influenciar a demanda
+
+\begin{itemize}
+\item Promoções de preços
+\item Mudança temporária de foco
+\item Comunicação com o cliente
+\item Acesso virtual dos clientes ao serviço
+\item Sistema de reservas
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{Ajustando a capacidade às variações da demanda}
+\begin{itemize}
+\item Overbooking:  vender antecipadamente uma capacidade maior do que a realmente disponível na data de prestação do serviço.
+
+\item Gestão da receita (Yield Management): alocação de capacidade entre os diversos segmentos e definição de nível de overbooking  de forma a maximizar a receita da venda do serviço.
+\begin{itemize}
+\item Exemplo: preço da estadia em uma Hotel
+\end{itemize}
+
+\end{itemize}
+\end{frame}
+
+
+% 
+% \begin{frame}{Capacidade produtiva}
+% Gestão tática de capacidade:
+% 
+% \begin{itemize}
+% \item Manter a produção nivelada e acomodar a flutuação sazonal de demana via estoques.
+% \item Acompanhar a demanda mês a mês, com a produção.
+% \item Tática intermediária de nivelamento por blocos.
+% \end{itemize}
+% 
+% \end{frame}
+
+
+
+\begin{comment}
+\begin{frame}{Capacidade produtiva: gestão tática da capacidade}
+
+
+% Desenvolver um plano de produção de uma família de produtos, para os próximos dois anos com períodos trimestrais. Os dados de estoques, previsão de demanda e custos são os seguintes:
+
+            \begin{center}
+                \includegraphics[width=4in]{../00-figuras/03-Aulas/Alternativa2.jpg}
+            \end{center}
+
+\end{frame}
+
+
+
+\begin{frame}{Capacidade produtiva: gestão tática da capacidade}
+
+
+% Desenvolver um plano de produção de uma família de produtos, para os próximos dois anos com períodos trimestrais. Os dados de estoques, previsão de demanda e custos são os seguintes:
+
+            \begin{center}
+                \includegraphics[width=4in]{../00-figuras/03-Aulas/Alternativa3.jpg}
+            \end{center}
+
+\end{frame}
+
+
+\begin{frame}{Capacidade produtiva: gestão tática da capacidade}
+
+Uma rotina que pode ser seguida para a análise da capacidade de produção é apresentada a seguir:
+
+\begin{enumerate}
+\item Identificar os grupos de recursos a serem incluídos na análise;
+\item Obter o padrão de consumo (horas/unidade) de cada família incluída no plano para cada grupo de recursos;
+\item Multiplicar o padrão de consumo de cada família para cada grupo de recursos pela quantidade de produção própria prevista no plano para cada família;
+\item Consolidar as necessidades de capacidade para cada grupo de recursos.
+\end{enumerate}
+\end{frame}
+
+\begin{frame}{Capacidade produtiva: gestão tática da capacidade}
+
+Vamos admitir que uma unidade de negócios (ou uma fábrica focalizada) trabalhe com quatro famílias de produtos e possua uma linha de montagem e cinco células de fabricação na sua estrutura produtiva. Os dados padrões de consumo, em horas por unidade, para cada família em cada grupo de recursos  e o plano de produção das quatro famílias são:
+
+            \begin{center}
+                \includegraphics[width=4in]{../00-figuras/03-Aulas/Recursos.jpg}
+            \end{center}
+
+
+\end{frame}
+
+
+\begin{frame}{Capacidade produtiva: gestão tática da capacidade}
+
+% Vamos admitir que uma unidade de negócios (ou uma fábrica focalizada) trabalhe com quatro famílias de produtos e possua uma linha de montagem e cinco células de fabricação na sua estrutura produtiva. Os dados padrões de consumo, em horas por unidade, para cada família em cada grupo de recursos  e o plano de produção das quatro famílias são:
+
+            \begin{center}
+                \includegraphics[width=4in]{../00-figuras/03-Aulas/Familia.jpg}
+                
+                
+                \includegraphics[width=4in]{../00-figuras/03-Aulas/Recursos-por-familia.jpg}
+            \end{center}
+
+
+\end{frame}
+
+\begin{frame}{Plano-mestre da produção}
+Plano-mestre de produção (PMP)
+\begin{itemize}
+\item Conexão entre o planejamento estratégico de longo prazo (plano de produção) e o as atividades operacionais.
+\item Desmembra o plano de produção em planos específicos de produtos acabados.
+\item PMP \textit{vesus} Plano mestre
+\item Obtido por um processo de tentativa e erro.
+\item Informações usadas
+\begin{itemize}
+\item Pedidos em carteira.
+\item Previsões
+\end{itemize}
+\end{itemize}
+
+\end{frame}
+
+
+\begin{frame}{Plano-mestre da produção}
+
+
+\resizebox{12cm}{!}{
+{\scalefont{2}
+\begin{tabular}{|lccccccc|}
+\hline
+Periodo &  &13 & 14 & 15 & 16 & 17 & 18   \\ \hline
+Demanda prevista &       & 400 & 450 & 600 & 600 & 550 & 600 \\
+% Recebimento programado & & 360 &    &     &     &    & \\
+% Estoque projetado &120& &     &     &     &    &\\
+% Necessidade líquida & &    &     &  &   &    & \\ 
+PMP & & &    &     &     &    &\\ \hline
+\end{tabular}
+}
+}
+
+Questões importantes:
+\begin{itemize}
+\item Existe algum recebimento programado?
+\item Existia alguma unidade em estoque?
+\item Qual é a necessidade líquida de produção considerando o recebimento programado e o estoque armazenado no último período?
+\end{itemize}
+\end{frame}
+
+
+
+\begin{frame}{Plano-mestre da produção}
+
+
+\resizebox{12cm}{!}{
+{\scalefont{2}
+\begin{tabular}{|lccccccc|}
+\hline
+Periodo &  &13 & 14 & 15 & 16 & 17 & 18   \\ \hline
+Demanda prevista &       & 400 & 450 & 600 & 600 & 550 & 600 \\
+Recebimento programado & & 360 & -   &  -   &  -   & -   & -\\
+Estoque projetado &120& &     &     &     &    &\\
+Necessidade líquida & &    &     &  &   &    & \\ 
+PMP &       &  &   &   &   &   &  \\ \hline
+\end{tabular}
+}
+}
+Observação: 
+\begin{itemize}
+\item Estoque projetado se refere as unidades estocadas no final período.
+\item Recebimento programado: recebimento programado para o início do período. 
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Plano-mestre da produção}
+
+
+\resizebox{12cm}{!}{
+{\scalefont{2}
+\begin{tabular}{|lccccccc|}
+\hline
+Periodo &  &13 & 14 & 15 & 16 & 17 & 18   \\ \hline
+Demanda prevista &       & 400 & 450 & 600 & 600 & 550 & 600 \\
+Recebimento programado & & 360 & -   &  -   &  -   & -   & -\\
+Estoque projetado &120& &     &     &     &    &\\
+Necessidade líquida & &    &     &  &   &    & \\ 
+PMP & & &    &     &     &    &\\ \hline
+\end{tabular}
+}
+}
+\begin{itemize}
+\item 
+Qual a necessidade líquida para o período 13 (primeiro periodo de planejamento)?
+\item Qual o estoque projetado para este período?
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{Plano-mestre da produção}
+
+
+\resizebox{12cm}{!}{
+{\scalefont{2}
+\begin{tabular}{|lccccccc|}
+\hline
+Periodo &  &13 & 14 & 15 & 16 & 17 & 18   \\ \hline
+Demanda prevista &       & 400 & 450 & 600 & 600 & 550 & 600 \\
+Recebimento programado & & 360 & -   &  -   &  -   & -   & -\\
+Estoque projetado &120&   &     &     &     &    &\\
+Necessidade líquida & &  0  &     &   &    &     &   \\ 
+PMP & & &    &     &     &    &\\ \hline
+\end{tabular}
+}
+}
+\end{frame}
+
+
+\begin{frame}{Plano-mestre da produção}
+
+
+\resizebox{12cm}{!}{
+{\scalefont{2}
+\begin{tabular}{|lccccccc|}
+\hline
+Periodo &  &13 & 14 & 15 & 16 & 17 & 18   \\ \hline
+Demanda prevista &       & 400 & 450 & 600 & 600 & 550 & 600 \\
+Recebimento programado & & 360 & -   &  -   &  -   & -   & -\\
+Estoque projetado &120&  80 &     &     &     &    &\\
+Necessidade líquida & & 0   &     &   &    &     &   \\ 
+PMP & & &    &     &     &    &\\ \hline
+\end{tabular}
+}
+}
+\end{frame}
+
+
+\begin{frame}{Plano-mestre da produção}
+
+
+\resizebox{12cm}{!}{
+{\scalefont{2}
+\begin{tabular}{|lccccccc|}
+\hline
+Periodo &  &13 & 14 & 15 & 16 & 17 & 18   \\ \hline
+Demanda prevista &       & 400 & 450 & 600 & 600 & 550 & 600 \\
+Recebimento programado & & 360 & -   &  -   &  -   & -   & -\\
+Estoque projetado &120&  80 &  -   &      &     &    &\\
+Necessidade líquida & & 0   &  370   &   &    &     &   \\ 
+PMP & & &    &     &     &    &\\ \hline
+\end{tabular}
+}
+}
+\end{frame}
+
+
+\begin{frame}{Plano-mestre da produção}
+
+
+\resizebox{12cm}{!}{
+{\scalefont{2}
+\begin{tabular}{|lccccccc|}
+\hline
+Periodo &  &13 & 14 & 15 & 16 & 17 & 18   \\ \hline
+Demanda prevista &       & 400 & 450 & 600 & 600 & 550 & 600 \\
+Recebimento programado & & 360 & -   &  -   &  -   & -   & -\\
+Estoque projetado &120&  80 &   -   &  -   &  -   &  -  &\\
+Necessidade líquida & & 0   &  370   & 600 & 600  & 550   & 600 \\ 
+PMP & & &    &     &     &    &\\ \hline
+\end{tabular}
+}
+}
+\end{frame}
+
+
+% 
+% \begin{frame}{Capacidade produtiva: gestão tática da capacidade}
+
+% 
+% 
+% \end{frame}
+% 
+% 
+% \begin{frame}{Capacidade produtiva: gestão tática da capacidade}
+
+% 
+% 
+% \end{frame}
+% 
+% 
+% \begin{frame}{Capacidade produtiva: gestão tática da capacidade}
+
+% 
+% 
+% \end{frame}
+% 
+% \begin{frame}{Capacidade produtiva: gestão tática da capacidade}
+
+% 
+% 
+% \end{frame}
+
+% 
+% 
+% \begin{frame}{Previsão de demanda: Etapas do modelo de previsão}
+% % \begin{block}{Agregação dos dados}
+% %  Previsões agregadas são muita mais precisas, percentualmente, que a previsão desagregada do mesmo fenômeno.
+% % 
+% % \end{block}
+% %         &
+% %         \begin{minipage}{160pt}
+%             \begin{center}
+%                 \includegraphics[width=3in]{../00-figuras/Demanda/etapas.jpg}
+%             \end{center}
+% %         \end{minipage}
+% %     \end{tabular}
+% \end{frame}
+% 
+% \begin{frame}{Atividade}
+% 
+% Atividade!!
+% \end{frame}
+ \end{comment}
+
+\begin{frame}{Bibliografia}
+\begin{itemize}
+\item
+   CORRÊA, H. L.; CORRÊA, C. A. Administração da produção e operações. 2. ed. São Paulo: Atlas, 2011.
+   \item SLACK, N.; CHAMBERS, S.; JOHNSTON, R. Administração da produção. 2. ed. São Paulo: Atlas, 2002.
+%    \item PEINADO, Jurandir; GRAEML, Alexandre R. Administração da produção: operações
+% industriais e de serviços. Curitiba : UnicenP, 2007.
+   \item TUBINO, D. F. Planejamento e controle da produção: teoria e prática. São Paulo: Atlas, 2008
+
+\end{itemize}
+\end{frame}
+\end{document}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+

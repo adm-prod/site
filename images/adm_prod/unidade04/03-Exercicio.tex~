@@ -1,0 +1,157 @@
+\documentclass[a4paper, 12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{algorithm}
+\usepackage{algorithmic}
+\usepackage{caption}
+\usepackage{color}
+\usepackage{enumerate}
+\usepackage{graphicx}
+\usepackage{lineno}
+\usepackage{natbib}
+\usepackage{pdflscape}
+\usepackage{scalefnt}
+%\usepackage{subfigure}
+%\usepackage{subcaption}
+\usepackage{verbatim}
+\usepackage{threeparttable}
+%\usepackage[alf]{abntcite}
+\usepackage{subfigure} 
+\usepackage{pgf,tikz}
+\usetikzlibrary{backgrounds}
+\usetikzlibrary{shapes}
+\usetikzlibrary{decorations.pathreplacing}
+\usepackage{multirow} 
+
+
+%opening
+\title{\textbf{Administração da produção II} \\ Atividade avaliativa: 5 pontos}
+\author{}
+
+\begin{document}
+\tikzstyle{hub}=[circle,regular polygon sides=3, inner
+sep=0pt, minimum size=10pt,draw]
+\tikzstyle{link3}=[line width=8pt]
+\date{28 de abril de 2016}
+
+\maketitle
+\paragraph{Alunos}: 
+
+\underline{\hspace{8cm}}
+
+\underline{\hspace{8cm}} 
+
+\underline{\hspace{8cm}}
+
+\section{Exercícios}
+
+\begin{enumerate}
+\item Considere o perfil de demanda prevista mensal para a família de produtos FP1, dado pela tabela abaixo:
+
+\begin{center}
+\begin{tabular}{cc}
+\hline
+\textbf{Mês} & \textbf{Demanda prevista} \\ \hline
+Jan & 520 \\
+Fev & 320 \\
+Mar & 156 \\
+Abr & 200 \\
+Mai & 460 \\
+Jun & 650 \\
+Jul & 860 \\
+Ago & 910 \\
+Set & 980 \\
+Out & 820 \\
+Nov & 650 \\
+Dez & 590 \\ \hline
+\end{tabular}
+\end{center}
+
+Considere também que cada produto da família em análise consuma (tempo-padrão) 20 minutos do recurso crítico RC. O RC tem índices de utilização de 90\% e de eficiência de 95\%. Preencha a tabela abaixo com a capacidade total teórica ( ou disponível)  necessária em  horas  para a produção dos produtos da família FP1 para as seguintes políticas de produção.
+
+
+\begin{enumerate}[a)]
+\item Política de acompanhamento da demanda com a produção (lote a lote)
+\item Política de nivelamento da produção
+\item Política de nivelamento da produção por blocos trimenstrais
+\end{enumerate}
+
+
+
+\begin{center}
+\begin{tabular}{ccccc}
+\hline
+\multirow{2}{*}{\textbf{Mês}} & \multirow{2}{*}{\textbf{Demanda prevista}} & \multicolumn{3}{c}{\textbf{Capacidade total teórica (em horas)}}  \\ \cline{3-5}
+  &   & \textbf{Política a}  & \textbf{Política b}  & \textbf{Política c} \\ \hline
+Jan & 520 & \\
+Fev & 320 \\
+Mar & 156 \\
+Abr & 200 \\
+Mai & 460 \\
+Jun & 650 \\
+Jul & 850 \\
+Ago & 910 \\
+Set & 980 \\
+Out & 820 \\
+Nov & 660 \\
+Dez & 590 \\ \hline
+\end{tabular}
+\end{center}
+
+\item  A fábrica de bocais de mangueira Mangue gostaria de determinar suas necessidades de capacidade para os próximos quatro anos. Atualmente, duas linhas de produção estão operando para bocais de plástico e de bronze. Três tipos (dimensões) de bocal estão disponíveis para os produtos de plástico e de bronze (10cm, 13cm e 16cm). A demanda prevista para os próximos quatros anos é conforme a tabela abaixo:
+
+\begin{center}
+\begin{tabular}{lcccc}
+\hline
+& \multicolumn{4}{c}{Demanda Anual (Milhares)} \\ \cline{2-5}
+& Ano 1  & Ano 2 & Ano 3 & Ano 4 \\ \hline
+Plástico 10 & 32 & 44 & 55 & 56 \\
+Plástico 13 &  15  & 16 & 17 & 18 \\
+Plástico 16 & 50& 55& 64 & 67 \\ \\
+Bronze 10 & 7 & 8 & 9 & 10 \\
+Bronze 13 & 3 & 4 & 5 & 6 \\
+Bronze 16 & 11 & 12 & 15 & 18 \\ \\ \hline
+\end{tabular}
+\end{center}
+
+Tanto a linha de produção de bronze quanto a linha de produção de plástico podem produzir quaisquer tamanhos de bocais. Cada máquina de bocais de bronze tem capacidade real para produzir 12.000 bocais por ano e requer dois operadores. A máquina de injeção de plásticos que faz os bocais de plásticos requer quatro operadores e tem capacidade real para produzir 200.000 bocais por ano. Três máquinas de bocais de bronze, uma máquina de injeção de plástico e 10 operadores estão hoje trabalhando.
+
+\begin{enumerate}[a)]
+\item Existe necessidade de incremento da capacidade para os próximos quatro anos? 
+\item Suponha que o setor de marketing de Mangue decida-se por fazer uma grande campanha para venda de bocais de bronze, que são mais caros, mas duram bem mais. A nova previsão do marketing, considerando a promoção, se dá conforme a tabela abaixo:
+
+
+\begin{center}
+\begin{tabular}{lcccc}
+\hline
+& \multicolumn{4}{c}{Demanda Anual (Milhares)} \\ \cline{2-5}
+& Ano 1  & Ano 2 & Ano 3 & Ano 4 \\ \hline
+Plástico 10 & 32 & 44 & 55 & 56 \\
+Plástico 13 &  15  & 16 & 17 & 18 \\
+Plástico 16 & 50& 55& 64 & 67 \\ \\
+Bronze 10 & 11 & 15 & 18 & 23 \\
+Bronze 13 & 6 & 5 & 6 & 9 \\
+Bronze 16 & 15 & 16 & 17 & 20 \\ \\ \hline
+\end{tabular}
+\end{center}
+
+Quais as implicações, para a capacidade produtiva, da campanha de marketing?
+
+% \item Em antecipação à campanha, a Mangue compra uma nova máquina pra bocais de bronze. Será suficiente para cobrir as novas necessidades?
+\item Suponha que os funcionários da Mangue sejam polivalentes, ou seja, podem operar qualquer um dos dois tipos de máquina.  Em antecipação à campanha, a Mangue adquiriu duas máquinas de bocais de bronze. Quais as implicações da compra das duas novas máquinas para as necessidades de mão-de-obra?
+
+\item Considerando as suposições do item anterior, determine a necessidade de aquisição de máquinas e de mão de obra caso a eficiência do processo de produção de bocais de bronze fosse aumentado de 90\% para 99\%. 
+
+
+\end{enumerate}
+
+ \end{enumerate}
+
+
+ 
+
+
+
+\end{document}
+

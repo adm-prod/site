@@ -1,0 +1,1579 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Apresentação da Qualificação de Mestrado
+%% Copyright 2010 Elisangela Martins de Sá
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[9pt]{beamer}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Configurando o idioma e os acentos
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[english]{babel}
+%\usepackage[brazil]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Configurando as Fontes
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{times} % Usa fonte Times New Roman
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Configurando Símbolos Matemáticos e outros símbolos
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{amsmath}
+
+
+\usepackage{verbatim}  % permite a inserção de comentários 
+\usepackage{ragged2e} % Utilizado para justificar o texto no Beamer (\justifying)
+\usepackage{beamerprosper}
+\usepackage{algorithmic}
+\usepackage{color, colortbl}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Referências bibliográficas e afins
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{natbib}
+\usepackage{subfigure} 
+\usepackage{pgf,tikz}
+\usetikzlibrary{backgrounds}
+\usetikzlibrary{shapes}
+\usetikzlibrary{decorations.pathreplacing}
+\usepackage{scalefnt}
+
+
+\def\newblock{}
+
+%****************************************************************
+% C O N F I G U R A Ç Õ E S  D O  B E A M E R
+%****************************************************************
+
+\mode<presentation>
+{
+    \usetheme{Madrid}
+    \setbeamercovered{transparent}
+    \setbeamercolor{alerted text}{fg=blue} 
+    \usepackage{pgf,pgfarrows,pgfnodes,pgfautomata,pgfheaps,pgfshade}
+
+    % Configurando o caption da tabelas e figuras apenas no beamer
+    \setbeamertemplate{caption}[numbered]
+    \setbeamerfont{caption}{size=\tiny}
+}
+
+
+%****************************************************************
+% CONFIGURANDO O PRIMEIRO SLIDE 
+%****************************************************************
+
+
+\title[]{Administração da produção II \\ Previsão de demanda}
+
+\author[Elisangela Martins de Sá]{Profª: Elisangela Martins de Sá}
+
+
+
+\institute[CEFET] 
+{CEFET MG \\ }
+
+\date[1º semestre, 2017] 
+{1º semestre, 2017}
+
+
+\pgfdeclareimage[height=0.9cm]{university-logo}{../00-figuras/cefet-logo.jpeg}
+\logo{\pgfuseimage{university-logo}}
+
+\begin{document}
+
+
+\pdfpkresolution=1200
+\pdfimageresolution=1200
+
+\justifying
+
+\begin{frame}
+    \titlepage
+\end{frame}
+
+
+\begin{frame}{Previsão de demanda: planejamento e inércia decisória*}
+
+    \textbf{\Large Previsão de demanda}\newline \newline
+    \begin{tabular}{cc}
+        \begin{minipage}{180pt}
+            \begin{block}{Definição}
+                Previsões são estimativas de como  o mercado demandante  vai se comportar no futuro.
+            \end{block}
+
+            \begin{itemize}
+                \item A necessidade de previsões na administração da produção deriva diretamente da inércia decisória.
+                \item             Para que um gestor de operações tome boas decisões, é necessário que ele tenha uma visão de futuro, para que a decisão tomada no presente seja adequada ao futuro.
+
+            \end{itemize}
+
+
+        \end{minipage}
+        &
+        \begin{minipage}{160pt}
+            \begin{center}
+                \includegraphics[width=2in]{../00-figuras/02-Previsao/target.jpeg}
+            \end{center}
+        \end{minipage}
+    \end{tabular}
+\end{frame}
+
+
+\begin{frame}{Previsão de demanda: Etapas do modelo de previsão}
+    \begin{center}
+        \includegraphics[width=3in]{../00-figuras/02-Previsao/etapas.jpeg}
+    \end{center}
+\end{frame}
+
+\begin{frame}{Previsão de demanda: Principais erros}
+    \begin{tabular}{cc}
+        \begin{minipage}{180pt}
+
+            \begin{block}{Erro 1}
+                Confundir previsões com metas e, um erro subsequente, considerar as metas como se fossem previsões.
+            \end{block}
+
+        \end{minipage}
+        &
+        \begin{minipage}{160pt}
+            \begin{center}
+                \includegraphics[width=2in]{../00-figuras/02-Previsao/target.jpeg}
+            \end{center}
+        \end{minipage}
+    \end{tabular}
+\end{frame}
+
+
+\begin{frame}{Previsão de demanda: Principais erros}
+    \begin{tabular}{cc}
+        \begin{minipage}{180pt}
+
+            \begin{block}{Erro 2}
+                Gastar tempo e esforço discutindo se se "acerta" ou "erra" nas previsões, quando o mais  relevante é discutir "o quanto" se está errando e as maneiras de alterar processos envolvidos, de forma a reduzir estes "erros".    
+            \end{block}
+
+        \end{minipage}
+        &
+        \begin{minipage}{160pt}
+            \begin{center}
+                \includegraphics[width=2in]{../00-figuras/02-Previsao/target.jpeg}
+            \end{center}
+        \end{minipage}
+    \end{tabular}
+\end{frame}
+
+
+\begin{frame}{Previsão de demanda: Principais erros}
+    \begin{tabular}{cc}
+        \begin{minipage}{180pt}
+
+            \begin{block}{Erro 3}
+                Levar em conta, nas previsões que servirão para apoiar decisões em operações, um número só. Previsões para operações, devem sempre ser consideradas com dois "números": a previsão em si e uma estimativa do erro desta previsão.
+            \end{block}
+
+        \end{minipage}
+        &
+        \begin{minipage}{160pt}
+            \begin{center}
+                \includegraphics[width=2in]{../00-figuras/02-Previsao/target.jpeg}
+            \end{center}
+        \end{minipage}
+    \end{tabular}
+\end{frame}
+
+
+\begin{frame}{Previsão de demanda: Principais erros}
+    \begin{tabular}{cc}
+        \begin{minipage}{180pt}
+
+            \begin{block}{Erro 4}
+                Desistir ou não se esforçar o suficiente para melhorar os processos de previsão por não se conseguir "acertar" as previsões quando,
+                em operações, não se necessita ter previsões perfeitas, mas previsões consistentemente melhores que as da concorrência.
+            \end{block}
+
+        \end{minipage}
+        &
+        \begin{minipage}{160pt}
+            \begin{center}
+                \includegraphics[width=2in]{../00-figuras/02-Previsao/target.jpeg}
+            \end{center}
+        \end{minipage}
+    \end{tabular}
+\end{frame}
+
+
+
+\begin{frame}{Previsão de demanda: etapas}
+    \begin{center}
+        \includegraphics[width=3in]{../00-figuras/02-Previsao/etapas.jpeg}
+    \end{center}
+\end{frame}
+
+
+
+\begin{frame}{Previsão de demanda: Reportagem EM}
+    Exercício baseado na reportagem do Estado de Minas:
+
+    \begin{itemize}
+        \item Identifique as informações usadas na previsão da demanda de carros para os próximos meses.
+    \end{itemize}
+
+\end{frame}
+
+\begin{frame}{Previsão de demanda: Reportagem EM}
+
+    \begin{center}
+        \includegraphics[width=4in]{../00-figuras/02-Previsao/Recorte1.jpeg}
+    \end{center}
+
+\end{frame}
+
+
+
+\begin{frame}{Previsão de demanda: Reportagem EM}
+    \begin{block}{Trechos da reportagem}
+
+        O dado corrobora a visão de especialistas de que o problema do setor não está na oferta de crédito, mas na demanda. “A intenção de compra de bens duráveis em geral depende não só de crédito, mas também de um ambiente econômico favorável, além de uma situação financeira mais confortável”, diz a economista Viviane Seda, responsável pela sondagem da FGV.
+    \end{block}
+
+\end{frame}
+
+
+
+\begin{frame}{Previsão de demanda: Reportagem EM}
+    \begin{block}{Trechos da reportagem}
+        O argumento é contrário ao que as montadoras têm defendido, de que o crédito está travado as vendas. Elas pleiteiam condições mais favoráveis para destravar os financiamentos ao consumidor, por meio da redução do valor dado como entrada e da criação de um fundo garantidor de crédito, com aportes das instituições financeiras. O governo também pretende flexibilizar a exigência de provisão dos bancos financiadores.
+    \end{block}
+
+\end{frame}
+
+
+
+
+
+
+
+\begin{frame}{Previsão de demanda: Reportagem EM}
+    \begin{block}{Trechos da reportagem}
+        Ao longo de 2013, segundo Viviane, o consumidor ficou mais cauteloso, uma reação a fatores como alta dos juros, incerteza quanto ao futuro da economia e do emprego, aceleração da inflação e maior endividamento. Tal comportamento vem se estendendo até este ano, com o adicional da recomposição parcial do Imposto sobre Produtos Industrializados (IPI), que deixou os carros mais caros.
+    \end{block}
+
+\end{frame}
+
+
+
+\begin{frame}{Previsão de demanda: Reportagem EM}
+    \begin{block}{Trechos da reportagem}
+        O presidente da ANFAVEA, Luiz Moan, estima que pelo menos metade dos pedidos de financiamento sejam rejeitados pelos bancos. “Sem dúvida o endividamento prejudica a concessão de crédito, mas acreditamos que o mercado está mais complicado devido às restrições no crédito”. \textbf{Ele} prevê \textbf{alta} de 1,4\% na produção de veículos em 2014, e de \textbf{1,1\% nas vendas}. \textbf{A Rosenberg} prevê \textbf{queda} de 2\% na produção e \textbf{de 3\% nas vendas}, enquanto \textbf{a Tendência} projeta recuo de 3,8\% na produção e \textbf{estabilidade nas vendas}.
+    \end{block}
+
+    \begin{itemize}
+        \item ANFAVEA: Associação Nacional dos Fabricantes de Veículos Automotores
+        \item Rosenberg: consultoria econômica
+        \item Tendências: consultoria econômica
+    \end{itemize}
+\end{frame}
+
+
+\begin{frame}{Previsão de demanda: Reportagem EM}
+    Questão:
+
+    \begin{itemize}
+        \item Identifique as informações usadas na previsão da demanda de carros para os próximos meses.
+    \end{itemize}
+
+\end{frame}
+
+
+
+\begin{frame}{Previsão de demanda: Etapas do modelo de previsão}
+    \begin{center}
+        \includegraphics[width=3in]{../00-figuras/02-Previsao/etapas.jpeg}
+    \end{center}
+\end{frame}
+
+\begin{frame}{Previsão de demanda: Lei dos grandes números}
+    \begin{itemize}
+        \item Como diferentes decisões tem inércias decisória diferentes, previsões de diferentes horizontes são necessárias para um adequado suporte à decisão.
+        \item Decisões de inércia pequena $\to$ envolvem níveis mais moderados de recursos. 
+            \begin{itemize}
+                \item Planejamento da capacidade no curto prazo
+            \end{itemize}
+        \item Decisões de inércia maior $\to$ envolvem níveis mais elevados de recursos. 
+            \begin{itemize}
+                \item Planejamento da capacidade no longo prazo
+            \end{itemize}
+    \end{itemize}
+    \begin{center}
+        \includegraphics[width=3in]{../00-figuras/02-Previsao/inercia.jpeg}
+    \end{center}
+\end{frame}
+
+
+
+\begin{frame}{Previsão de demanda: Lei dos grandes números}
+    \begin{block}{Horizonte \textit{versus} incertezas}
+        Previsões  de longo prazo, em geral, envolvem mais recursos financeiros e são feitas sob condições de maior incerteza.
+
+    \end{block}
+    \begin{center}
+        \includegraphics[width=4in]{../00-figuras/02-Previsao/horizonte1.jpeg}
+    \end{center}
+\end{frame}
+
+
+
+\begin{frame}{Previsão de demanda: Lei dos grandes números}
+    \begin{block}{Previsões agregadas}
+        Previsões agregadas são muita mais precisas, percentualmente, que a previsão desagregada do mesmo fenômeno.
+    \end{block}
+    \begin{center}
+        \includegraphics[width=3.5in]{../00-figuras/02-Previsao/Mc.jpeg}
+    \end{center}
+\end{frame}
+
+\begin{frame}{Previsão de demanda: lei dos grandes números}
+    \begin{block}{Horizonte \textit{versus} incertezas}
+        Decisões de longo prazo tendem a não requerer alto nível de desagregação.
+    \end{block}
+    \begin{center}
+        \includegraphics[width=4in]{../00-figuras/02-Previsao/horizonte.jpeg}
+    \end{center}
+\end{frame}
+
+
+
+
+\begin{frame}{Previsão de demanda: Características das técnicas de previsão}
+    Características das principais técnicas de previsão:
+    \begin{itemize}
+        \item As previsões não são perfeitas, pois não é capaz de prever todas as variações aleatórias que ocorrerão.
+        \item A acuracidade das previsões diminui com o aumento do período de tempo.
+        \item A previsão para grupos de produto é mais precisa do que para os produtos individualmente.
+        \item O grau de agregação varia de acordo com o horizonte de planejamento.
+    \end{itemize}
+
+\end{frame}
+
+
+\begin{frame}{Previsão de demanda: Etapas do modelo de previsão}
+    \begin{center}
+        \includegraphics[width=3in]{../00-figuras/02-Previsao/etapas.jpeg}
+    \end{center}
+\end{frame}
+
+
+\begin{frame}{Previsão de demanda: Informações para previsão}
+    As principais informações para previsão de demanda são as seguintes:
+    \begin{itemize}
+        \item Dados históricos de vendas, potencial de compra do mercardo, vendas perdidas e etc.
+        \item Informações que expliquem comportamento atípicos da demanda
+        \item Informações sobre variáveis correlacionadas as vendas
+        \item Conhecimento da futura conjectura econômica
+        \item Informações sobre atuação dos concorrentes
+        \item Informações sobre decisões da área comercial
+    \end{itemize}
+\end{frame}
+
+
+\begin{frame}{Previsão de demanda: Etapas do modelo de previsão}
+    \begin{center}
+        \includegraphics[width=3in]{../00-figuras/02-Previsao/etapas.jpeg}
+    \end{center}
+\end{frame}
+
+
+\begin{frame}{Previsão de demanda: Classificação dos métodos de previsão}
+
+    \begin{block}{Métodos quantitativos}
+        As técnicas quantitativas envolvem a análise numérica dos dados passados, isentando-se de opiniões pessoais ou palpites. Empregam-se modelos matemáticos para projetar a demanda futura. Podem ser subdivididas em dois grandes grupos: as técnicas baseadas em séries temporais, e as técnicas baseadas em correlações.
+    \end{block}
+
+
+    \begin{block}{Métodos qualitativos}
+        As técnicas qualitativas privilegiam principalmente dados subjetivos, os quais são difíceis de representar numericamente. Estão baseadas na opinião e no julgamento de pessoas chaves, especialistas nos produtos ou nos mercados onde atuam estes produtos;
+    \end{block}
+
+\end{frame}
+
+\begin{frame}{Previsão de demanda: Previsão de curto prazo}
+    Previsão de vendas de curto prazo
+    \begin{itemize}
+        \item Aceita-se a hipótese de que o futuro seja uma "continuação" do passado.
+        \item A técnica geralmente utilizada é a de projeção: correlação entre as vendas passadas e o tempo.
+            \begin{itemize}
+                \item Séries temporais simples
+            \end{itemize}
+    \end{itemize}
+
+
+    \begin{center}
+        \begin{tabular}{cc} \hline
+            Dia & Demanda \\ \hline
+            Dom & 40 \\ 
+            Seg & 10\\
+            Ter & 11 \\
+           Quar & 10 \\
+           Qui  & 20 \\
+            Sex & 40\\
+           Sáb & 40\\
+            Dom & 41 \\ \hline
+            Seg &  \\ \hline
+        \end{tabular}
+    \end{center}
+
+\end{frame}
+
+
+\begin{frame}{Previsão de demanda: Previsão de médio prazo}
+    Previsão de vendas de médio prazo
+    \begin{itemize}
+        \item Aceita-se a hipótese de que as relações que haviam no passado, entre as vendas e outras variáveis, continuam a valer no futuro.
+            \begin{itemize}
+                \item modelos causais 
+            \end{itemize}
+
+            Exemplo de um modelo causal
+
+            $$D =  -0,13 + 0,91 \times \textrm{PIBcc} - 0,22 \times  \textrm{PreçoDE} + 0,59 \times  \textrm{Pop} $$
+            \begin{itemize}
+                \item D: Demanda por cimento
+                \item PIBcc: PIC da construção civil
+                \item PreçoDE: Preço defasado
+                \item Pop: População
+            \end{itemize}
+    \end{itemize}
+
+\end{frame}
+
+
+
+\begin{frame}{Previsão de demanda: Previsão de longo prazo}
+    Previsão de vendas de longo prazo
+
+    \begin{itemize}
+        \item Adota-se a hipótese de que o futuro não guarda relação direta com o passado, pelo menos não uma relação que possa ser modelada matematicamente.
+            \begin{itemize}
+                \item A previsão, em geral, usando técnicas qualitativas
+                    \begin{itemize}
+                        \item Júri de executivos
+                        \item Método Delphi
+                        \item Força de vendas
+                        \item Pesquisa de mercado
+                        \item Analogia histórica
+                    \end{itemize}
+                \item Pode-se usar modelos causais
+            \end{itemize}
+    \end{itemize}
+\end{frame}
+
+
+\begin{frame}{Previsão de demanda: Abordagem quantitativa}
+
+    \begin{block}{Previsão baseada em séries temporais}
+        Série Temporal é um conjunto de observações sobre uma variável, ordenado no tempo, e
+        registrado em períodos regulares. 
+    \end{block}
+
+    \begin{center}
+        \begin{tabular}{cc} \hline
+            Dia & Demanda \\ \hline
+            Seg & 10\\
+            Ter & 11 \\
+           Quar & 10 \\
+           Qui  & 20 \\
+            Sex & 40\\
+           Sáb & 41\\
+            Dom & 40 \\ \hline
+        \end{tabular}
+    \end{center}
+\end{frame}
+
+
+\begin{frame}{Previsão de demanda: abordagem quantitativa}
+
+    Técnicas baseadas em séries temporais partem do princípio de que a demanda futura será uma projeção dos seus valores passados, não sofrendo influência de outras variáveis.
+
+    Um série temporal de dados em geral tem quatro principais componentes
+    \begin{itemize}
+        \item Tendência:  consiste num movimento gradual de longo prazo, direcionando os dados.
+        \item Ciclicidade (sazonalidade): refere-se a variações cíclicas de curto prazo, relacionadas ao fator tempo.
+        \item Aleatoriedade (variações randômicas): são variações normais difíceis de se determinar e cuja completa remoção é inviável.
+        \item Variações irregulares:  são alterações atípicas na demanda.
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Previsão de demanda: Reportagem EM}
+
+    Previsão no curto prazo: Para os seguintes tipos de produtos identifique se poderia existir, tendência, sazonalidade, variações aleatórias e variações irregulares. 
+
+    \begin{itemize}
+        \item Cerveja skol comum
+        \item Cerveja skol beats
+        \item Um modelo de celular
+        \item Consumo de carro 
+        \item Consumo de combustível
+    \end{itemize}
+
+\end{frame}
+
+
+\begin{frame}{Previsão de demanda: Histórico de demanda}
+    \begin{center}
+        \includegraphics[width=5in]{../00-figuras/02-Previsao/historico.jpeg}
+    \end{center}
+\end{frame}
+
+\begin{frame}{Previsão de demanda: Demandas estáveis}
+    \begin{itemize}
+        \item 
+            A média móvel  usa dados de um número predeterminado de períodos ($n$), normalmente os mais recentes, para gerar sua previsão. A cada novo período de previsão se substitui o dado mais antigo pelo mais recente.
+
+        \item Assume-se que a demanda encontra-se relativamente estável flutuando aleatoriamente em torno de um patamar que se deseja estimar.
+    \end{itemize}
+
+    $$Mm_n = \frac{\sum \textrm{Demanda dos $n$ períodos prévios}}{n}$$ ou
+
+    $$ Mm_n = \frac{\sum_{i=1}^n D_i}{n} $$
+
+    \begin{itemize}
+        \item $ Mm_n$ = média móvel de $n$ periodos
+        \item $D_i:$ demanda ocorrida no período $i$
+        \item $n:$ quantidade de períodos mais recentes sendo considerados
+    \end{itemize}
+
+\end{frame}
+
+
+
+\begin{frame}{Previsão de demanda: Demandas estáveis}
+
+    Exemplo:
+    \begin{center}
+        \begin{tabular}{cc} \hline
+            Dia & Demanda \\ \hline
+            Seg & 10\\
+            Ter & 11 \\
+           Quar & 10 \\
+           Qui  & 13 \\
+            Sex & 12\\
+           Sáb & 10\\
+            Dom &11 \\ \hline
+        \end{tabular}
+    \end{center}
+    $$Mm_1 = \frac{11 }{1} = 11$$
+    $$Mm_4 = \frac{11 + 10 + 12 + 13}{4} = 11,5$$
+    $$Mm_7 = \frac{11 + 10 + 12 + 13 + 10 + 11 + 10}{7} = 11$$
+\end{frame}
+
+
+
+
+\begin{frame}{Previsão de demanda: Demandas estáveis}
+    \begin{itemize}
+        \item Média móvel com $n = 1,$ histórico pequeno, mas a previsão é muito suscetível a variações aleatórias recentes.
+        \item As observações antigas têm o mesmo peso que as atuais, isto é 1/n.
+        \item  Exige a manutenção de um número muito grande de dados, principalmente, se $n$ for grande. 
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Previsão de demanda: Demandas estáveis}
+    A média móvel ponderada($MP_n$): atribui pesos aos dados usados na média.
+
+    $$Mp_n = \frac{\sum \textrm{Demanda dos $n$ períodos prévios ponderada}}{\sum dos \ pesos}$$
+
+    ou
+
+    $$ Mp_n = \frac{\sum_{i=1}^n w_i D_i}{\sum_{i=1}^n w_i} $$
+
+
+
+    \begin{itemize}
+        \item $ Mn_n$ = média móvel de $n$ períodos
+        \item $D_i:$ demanda ocorrida no período $i$
+        \item $w_i:$ peso associado a demanda ocorrida no período $i$
+        \item $n:$ quantidade de períodos mais recentes sendo considerados
+    \end{itemize}
+\end{frame}
+
+
+\begin{frame}{Previsão de demanda: Demandas estáveis}
+
+    Exemplo:
+    \begin{center}
+        \begin{tabular}{cc} \hline
+            Dia & Demanda \\ \hline
+            Seg & 10\\
+            Ter & 11 \\
+           Quar & 10 \\
+           Qui  & 13 \\
+            Sex & 12\\
+           Sáb & 10\\
+            Dom &11 \\ \hline
+        \end{tabular}
+    \end{center}
+
+    Encontre a média móvel ponderada para $n=3$ e pesos 3, 2 e  1.
+    $$Mp_3 = \frac{3 x 11 + 2 x 10 + 1 x 12 }{6} = 10.83$$
+
+    Encontre a média móvel ponderada para $n=4$ e pesos 3, 2, 2 e 1.
+
+    $$Mp_4 = \frac{3 x 11 + 2 x 10 + 2 x 12 + 1 x 13 }{8} = 11.25$$
+
+\end{frame}
+
+
+\begin{frame}{Previsão de demanda: Demandas estáveis}
+    \begin{itemize}
+        \item Média móvel ponderada, dá mais peso as demandas mais recentes.
+        \item  Exige a manutenção de um número muito grande de dados, principalmente, se $n$ for grande. 
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Previsão de demanda: Demandas estáveis}
+    Exercício
+
+    \begin{enumerate}
+        \item Compute a média móvel considerando n = 1, 4 e 6,  para o  seguinte histórico de demanda.
+            \begin{center}
+                \begin{tabular}{cc}
+                    \hline Semana & Demanda \\ \hline 
+                            Sem 1 & 30 \\ 
+                            Sem 2 & 35 \\
+                            Sem 3 & 36 \\
+                            Sem 4 & 33 \\ 
+                            Sem 5 & 32 \\
+                            Sem 6 & 34 \\
+                            Sem 7 & 36 \\
+                            Sem 8 & 35 \\ \hline
+                \end{tabular}
+            \end{center}
+
+        \item Considerando pesos 5, 3 e 1, compute a média móvel ponderada $MP_3$ dos históricos anteriores.
+        \item Considerando os pesos 0.8 e 0.2, compute a média móvel ponderada $MP_2$ dos históricos anteriores.
+    \end{enumerate}
+\end{frame}
+
+
+\begin{frame}{Previsão de demanda: suavização exponencial}
+    A suavização exponencial  (média exponencial móvel): atribui pesos que decresce no tempo em progressão geométrica .
+
+    $${Me}_i^\alpha =  [\textrm{Demanda real do último período} \times (\alpha)] + [\textrm{última previsão} \times (1- \alpha)]$$
+    ou
+    $$ {Me}_i = {Me}_{i-1} +  \alpha (D_{i-1} - {Me}_{i-1})$$
+
+
+
+    \begin{itemize}
+        \item $ {Me}_i$ = previsão para o período $i$
+        \item $D_{i-1}:$ demanda ocorrida no período $i - 1$
+        \item $\alpha \in [0,1]$ é chamado de constante de suavização
+    \end{itemize}
+
+\end{frame}
+
+
+
+\begin{frame}{Previsão de demanda: suavização exponencial}
+    A suavização exponencial  (média exponencial móvel): atribui pesos que decresce no tempo em progressão geométrica .
+
+    $$Me_i =  [\textrm{Demanda real do último período} \times (\alpha)] + [\textrm{última previsão} \times (1- \alpha)]$$
+    ou
+    $$ {Me}_i = {Me}_{i-1} +  \alpha (D_{i-1} - {Me}_{i-1})$$
+
+
+    \begin{itemize}
+        \item $\alpha \in [0,1]$ é chamado de constante de suavização
+        \item Valores práticos para $\alpha$ situam-se na faixa de 0,05 e 0,35.
+        \item $(1-\alpha)$ é a taxa exponencial com que caem os pesos de ponderação dos dados históricos. 
+            \begin{itemize}
+                \item $\alpha$: periodo mais recente
+                \item $\alpha (1-\alpha)$: mês $t-1$
+                \item $\alpha (1-\alpha)^2$: mês $t-2$
+            \end{itemize}
+    \end{itemize}
+\end{frame}
+
+
+\begin{frame}{Previsão de demanda: Demandas estáveis}
+
+    Exemplo:
+    \begin{center}
+        \begin{tabular}{cc} \hline
+            Dia & Demanda \\ \hline
+            Seg & 10\\
+            Ter & 11 \\
+           Quar & 10 \\
+           Qui  & 13 \\
+            Sex & 12\\
+           Sáb & 10\\
+            Dom &11 \\ \hline
+        \end{tabular}
+    \end{center}
+    Considerando que a previsão da demanda para o domingo era de 12 unidades.
+    Para $\alpha = 0,1$, $$Me_{Seg} = 12 + (11 - 12) \times 0.1 = 11.9$$
+    Para $\alpha = 0,9$, $$Me_{Seg} = 12 + (11 - 12) \times 0.9 = 11.1$$
+
+\end{frame}
+
+
+\begin{frame}{Previsão de demanda: Demandas estáveis}
+
+    \begin{enumerate}
+        \item Compute a previsão para a Semana 9 por meio da técnica de suavização exponencial usando fatores de suavização $\alpha = 0,1$ e $\alpha = 0,35$
+            considerando que $M_8 = 34.$
+
+            \begin{center}
+                \begin{tabular}{cc}
+                    \hline Semana & Demanda \\ \hline 
+                            Sem 1 & 30 \\ 
+                            Sem 2 & 35 \\
+                            Sem 3 & 36 \\
+                            Sem 4 & 33 \\ 
+                            Sem 5 & 32 \\
+                            Sem 6 & 34 \\
+                            Sem 7 & 36 \\
+                            Sem 8 & 35 \\ \hline
+                \end{tabular}
+            \end{center}
+
+
+    \end{enumerate}
+\end{frame}
+ 
+\begin{comment}
+//// MUITO IMPORTANTE
+
+\begin{frame}{Previsão de demanda: Sazonalidade}
+
+    \begin{block}{Ciclicidade}
+        Ciclicidade (sazonalidade): refere-se a variações cíclicas de curto prazo, relacionadas ao fator tempo.
+
+    \end{block}
+
+    \begin{center}
+        \includegraphics[width=4in]{../00-figuras/02-Previsao/saz.jpeg}
+    \end{center}
+
+
+\end{frame}
+
+
+\begin{frame}{Previsão de demanda: Sazonalidade}
+    \begin{center}
+        \includegraphics[width=4in]{../00-figuras/02-Previsao/Sazonalidadeb.jpeg}
+    \end{center}
+\end{frame}
+
+
+\begin{frame}{Previsão de demanda: Sazonalidade}
+    \begin{center}
+        \includegraphics[width=4in]{../00-figuras/02-Previsao/Sazonalidadec.jpeg}
+    \end{center}
+\end{frame}
+
+
+\begin{frame}{Previsão de demanda: Sazonalidade}
+    \begin{center}
+        \includegraphics[width=4.5in]{../00-figuras/02-Previsao/Sazonalidadea.jpeg}
+    \end{center}
+\end{frame}
+
+
+
+
+\begin{frame}{Previsão de demanda: Sazonalidade}
+
+    \begin{itemize}
+
+        \item A forma mais simples de se considerar a sazonalidade nas previsões da demanda, consiste em empregar o último dado da demanda, no período sazonal em questão, e assumi-lo como previsão.
+
+        \item A sazonalidade é expressa em termos de uma quantidade, ou de uma percentagem, da demanda que desvia-se dos valores médios da série. Caso exista tendência, ela deve ser considerada. 
+
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Previsão de demanda: sazonalidade}
+
+    Previsão de demanda na presença de sazonalidade:
+
+    \begin{block}{Fator sazonal}
+        Fator sazonal mede a relação da média dos valores da série temporal de um mesmo período com a média de todos os valores da série temporal.
+        $$FS_i = \frac{Me_i}{Me}$$
+        \begin{itemize}
+            \item $Me_i:$ média do período $i$
+            \item $Me:$ média da série
+        \end{itemize}
+    \end{block}
+
+\end{frame}
+
+
+\begin{frame}{Previsão de demanda: Sazonalidade}
+
+    \begin{center}
+        \includegraphics[width=3.0in]{../00-figuras/02-Previsao/Sazonalidadea.jpeg}
+    \end{center}
+
+    \begin{itemize}
+        \item $Me = 12.5$
+        \item $FS_1 =1.6$
+        \item $FS_2=	1.2$
+        \item $FS_3 =	0.4$
+        \item $FS_4 =	0.8$
+    \end{itemize}
+
+\end{frame}
+
+\begin{frame}{Previsão de demanda: sazonalidade}
+
+    Previsão de demanda na presença de sazonalidade:
+
+    \begin{enumerate}
+        \item Corrigir a série temporal do efeito da sazonalidade através da divisão dos valores da série temporal pelos seus respectivos fatores sazonais.
+
+            $$  Dc_i = \frac{D_i}{FS_i}$$
+            onde $Dc_i$ é a demanda corrigida ou dessazonalizada.
+        \item Realizar a previsão através dos métodos de previsão para demandas estáveis.
+        \item Multiplicar a previsão pelos fatores sazonais incorporando a sazonalidade.
+    \end{enumerate}
+\end{frame}
+
+\begin{frame}{Previsão de demanda: sazonalidade}
+
+    \begin{center}
+        \begin{tabular}{rr}
+            \hline 
+            Mês & Demanda \\ \hline
+               1 &    1360.00 \\ 
+               2 &    865.23 \\ 
+               3 &    1141.63 \\ 
+               4 &    2105.8 \\ \hline
+               5 &    1226.48 \\ 
+               6 &    1238.10 \\ 
+               7 &    1093.17 \\ 
+               8 &    2191.08 \\ \hline
+               9 &    1454.08 \\ 
+              10 &   948.62 \\ 
+              11 &    1337.67 \\ 
+              12 &    2497.43 \\ \hline
+        \end{tabular}
+    \end{center}
+
+\end{frame}
+
+
+
+\begin{frame}{Previsão de demanda: Sazonalidade}
+
+
+    \begin{center}
+        \includegraphics[width=4.5in]{../00-figuras/02-Previsao/Sazonalidade3.jpeg}
+    \end{center}
+
+
+\end{frame}
+
+
+
+
+\begin{frame}{Previsão de demanda: Sazonalidade}
+
+
+    \begin{center}
+        \includegraphics[width=4.5in]{../00-figuras/02-Previsao/Sazonalidade1.jpeg}
+    \end{center}
+
+
+\end{frame}
+
+
+
+
+\begin{frame}{Previsão de demanda: Sazonalidade}
+
+
+    \begin{center}
+        \includegraphics[width=4.5in]{../00-figuras/02-Previsao/Sazonalidade2.jpeg}
+    \end{center}
+
+
+\end{frame}
+
+
+\begin{frame}{Previsão de demanda: sazonalidade}
+
+    Encontrar o fator de sazonalidade:
+    \begin{center}
+        \begin{tabular}{rcr}
+            \hline 
+            Mês & Mês Quad  & Demanda \\ \hline
+               1 & 1 &  1360.00 \\ 
+               2 & 2 &  865.23 \\ 
+               3 & 3 &  1141.63 \\ 
+               4 & 4 &  2105.8 \\ \hline
+               5 & 1 &  1226.48 \\ 
+               6 & 2 &  1238.10 \\ 
+               7 & 3 &  1093.17 \\ 
+               8 & 4 &  2191.08 \\ \hline
+               9 & 1 &  1454.08 \\ 
+              10 & 2 &  948.62 \\ 
+              11 & 3 &  1337.67 \\ 
+              12 & 4 &  2497.43 \\ \hline
+                 & Me& 1454.94 \\ \hline
+        \end{tabular}
+    \end{center}
+
+\end{frame}
+
+
+
+\begin{frame}{Previsão de demanda: sazonalidade}
+
+    Encontrar o fator de sazonalidade:
+    \begin{center}
+        \begin{tabular}{rcr}
+            \hline 
+            Mês & Mês Quad  & Demanda \\ \hline
+               1 & 1 &  1360.00 \\ 
+               2 & 2 &  865.23 \\ 
+               3 & 3 &  1141.63 \\ 
+               4 & 4 &  2105.8 \\ \hline
+               5 & 1 &  1226.48 \\ 
+               6 & 2 &  1238.10 \\ 
+               7 & 3 &  1093.17 \\ 
+               8 & 4 &  2191.08 \\ \hline
+               9 & 1 &  1454.08 \\ 
+              10 & 2 &  948.62 \\ 
+              11 & 3 &  1337.67 \\ 
+              12 & 4 &  2497.43 \\ \hline
+        \end{tabular}
+    \end{center}
+
+    \begin{itemize}
+        \item $Me: 1454.94 $
+        \item $Me_1:1346.85 \to 1346.85/1454.94=0.93$
+        \item $Me_2:1017.32 \to 1014.32/1454.94 = 0.70$
+        \item $Me_3:1190.82 \to 1190.82/1454.94 = 0.82$
+        \item $Me_4:2264.77 \to 2264.77/1454.94 = 1.56$
+    \end{itemize}
+
+
+\end{frame}
+
+
+\begin{frame}{Previsão de demanda: sazonalidade}
+
+    \begin{center}
+        \begin{table}[htbp]
+            \caption{}
+            \begin{tabular}{rrrrr}
+                \hline
+                Mês & Mês Quad & $D$ & FS & $Dc$ \\ \hline  
+                   1 & 1 & 1360 & 0.93 & 1469.14 \\ 
+                   2 & 2 & 865.23 & 0.70 & 1237.43 \\ 
+                   3 & 3 & 1141.63 & 0.82 & 1394.84 \\ 
+                   4 & 4 & 2105.8 & 1.56 & 1352.81 \\ \hline
+                   5 & 1 & 1226.48 & 0.93 & 1324.91 \\ 
+                   6 & 2 & 1238.1 & 0.70 & 1770.70 \\ 
+                   7 & 3 & 1093.17 & 0.82 & 1335.63 \\ 
+                   8 & 4 & 2191.08 & 1.56 & 1407.60 \\ \hline
+                   9 & 1 & 1454.08 & 0.93 & 1570.77 \\ 
+                  10 & 2 & 948.62 & 0.70 & 1356.69 \\ 
+                  11 & 3 & 1337.67 & 0.82 & 1634.36 \\ 
+                  12 & 4 & 2497.43 & 1.56 & 1604.41 \\ \hline
+            \end{tabular}
+            $$ Dc_i = D_i/FS_i$$
+            \label{}
+        \end{table}
+
+    \end{center}
+
+
+\end{frame}
+
+
+\begin{frame}{Previsão de demanda: Sazonalidade}
+
+
+    \begin{center}
+        \includegraphics[width=4.5in]{../00-figuras/02-Previsao/Sazonalidade4.jpeg}
+    \end{center}
+
+
+\end{frame}
+
+
+
+\begin{frame}{Previsão de demanda: sazonalidade}
+    \begin{center}
+        \begin{tabular}{ll}\hline
+            Periodo & $DC_i$ \\ \hline
+                  1 & 1469.14 \\ 
+                  2 & 1237.43 \\ 
+                  3 & 1394.84 \\ 
+                  4 & 1352.81 \\ \hline
+                  5 & 1324.91 \\ 
+                  6 & 1770.70 \\ 
+                  7 & 1335.63 \\ 
+                  8 & 1407.60 \\ \hline
+                  9 & 1570.77 \\ 
+                 10 & 1356.69 \\ 
+                 11 & 1634.36 \\ 
+                 12 & 1604.41 \\ \hline
+        \end{tabular}
+    \end{center}
+
+    $$Mm_6 = \frac{1604.41 + 1634 + 1356.69 + 1570.77 + 1407.60 + 1335.63}{6} = 1484.91$$
+
+\end{frame}
+
+
+
+\begin{frame}{Previsão de demanda: sazonalidade}
+    \begin{center}
+        \begin{tabular}{cccc}\hline
+            Mês & Mês Quad. & $FS$ & Previsão \\ \hline
+              17 & 1 & 0.93 & 1374.60 \\ 
+              18 & 2 & 0.70 & 1038.27 \\ 
+              19 & 3 & 0.82 & 1215.35 \\ 
+              20 & 4 & 1.56 & 2311.42 \\ \hline
+        \end{tabular}
+        $$\textrm{Previsão}_i = \textrm{Previsão desazonalizada} \times FS_i = 1484.91 \times FS_i$$
+    \end{center}
+
+\end{frame}
+
+
+
+\begin{frame}{Previsão de demanda: Sazonalidade}
+
+
+    \begin{center}
+        \includegraphics[width=4.5in]{../00-figuras/02-Previsao/Sazonalidade5.jpeg}
+    \end{center}
+
+
+\end{frame}
+
+\begin{frame}{Previsão de demanda: Tendência}
+
+    \begin{block}{Tendência}
+        Tendência consiste num movimento gradual de longo prazo, direcionando os dados.
+    \end{block}
+    Técnicas para tendência baseada nos mínimos quadrados:
+    \begin{itemize}
+        \item 
+            Assumindo que o padrão de demanda pode ser representado por uma equação linear com o  formato:
+
+            $$Y = a + b X$$
+            Onde,
+
+            \begin{itemize}
+                \item  $Y =$ Previsão da demanda para o período $X$;
+                \item  $a =$ Ordenada à origem, ou intercepção no eixo dos $Y$(Função Interseção);
+                \item  $b =$  Coeficiente angular (Função Inclinação);
+                \item $X =$ Período  para previsão;
+                \item $n =$ número de períodos observados.
+            \end{itemize}
+
+            Esta técnica consiste em encontrar valores para $a$ e $b,$ definindo desta forma a equação da reta de tendência.
+    \end{itemize}
+\end{frame}
+
+
+\begin{frame}{Previsão de demanda: Sazonalidade}
+    \begin{center}
+
+        \begin{tabular}{rr}
+            \hline
+            Periodo & Demanda \\ \hline
+                  1 & 10 \\ 
+                  2 & 12 \\ 
+                  3 & 15 \\ 
+                  4 & 14 \\ 
+                  5 & 18 \\ 
+                  6 & 20 \\ 
+                  7 & 25 \\ 
+                  8 & 27 \\ 
+                  9 & 31 \\ 
+                 10 & 30 \\ 
+                 11 & 33 \\ 
+                 12 & 35 \\ \hline
+        \end{tabular}
+    \end{center}
+
+
+\end{frame}
+
+
+\begin{frame}{Previsão de demanda: Sazonalidade}
+    \begin{center}
+        \begin{tabular}{rr}
+            \hline
+            Periodo & Demanda \\ \hline
+                  1 & 10 \\ 
+                  2 & 12 \\ 
+                  3 & 15 \\ 
+                  4 & 14 \\ 
+                  5 & 18 \\ 
+                  6 & 20 \\ 
+                  7 & 25 \\ 
+                  8 & 27 \\ 
+                  9 & 31 \\ 
+                 10 & 30 \\ 
+                 11 & 33 \\ 
+                 12 & 35 \\ \hline
+        \end{tabular}
+    \end{center}
+    $$ Y = 6.91 + 2.4 \times X$$
+
+\end{frame}
+
+\begin{frame}{Previsão de demanda: Sazonalidade}
+    \begin{center}
+        \includegraphics[width=4.0in]{../00-figuras/02-Previsao/Tendenciaa.jpeg}
+    \end{center}
+
+    $$ Y = 6.91 + 2.4 \times X$$
+
+\end{frame}
+
+
+
+\begin{frame}{Previsão de demanda: Sazonalidade}
+
+
+    \begin{center}
+        \includegraphics[width=4.0in]{../00-figuras/02-Previsao/Tendenciab.jpeg}
+    \end{center}
+
+    $$ Y = 6.91 + 2.4 \times X = 6.91 + 2.4 \times 13 = 38.1$$
+
+\end{frame}
+
+
+\end{comment}
+
+\begin{comment}
+/// PROVISORIO
+
+\begin{frame}{Previsão de demanda: Etapas}
+    \begin{center}
+        \includegraphics[width=3in]{../00-figuras/02-Previsao/etapas.jpeg}
+    \end{center}
+\end{frame}
+
+
+\begin{frame}{Previsão de demanda: monitoração do modelo}
+    \begin{tabular}{cc}
+        \begin{minipage}{250pt}
+
+            \begin{itemize}
+                \item  É sempre importante acompanhar dois tipos de erros de previsão
+                    \begin{itemize}
+                        \item Amplitude do erro: medida da acuracidade das previsões.
+                        \item Viés do erro: viés ocorre quando os erros ocorrem sistematicamente para um lado só.
+                    \end{itemize}
+            \end{itemize}
+        \end{minipage}
+        &
+        \begin{minipage}{100pt}
+            \begin{center}
+                \includegraphics[width=1in]{../00-figuras/02-Previsao/target.jpeg}
+            \end{center}
+        \end{minipage}
+    \end{tabular}
+\end{frame}
+
+
+\begin{frame}{Previsão de demanda: monitoração do modelo}
+
+    Definições:
+    \begin{itemize}
+        \item $\textrm{Erro}_i$ = $(D_i-P_i)$
+        \item Erro acumulado (ErrAcu) = $\sum_i (D_i - P_i)$
+            \begin{itemize}
+                \item $D:$ Demanda real
+                \item $P:$ Previsão da demanda
+            \end{itemize}
+    \end{itemize}
+\end{frame}
+
+
+\begin{frame}{Previsão de demanda: monitoração do modelo}
+
+    Previsão de demanda usando suavização exponencial com $\alpha = 0.5$.
+
+
+    \begin{center}
+        \begin{tabular}{cccc} \hline
+            $D_i$ & $P_i$ & $\textrm{Erro}_i$  & ErrAcu \\ \hline
+               32 & 30.0 & 2.00 &  2.00  \\ 
+               31 & 31.0 & 0.00 &   2.00   \\ 
+               29 & 31.0 & -2.00 &  0.00  \\ 
+               31 & 30.0 & 1.00 &   1.00  \\ 
+               32 & 30.5 & 1.50 &   2.50  \\ \hline 
+        \end{tabular}
+    \end{center}
+
+
+
+    \begin{itemize}
+        \item $D_i:$ Demanda no periodo $i$
+        \item $P_i (M_i):$ Previsão para o periodo $i$
+        \item ErrAcu = Erro acumulado
+    \end{itemize}
+\end{frame}
+
+
+
+\begin{frame}{Previsão de demanda: monitoração do modelo}
+
+    Definições:
+    \begin{itemize}
+        \item Erro médio absoluto (MAD) -  \textit{Mean Absolute Deviation} = $(\sum_i |D_i - P_i)|)/n$
+            \begin{itemize}
+                \item $D:$ Demanda real
+                \item $P:$ Previsão da demanda
+                \item $n:$ Número de periodos considerados
+            \end{itemize}
+    \end{itemize}
+
+\end{frame}
+
+
+
+\begin{frame}{Previsão de demanda: monitoração do modelo}
+
+    Previsão de demanda usando suavização exponencial com $\alpha = 0.5$.
+
+    \begin{center}
+
+        \begin{tabular}{ccccccc}\hline
+            $D_i$ & $P_i$ & $\textrm{Erro}_i$ & ErrAcu & ErroAbs & ErroAbsAcu & MAD \\ \hline
+               30 & \\ 
+               32 & 30.0 & 2.00 & 2.00 & 2.0 & 2.0 & 2.0 \\ 
+               31 & 31.0 & 0.00 &  2.00 & 0.0 & 2.0 & 1.0 \\ 
+               29 & 31.0 & -2.00   & 0.00 & 2.0 & 4.0 & 1.3 \\ 
+               31 & 30.0 & 1.00   & 1.00 & 1.0 & 5.0 & 1.3 \\ 
+               32 & 30.5 & 1.50  & 2.50 & 1.5 & 6.5 & 1.3 \\ \hline
+        \end{tabular}
+
+
+    \end{center}
+
+    \begin{itemize}
+        \item ErroAbs : Erro absoluto
+        \item ErroAbsAcu: Erro absoluto acumulado
+        \item MAD: Erro médio absoluto  
+    \end{itemize}
+\end{frame}
+
+
+\begin{frame}{Previsão de demanda: monitoração do modelo}
+
+    Previsão de demanda usando a técnica de $MP_2$ com pesos 0,8 e 0,2:
+
+    \begin{center}
+
+        \begin{tabular}{ccccccc}\hline
+            $D_i$ & $P_i$ & $\textrm{Erro}_i$  & ErrAcu & ErroAbs & ErroAbsAcu & MAD\\ \hline
+               30 & \\ 
+             40.0 & 32.0 & 8.0 & 8.0 & 8.0 & 8.0 & 8.0   \\ 
+             30.0 & 38.0 & -8.0 & 0.0 & 8.0 & 16.0 & 8.0  \\ 
+             40.0 & 32.0 & 8.0 & 8.0 & 8.0 & 24.0 & 8.0   \\ 
+             30.0 & 38.0 & -8.0 & 0.0 & 8.0 & 32.0 & 8.0   \\ 
+             40.0 & 32.0 & 8.0 & 8.0 & 8.0 & 40.0 & 8.0   \\  
+             30.0 & 38.0 & -8.0 & 0.0 & 8.0 & 48.0 & 8.0   \\  \hline
+        \end{tabular}
+
+
+    \end{center}
+
+\end{frame}
+
+\begin{frame}{Previsão de demanda: monitoração do modelo}
+
+    Previsão de demanda usando a técnica de $MP_2$ com pesos 0,2 e 0,8:
+
+    \begin{center}
+
+        \begin{tabular}{cccccccc}\hline
+            $D_i$ & $P_i$ & $\textrm{Erro}_i$  & ErrAcu & ErroAbs & ErroAbsAcu & MAD \\ \hline
+               30 & \\ 
+             40.0 & 38.0 & 2.0 & 2.0 & 2.0 & 2.0 & 2.0   \\ 
+             30.0 & 32.0 & -2.0 & 0.0 & 2.0 & 4.0 & 2.0   \\ 
+             40.0 & 38.0 & 2.0 & 2.0 & 2.0 & 6.0 & 2.0   \\ 
+             30.0 & 32.0 & -2.0 & 0.0 & 2.0 & 8.0 & 2.0   \\ 
+             40.0 & 38.0 & 2.0 & 2.0 & 2.0 & 10.0 & 2.0  \\ 
+             30.0 & 32.0 & -2.0 & 0.0 & 2.0 & 12.0 & 2.0  \\ \hline
+        \end{tabular}
+    \end{center}
+\end{frame}
+
+\begin{frame}{Previsão de demanda: monitoração do modelo}
+
+    Comparação entre os dois modelos de previsão:
+
+    \begin{center}
+        \begin{tabular}{rrrlrr} \hline
+            $D_i$ & ErrAcu & $\textrm{MAD}^a$ & & ErrAcu& $\textrm{MAD}^b$ \\ \hline 
+               40 & 2 & 8 &  & 8 & 2 \\ 
+               30 & 0 & 8 &  & 0 & 2 \\ 
+               40 & 2 & 8 &  & 8 & 2 \\ 
+               30 & 0 & 8 &  & 0 & 2 \\ 
+               40 & 2 & 8 &  & 8 & 2 \\  
+               30 & 0 & 8 &  & 0 & 2 \\ \hline
+        \end{tabular}
+    \end{center}
+    \begin{itemize}
+        \item $w_a:$ pesos 0,8 e 0,2 \\
+        \item $w_b:$ pesos 0,2 e 0,8 \\
+    \end{itemize}
+\end{frame}
+
+
+
+
+\begin{frame}{Previsão de demanda: monitoração do modelo}
+
+    Analise o Erro acumulado e o MAD associado ao seguinte conjunto de previsão:
+
+    \begin{center}
+
+        \begin{tabular}{cccccccc}\hline
+            $D_i$ & $P_i$ & $\textrm{Erro}_i$  & ErrAcu & ErroAbs & ErroAbsAcu & MAD \\ \hline
+             % 30 & \\ 
+               30 & 20 & 10 & 10 & 10 & 10 & 10 \\ 
+               40 & 30 & 10 & 20 & 10 & 20 & 10  \\ 
+               50 & 40 & 10 & 30 & 10 & 30 & 10  \\ 
+               60 & 50 & 10 & 40 & 10 & 40 & 10  \\ 
+               70 & 60 & 10 & 50 & 10 & 50 & 10  \\ 
+               80 & 70 & 10 & 60 & 10 & 60 & 10  \\ \hline
+        \end{tabular}
+
+
+    \end{center}
+
+\end{frame}
+
+
+\begin{frame}{Previsão de demanda: monitoração do modelo}
+    \begin{itemize}
+        \item  É sempre importante acompanhar dois tipos de erros de previsão
+            \begin{itemize}
+                \item Amplitude do erro: medida da acuracidade das previsões.
+                \item \textbf{Viés do erro: viés ocorre quando os erros ocorrem sistematicamente para um lado só.}
+            \end{itemize}
+    \end{itemize}
+
+    \begin{block}{Sinal de rastreabilidade - \textit{Tracking signal}}
+        O Sinal de rastreabilidade é um indicador de viés no erro dado por
+        $$\textrm{Sinal de rastreabilidade (SR)} =\frac{ \textrm{ErrAcu}}{MAD}.$$
+        Este valor deve estar dentro do intervalo $[-4,4].$
+
+    \end{block}
+\end{frame}
+
+
+\begin{frame}{Previsão de demanda: monitoração do modelo}
+
+    Usando a técnica de suavização exponencial com $\alpha = 0.5,$ determine se a previsão está sob controle
+
+    \begin{center}
+
+
+        \begin{tabular}{ccccccccc}\hline
+            $D_i$ & $P_i$ & $\textrm{Erro}_i$ & Ajuste & ErrAcu & ErroAbs & ErroAbsAcu & MAD & SR\\ \hline
+               30 & \\ 
+             35.0 & 30.0 & 5.0 & 4.5 & 5.0 & 5.0 & 5.0 & 5.0 & 1 \\ 
+             37.0 & 34.5 & 2.5 & 2.3 & 7.5 & 2.5 & 7.5 & 3.8 & 2 \\ 
+             40.0 & 36.8 & 3.3 & 2.9 & 10.8 & 3.3 & 10.8 & 3.6 & 3 \\ 
+             41.0 & 39.7 & 1.3 & 1.2 & 12.1 & 1.3 & 12.1 & 3.0 & 4 \\ 
+             45.0 & 40.9 & 4.1 & 3.7 & 16.2 & 4.1 & 16.2 & 3.2 & \textbf{5} \\ \hline
+        \end{tabular}
+
+    \end{center}
+
+    \textbf{Necessário rever a técnica de previsão!!}
+\end{frame}
+
+\begin{frame}
+
+    Previsão usando a técnica de suavização exponencial com $\alpha = 0.2.$
+
+    \begin{center}
+
+
+        \begin{tabular}{cccccccc}\hline
+            $D_i$ & $P_i$ & $\textrm{Erro}_i$ &  ErrAcu & ErroAbs & ErroAbsAcu & MAD & SR\\ \hline
+             71.0 & 71.200 & -0.2 & -0.2 & 0.2 & 0.2 & 0.2 & -1.0 \\ 
+             72.0 & 71.160 & 0.8 & 0.6 & 0.8 & 1.0 & 0.5 & 1.2 \\ 
+             73.0 & 71.328 & 1.7 & 2.3 & 1.7 & 2.7 & 0.9 & 2.6 \\ 
+             71.0 & 71.662 & -0.7 & 1.6 & 0.7 & 3.4 & 0.8 & 2.0 \\ 
+             72.0 & 71.530 & 0.5 & 2.1 & 0.5 & 3.8 & 0.8 & 2.8 \\ 
+             65.0 & 71.624 & -6.6 & -4.5 & 6.6 & 10.5 & 1.7 & -2.6 \\ 
+             59.0 & 70.299 & -11.3 & -15.8 & 11.3 & 21.8 & 3.1 & -5.1 \\ 
+               43 & 68.039 & -25.0 & -40.8 & 25.0 & 46.8 & 5.9 & -7.0 \\ 
+               38 & 63.031 & -25.0 & -65.9 & 25.0 & 71.8 & 8.0 & -8.3 \\ 
+               35 & 58.025 & -23.0 & -88.9 & 23.0 & 94.9 & 9.5 & -9.4 \\ 
+               33 & 53.420 & -20.4 & -109.3 & 20.4 & 115.3 & 10.5 & -10.4 \\ \hline
+        \end{tabular}
+    \end{center}
+\end{frame}
+
+
+
+\begin{frame}{Previsão de demanda: monitoração do modelo}
+
+    Previsão de demanda usando uma técnica qualquer:
+
+    \begin{center}
+
+        \begin{tabular}{cccccccc}\hline
+            $D_i$ & $P_i$ & $\textrm{Erro}_i$  & ErrAcu & ErroAbs & ErroAbsAcu & MAD & SR\\ \hline
+               30 & \\ 
+               30 & 20 & 10 & 10 & 10 & 10 & 10 & 1 \\ 
+               40 & 30 & 10 & 20 & 10 & 20 & 10 & 2 \\ 
+               50 & 40 & 10 & 30 & 10 & 30 & 10 & 3 \\ 
+               60 & 50 & 10 & 40 & 10 & 40 & 10 & 4 \\ 
+               70 & 60 & 10 & 50 & 10 & 50 & 10 & 5 \\ 
+               80 & 70 & 10 & 60 & 10 & 60 & 10 & 6 \\ \hline
+        \end{tabular}
+    \end{center}
+\end{frame}
+
+
+
+\begin{frame}{Previsão de demanda: monitoração do modelo}
+
+    Previsão de demanda usando a técnica de $MP_2$ com pesos 0,8 e 0,2:
+
+    \begin{center}
+
+        \begin{tabular}{cccccccc}\hline
+            $D_i$ & $P_i$ & $\textrm{Erro}_i$  & ErrAcu & ErroAbs & ErroAbsAcu & MAD & SR\\ \hline
+               30 & \\ 
+             40.0 & 32.0 & 8.0 & 8.0 & 8.0 & 8.0 & 8.0 & 1.0 \\ 
+             30.0 & 38.0 & -8.0 & 0.0 & 8.0 & 16.0 & 8.0 & 0.0 \\ 
+             40.0 & 32.0 & 8.0 & 8.0 & 8.0 & 24.0 & 8.0 & 1.0 \\ 
+             30.0 & 38.0 & -8.0 & 0.0 & 8.0 & 32.0 & 8.0 & 0.0 \\ 
+             40.0 & 32.0 & 8.0 & 8.0 & 8.0 & 40.0 & 8.0 & 1.0 \\  \hline
+        \end{tabular}
+
+
+    \end{center}
+
+\end{frame}
+
+\begin{frame}{Previsão de demanda: monitoração do modelo}
+
+    Previsão de demanda usando a técnica de $MP_2$ com pesos 0,2 e 0,8:
+
+    \begin{center}
+
+        \begin{tabular}{ccccccccc}\hline
+            $D_i$ & $P_i$ & $\textrm{Erro}_i$  & ErrAcu & ErroAbs & ErroAbsAcu & MAD & SR\\ \hline
+               30 & \\ 
+             40.0 & 38.0 & 2.0 & 2.0 & 2.0 & 2.0 & 2.0 & 1.0 \\ 
+             30.0 & 32.0 & -2.0 & 0.0 & 2.0 & 4.0 & 2.0 & 0.0 \\ 
+             40.0 & 38.0 & 2.0 & 2.0 & 2.0 & 6.0 & 2.0 & 1.0 \\ 
+             30.0 & 32.0 & -2.0 & 0.0 & 2.0 & 8.0 & 2.0 & 0.0 \\ 
+             40.0 & 38.0 & 2.0 & 2.0 & 2.0 & 10.0 & 2.0 & 1.0 \\ \hline
+        \end{tabular}
+    \end{center}
+\end{frame}
+
+
+\begin{frame}{Previsão de demanda: calibração do modelo}
+
+    Calibração de modelos de previsão:
+
+    \begin{itemize}
+        \item MAD é um indicador, frequentemente, utilizado para medir a amplitude das previsões.
+        \item Calibração de um modelo de previsão é a seleção racional dos parâmetros usandos no modelo.
+        \item Uma alternativa para calibração é seleção dos parâmetros que resultem em menores MAD.
+    \end{itemize}
+    \begin{center}
+        \begin{tabular}{rrrlrr} \hline
+            $D_i$ & $MP^a$ & $\textrm{MAD}^a$ & & $MP^b$ & $\textrm{MAD}^b$ \\ \hline 
+               30 & 38 & 8 &  & 32 & 2 \\ 
+               40 & 32 & 8 &  & 38 & 2 \\ 
+               30 & 38 & 8 &  & 32 & 2 \\ 
+               40 & 32 & 8 &  & 38 & 2 \\ 
+               30 & 38 & 8 &  & 32 & 2 \\ 
+               40 & 32 & 8 &  & 38 & 2 \\ \hline
+        \end{tabular}
+    \end{center}
+    \begin{itemize}
+        \item $w_a:$ pesos 0,8 e 0,2 \\
+        \item $w_b:$ pesos 0,2 e 0,8 \\
+    \end{itemize}
+\end{frame}
+
+
+
+\begin{frame}{Exercício:}
+    A proprietária de uma empresa de locação de equipamentos precisa saber qual o volume de venda de aluguéis de impressoras para alguns de seus clientes principais para poder prever a quantidade de suprimentos que irão juntos. O dados das últimas dez semanas são:
+
+
+    \begin{tabular}{ccccc} \hline
+        Semana & Aluguéis & &Semana & Aluguéis \\ \hline
+             1 & 26& & 6 & 22\\
+             2 & 28& & 7 & 26\\
+             3 & 30& & 8 & 24\\
+             4 & 26& & 9 & 20 \\
+             5 & 27& &  10 & 23 \\ \hline
+    \end{tabular}
+    \newline
+
+    $(i)$Prepare uma previsão para as semanas de 6 a 10, usando média móvel de 3 semanas e de 4 semanas. $(ii)$ Qual o desvio médio absoluto? $(iii)$ Usando o desvio médio absoluto e o sinal de rastreabilidade determine qual é o melhor valor de $n$ dentre 3 e 4. $(iv)$ Compare o melhor modelo obtido em $(iii)$ com o modelo de previsão usando suavização exponencial com $\alpha = 0,5.$
+\end{frame}
+
+
+
+\begin{frame}{Exercício:}
+
+    Resultado:
+
+    \begin{center}
+        \begin{tabular}{|r|rrr|rrr|rrr|}
+            \hline  & \multicolumn{3}{c}{$Mm_3$} & \multicolumn{3}{|c}{$Mm_4$} & \multicolumn{3}{|c|}{$Me^{0.5}$}  \\ \hline
+               Per. & ErrAcu & MAD & SR & ErrAcu & MAD & SR &  ErrAcu & MAD & SR \\ \hline
+                  6 & -5.67 & 5.67 & -1.00   & -5.75 & 5.75 & -1.00 & -5.13 & 5.13 & -1.00 \\ 
+                  7 & -4.67 & 3.33 & -1.40   & -6.00 & 3.00 & -2.00 & -3.69 & 3.28 & -1.12 \\ 
+                  8 & -5.67 & 2.56 & -2.22   & -7.25 & 2.42 & -3.00 & -4.97 & 2.61 & -1.90 \\ 
+                  9 & -9.67 & 2.92 & -3.31   & -12.00 & 3.00 & -4.00 & -9.61 & 3.12 & -3.08 \\ 
+                 10 & -10.00 & 2.40 & -4.17   & -12.00 & 2.40 & -5.00 & -8.93 & 2.63 & -3.39 \\ \hline
+        \end{tabular}
+    \end{center}
+
+\end{frame}
+
+\end{comment}
+% 
+% 
+% 
+% \begin{frame}{Atividade}
+% 
+%     Atividade em grupo!!!
+% 
+% \end{frame}
+
+\begin{frame}{Bibliografia}
+    \begin{itemize}
+        \item CORRÊA, H. L.; CORRÊA, C. A. Administração da produção e operações. 2. ed. São Paulo: Atlas, 2011.
+        \item SLACK, N.; CHAMBERS, S.; JOHNSTON, R. Administração da produção. 2. ed. São Paulo: Atlas, 2002.
+    \end{itemize}
+\end{frame}
+\end{document}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

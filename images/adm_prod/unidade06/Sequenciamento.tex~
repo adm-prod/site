@@ -1,0 +1,395 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Apresentação da Qualificação de Mestrado
+%% Copyright 2010 Elisangela Martins de Sá
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[9pt]{beamer}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Configurando o idioma e os acentos
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[english]{babel}
+%\usepackage[brazil]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+
+%\usepackage{footnote}
+\usepackage{threeparttable}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Configurando as Fontes
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{times} % Usa fonte Times New Roman
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Configurando Símbolos Matemáticos e outros símbolos
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{amsmath}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Configurando as Figuras
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\usepackage[pdftex]{color,graphicx} % Utilizado para colocar figuras jpg, png e gif
+%\usepackage{float} % Força a inserção da figura no local especificado (coloque um H no figure)
+%\usepackage{subfigure}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Configurando as Tabelas
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{multirow} % Permite tabelas com multiplas linhas colapsadas.
+\usepackage{booktabs} % Permite o uso de tabelas profissionais (\toprule,\bottomrule, etc).
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Configurando o caption (Legendas) das tabelas e figuras
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\usepackage[scriptsize,bf,up]{caption} % Diminui o tamanho da letra e faz o texto (Figura N ou Tabela N) em negrito
+%\usepackage{caption}
+%\captionsetup[table]{justification=justified,singlelinecheck=false} % Justifica as legendas (captions) das tabelas.
+%\captionsetup[figure]{justification=justified,singlelinecheck=false} % Justifica as legendas (captions) das figuras.
+%\setlength{\belowcaptionskip}{2pt} % Configura o espaçamento entre a legenda e a tabela ou figura
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Outros pacotes
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\usepackage{texshade} % Usado para formatar alinhamento de seqüências (apêndice)
+%\usepackage{pdflscape} % Permite rotacionar a página para Paisagem (landscape)
+%\usepackage{rotating} % Permite rotacionar tabelas (sideways)
+\usepackage{verbatim}  % permite a inserção de comentários 
+\usepackage{ragged2e} % Utilizado para justificar o texto no Beamer (\justifying)
+\usepackage{beamerprosper}
+\usepackage{algorithmic}
+\usepackage{color, colortbl}
+
+\usepackage[ruled,portugues]{algorithm2e}
+%\usepackage{algpseudocode}
+%\usepackage{paralist}
+%\usepackage[active,tightpage]{preview}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Referências bibliográficas e afins
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\usepackage{sbc}
+%\usepackage[alf]{abntcite}
+\usepackage{natbib}
+\usepackage{subfigure} 
+\usepackage{pgf,tikz}
+\usetikzlibrary{backgrounds}
+\usetikzlibrary{shapes}
+\usetikzlibrary{decorations.pathreplacing}
+\usepackage{scalefnt}
+
+
+%\usepackage[natbib=true, bibstyle=authoryear, citestyle=authoryear-comp]{biblatex}
+\def\newblock{}
+
+%****************************************************************
+% C O N F I G U R A Ç Õ E S  D O  B E A M E R
+%****************************************************************
+
+\mode<presentation>
+{
+ %\usetheme{Darmstadt}
+% \usetheme{Warsaw}
+% \usetheme{Antibes}
+%\usetheme{AnnArbor}
+% \usetheme{bars}
+%\usetheme{Berkeley} %o índice fica a esquerda
+%\usetheme{Boadilla}
+% \usetheme {CambridgeUS}
+% \usetheme{Copenhagen}
+% \usetheme{Darmstadt}
+% \usetheme{Dresden} % Simples
+% \usetheme{Frankfurt}
+% \usetheme{Goettingen} %o índice fica a direita (sem cor) 
+% \usetheme{Hannover} %o  índice fica a esquerda (sem cor)
+% \usetheme{Ilmenau}
+% \usetheme{JuanLesPins}
+% \usetheme{Luebeck}
+\usetheme{Madrid}
+% \usetheme{Malmoe} % Simples
+% \usetheme{Marburg} %o índice fica a direita degrade (sem cor) 
+% \usetheme{Montpellier} % Mais simples
+% \usetheme{PaloAlto}
+% \usetheme{Pittsburgh}
+% \usetheme[height=0.5cm]{Rochester}
+% \usetheme{Singapore} % Mais simples
+ % \usetheme{Malmoe}
+  % or ...
+ % \usecolortheme{dolphin}
+ % \usecolortheme{whale}
+%   \setbeamercovered{transparent}
+  \setbeamercovered{invisible}
+
+ % \setbeamercolor{background canvas}{bg=black}
+  % or whatever (possibly just delete it)
+  %\setbeamersize{text margin left=0.5cm, text margin right=0.5cm}
+ % \usefonttheme{serif}
+%   \usecolortheme{lily}
+  
+  \setbeamercolor{alerted text}{fg=blue} 
+  \usepackage{pgf,pgfarrows,pgfnodes,pgfautomata,pgfheaps,pgfshade}
+
+	% Configurando o caption da tabelas e figuras apenas no beamer
+	\setbeamertemplate{caption}[numbered]
+	\setbeamerfont{caption}{size=\tiny}
+}
+
+
+
+%****************************************************************
+% CONFIGURANDO O PRIMEIRO SLIDE 
+%****************************************************************
+
+
+\title[]{Programação e sequenciamento}
+
+\author[Elisangela Martins de Sá]{Profª: Elisangela Martins de Sá}
+
+
+
+\institute[CEFET] 
+{CEFET MG \\ }
+
+ \date[2º Semestre, 2016] 
+ {2º Semestre, 2016}
+
+
+ \pgfdeclareimage[height=0.9cm]{university-logo}{figuras/cefet-logo.jpg}
+ \logo{\pgfuseimage{university-logo}}
+
+\begin{comment}
+\AtBeginSubsection[]
+{
+  \begin{frame}<beamer>{Sumário}
+    \tableofcontents[currentsection,currentsubsection]
+  \end{frame}
+}
+\end{comment}
+
+
+% If you wish to uncover everything in a step-wise fashion, uncomment
+% the following command: 
+
+%\beamerdefaultoverlayspecification{<+->}
+%\def\supertiny{\fontsize{5pt}{5pt}\selectfont}
+
+\begin{document}
+
+
+\pdfpkresolution=1200
+\pdfimageresolution=1200
+
+\justifying
+
+\begin{frame}
+  \titlepage
+\end{frame}
+
+
+
+
+
+
+\begin{frame}{Processos produtivos}
+            \begin{center}
+                \includegraphics[width=4in]{./figuras/envase.jpg}
+            \end{center}
+
+\end{frame}
+
+
+
+% 
+% \begin{frame}{Processos produtivos}
+%             \begin{center}
+%                 \includegraphics[width=4in]{./figuras/refrigerante.png}
+%             \end{center}
+% 
+% \end{frame}
+
+\begin{frame}{Processos produtivos}
+            \begin{center}
+                \includegraphics[width=4in]{./figuras/carro.jpg}
+            \end{center}
+
+\end{frame}
+
+\begin{frame}{Processos produtivos}
+            \begin{center}
+                \includegraphics[width=4in]{./figuras/Cerveja.jpg}
+            \end{center}
+
+\end{frame}
+
+
+% 
+% 
+% \begin{frame}{Processos produtivos}
+%             \begin{center}
+%                 \includegraphics[width=4in]{./figuras/refrigerante.png}
+%             \end{center}
+% 
+% \end{frame}
+
+
+\begin{frame}{Processos produtivos}
+            \begin{center}
+                \includegraphics[width=1.2in]{./figuras/Marmoraria/marmore.jpg} \hspace{1cm} 
+                                \includegraphics[width=1.8in]{./figuras/Marmoraria/corte.jpg}
+\vspace{.5cm}
+                                                                \includegraphics[width=1.8in]{./figuras/Marmoraria/resinagem.jpg}  \hspace{1cm} 
+                                                                                   \includegraphics[width=1.8in]{./figuras/Marmoraria/produto.jpg}
+                \end{center}
+
+\end{frame}
+
+
+\begin{frame}{Processos produtivos}
+            \begin{center}
+                \includegraphics[width=4in]{./figuras/Estatua.jpg} 
+                \end{center}
+
+\end{frame}
+
+
+\begin{frame}{Processos produtivos}
+            \begin{center}
+                \includegraphics[width=2in]{./figuras/desenho-carro.jpg}  \hspace{1cm}  \includegraphics[width=2in]{./figuras/navio.jpg}
+                
+                \end{center}
+
+\end{frame}
+
+
+\begin{frame}{O computador é Eficiente?}
+Sequenciar $n$ itens em $m$ máquinas e selecionar a melhor solução
+dentre todas as soluções  possíveis por enumeração. 
+
+\begin{center}
+\begin{tabular}{cccc}
+\hline
+Item & Máquinas & Universo de soluções & Tempo de processamento \\ \hline
+4 & 5 & 7.962.624 & 1,3 minutos \\
+5 & 5 & $2,49 \times 10^{10}$ & 2,9 dias \\
+6 & 5 & $1,94 \times 10^{14}$ & 61,4 anos \\ \hline
+\end{tabular}
+\end{center}
+\end{frame}
+
+\begin{frame}{Fatores que afetam o sequenciamento e programação}
+\begin{itemize}
+\item Em termos de ordem
+\begin{itemize}
+\item Datas de entrega
+\item Estado de realização
+\item Preparações de máquinas
+\item Roteiros de produção
+\end{itemize}
+\item Em termos de recursos
+\begin{itemize}
+\item Manutenção de máquinas
+\item Fornecimento de matérias-primas
+\item Disponibilidade de ferramentes
+\item Falta de funcionários
+\end{itemize}
+
+\item Em termos de operações
+\begin{itemize}
+\item Retrabalho
+\item Pós-produção
+\item Restrições quanto ao tamanho do lote
+\item Operações em recursos gargalos
+\item Disponibilidade simultânea de recursos
+\end{itemize}
+
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{Sistemas de Programação: carregamento infinito}
+            \begin{center}
+                \includegraphics[angle=90,width=4in]{./figuras/infinito.jpg}
+            \end{center}
+
+\end{frame}
+
+
+\begin{frame}{Sistemas de Programação: carregamento finito}
+            \begin{center}
+                \includegraphics[width=4in]{./figuras/finito.jpg}
+            \end{center}
+
+\end{frame}
+
+
+\begin{frame}{Sistemas de Programação: Programação para frente - forward}
+            \begin{center}
+                \includegraphics[width=4in]{./figuras/forward.jpg}
+            \end{center}
+
+\end{frame}
+
+\begin{frame}{Sistemas de Programação: Programação para trás - backward}
+            \begin{center}
+                \includegraphics[angle=90,width=4in]{./figuras/backward.jpg}
+            \end{center}
+
+\end{frame}
+
+
+
+
+\begin{frame}{Processos produtivos: Sistemas APS}
+Sistemas APS: sistemas de planejamento avançando 
+            \begin{center}
+                \includegraphics[width=4in]{./figuras/aps012.png}
+            \end{center}
+
+\end{frame}
+
+
+\begin{frame}{Processos produtivos: Sistemas APS}
+            \begin{center}
+                \includegraphics[width=4in]{./figuras/aps03.jpg}
+            \end{center}
+
+\end{frame}
+
+
+\begin{frame}{Processos produtivos: Sistemas APS}
+            \begin{center}
+                \includegraphics[width=4in]{./figuras/aps.jpg}
+            \end{center}
+
+\end{frame}
+
+\begin{frame}{Processos produtivos: Sistemas APS}
+            \begin{center}
+                \includegraphics[width=4in]{./figuras/aps04.png}
+            \end{center}
+
+\end{frame}
+
+
+\begin{frame}{Processos produtivos: Sistemas APS}
+            \begin{center}
+                \includegraphics[width=4in]{./figuras/aps02.jpg}
+            \end{center}
+
+\end{frame}
+
+\begin{frame}{Bibliografica}
+
+\end{frame}
+\end{document}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+

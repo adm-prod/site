@@ -1,0 +1,487 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Apresentação da Qualificação de Mestrado
+%% Copyright 2010 Elisangela Martins de Sá
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[9pt]{beamer}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Configurando o idioma e os acentos
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[english]{babel}
+%\usepackage[brazil]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+
+%\usepackage{footnote}
+\usepackage{threeparttable}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Configurando as Fontes
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{times} % Usa fonte Times New Roman
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Configurando Símbolos Matemáticos e outros símbolos
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{amsmath}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Configurando as Figuras
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\usepackage[pdftex]{color,graphicx} % Utilizado para colocar figuras jpg, png e gif
+%\usepackage{float} % Força a inserção da figura no local especificado (coloque um H no figure)
+%\usepackage{subfigure}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Configurando as Tabelas
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{multirow} % Permite tabelas com multiplas linhas colapsadas.
+\usepackage{booktabs} % Permite o uso de tabelas profissionais (\toprule,\bottomrule, etc).
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Configurando o caption (Legendas) das tabelas e figuras
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\usepackage[scriptsize,bf,up]{caption} % Diminui o tamanho da letra e faz o texto (Figura N ou Tabela N) em negrito
+%\usepackage{caption}
+%\captionsetup[table]{justification=justified,singlelinecheck=false} % Justifica as legendas (captions) das tabelas.
+%\captionsetup[figure]{justification=justified,singlelinecheck=false} % Justifica as legendas (captions) das figuras.
+%\setlength{\belowcaptionskip}{2pt} % Configura o espaçamento entre a legenda e a tabela ou figura
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Outros pacotes
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\usepackage{texshade} % Usado para formatar alinhamento de seqüências (apêndice)
+%\usepackage{pdflscape} % Permite rotacionar a página para Paisagem (landscape)
+%\usepackage{rotating} % Permite rotacionar tabelas (sideways)
+\usepackage{verbatim}  % permite a inserção de comentários 
+\usepackage{ragged2e} % Utilizado para justificar o texto no Beamer (\justifying)
+\usepackage{beamerprosper}
+\usepackage{algorithmic}
+\usepackage{color, colortbl}
+
+\usepackage[ruled,portugues]{algorithm2e}
+%\usepackage{algpseudocode}
+%\usepackage{paralist}
+%\usepackage[active,tightpage]{preview}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Referências bibliográficas e afins
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\usepackage{sbc}
+%\usepackage[alf]{abntcite}
+\usepackage{natbib}
+\usepackage{subfigure} 
+\usepackage{pgf,tikz}
+\usetikzlibrary{backgrounds}
+\usetikzlibrary{shapes}
+\usetikzlibrary{decorations.pathreplacing}
+\usepackage{scalefnt}
+
+
+%\usepackage[natbib=true, bibstyle=authoryear, citestyle=authoryear-comp]{biblatex}
+\def\newblock{}
+
+%****************************************************************
+% C O N F I G U R A Ç Õ E S  D O  B E A M E R
+%****************************************************************
+
+\mode<presentation>
+{
+ %\usetheme{Darmstadt}
+% \usetheme{Warsaw}
+% \usetheme{Antibes}
+%\usetheme{AnnArbor}
+% \usetheme{bars}
+%\usetheme{Berkeley} %o índice fica a esquerda
+%\usetheme{Boadilla}
+% \usetheme {CambridgeUS}
+% \usetheme{Copenhagen}
+% \usetheme{Darmstadt}
+% \usetheme{Dresden} % Simples
+% \usetheme{Frankfurt}
+% \usetheme{Goettingen} %o índice fica a direita (sem cor) 
+% \usetheme{Hannover} %o  índice fica a esquerda (sem cor)
+% \usetheme{Ilmenau}
+% \usetheme{JuanLesPins}
+% \usetheme{Luebeck}
+\usetheme{Madrid}
+% \usetheme{Malmoe} % Simples
+% \usetheme{Marburg} %o índice fica a direita degrade (sem cor) 
+% \usetheme{Montpellier} % Mais simples
+% \usetheme{PaloAlto}
+% \usetheme{Pittsburgh}
+% \usetheme[height=0.5cm]{Rochester}
+% \usetheme{Singapore} % Mais simples
+ % \usetheme{Malmoe}
+  % or ...
+ % \usecolortheme{dolphin}
+ % \usecolortheme{whale}
+%   \setbeamercovered{transparent}
+  \setbeamercovered{invisible}
+
+ % \setbeamercolor{background canvas}{bg=black}
+  % or whatever (possibly just delete it)
+  %\setbeamersize{text margin left=0.5cm, text margin right=0.5cm}
+ % \usefonttheme{serif}
+%   \usecolortheme{lily}
+  
+  \setbeamercolor{alerted text}{fg=blue} 
+  \usepackage{pgf,pgfarrows,pgfnodes,pgfautomata,pgfheaps,pgfshade}
+
+	% Configurando o caption da tabelas e figuras apenas no beamer
+	\setbeamertemplate{caption}[numbered]
+	\setbeamerfont{caption}{size=\tiny}
+}
+
+
+
+%****************************************************************
+% CONFIGURANDO O PRIMEIRO SLIDE 
+%****************************************************************
+
+
+\title[]{Gestão de Projetos}
+
+\author[Elisangela Martins de Sá]{Profª: Elisangela Martins de Sá}
+
+
+
+\institute[CEFET] 
+{CEFET MG \\ }
+
+ \date[2º Semestre, 2016] 
+ {2º Semestre, 2016}
+
+
+ \pgfdeclareimage[height=0.9cm]{university-logo}{figuras/cefet-logo.jpg}
+ \logo{\pgfuseimage{university-logo}}
+
+\begin{comment}
+\AtBeginSubsection[]
+{
+  \begin{frame}<beamer>{Sumário}
+    \tableofcontents[currentsection,currentsubsection]
+  \end{frame}
+}
+\end{comment}
+
+
+% If you wish to uncover everything in a step-wise fashion, uncomment
+% the following command: 
+
+%\beamerdefaultoverlayspecification{<+->}
+%\def\supertiny{\fontsize{5pt}{5pt}\selectfont}
+
+\begin{document}
+
+
+\pdfpkresolution=1200
+\pdfimageresolution=1200
+
+\justifying
+
+\begin{frame}
+  \titlepage
+\end{frame}
+
+
+
+
+
+
+\begin{frame}{Processos produtivos: Produção em massa}
+            \begin{center}
+                \includegraphics[width=4in]{./figuras/envase.jpg}
+            \end{center}
+
+\end{frame}
+
+
+% 
+% % 
+% % \begin{frame}{Processos produtivos}
+% %             \begin{center}
+% %                 \includegraphics[width=4in]{./figuras/refrigerante.png}
+% %             \end{center}
+% % 
+% % \end{frame}
+% 
+% \begin{frame}{Processos produtivos}
+%             \begin{center}
+%                 \includegraphics[width=4in]{./figuras/carro.jpg}
+%             \end{center}
+% 
+% \end{frame}
+% 
+% \begin{frame}{Processos produtivos}
+%             \begin{center}
+%                 \includegraphics[width=4in]{./figuras/Cerveja.jpg}
+%             \end{center}
+% 
+% \end{frame}
+% 
+% 
+% % 
+% % 
+% % \begin{frame}{Processos produtivos}
+% %             \begin{center}
+% %                 \includegraphics[width=4in]{./figuras/refrigerante.png}
+% %             \end{center}
+% % 
+% % \end{frame}
+
+
+\begin{frame}{Processos produtivos: Produção intermitente}
+            \begin{center}
+                \includegraphics[width=1.2in]{./figuras/Marmoraria/marmore.jpg} \hspace{1cm} 
+                                \includegraphics[width=1.8in]{./figuras/Marmoraria/corte.jpg}
+\vspace{.5cm}
+                                                                \includegraphics[width=1.8in]{./figuras/Marmoraria/resinagem.jpg}  \hspace{1cm} 
+                                                                                   \includegraphics[width=1.8in]{./figuras/Marmoraria/produto.jpg}
+                \end{center}
+
+\end{frame}
+
+
+\begin{frame}{Processos produtivos: Projetos}
+            \begin{center}
+                \includegraphics[width=4in]{./figuras/Estatua.jpg} 
+                \end{center}
+
+\end{frame}
+
+
+\begin{frame}{Processos produtivos: Projetos}
+            \begin{center}
+                \includegraphics[width=2in]{./figuras/desenho-carro.jpg}  \hspace{1cm}  \includegraphics[width=2in]{./figuras/navio.jpg}
+                
+                \end{center}
+
+\end{frame}
+
+\begin{frame}{Gestão de projetos}
+
+\begin{block}{Projeto}
+Conjunto único e finito de atividades inter-relacionadas, pensadas para produzir um resultado definido dentro do 
+prazo determinado, utilizando uma alocação de recursos.
+\end{block}
+
+Exemplo de projetos no ramo automobilístico
+\begin{itemize}
+\item Implantação de mais linhas de produção
+\item Instalação de uma nova fábrica
+\item Mudança na tecnologia de produção
+\item Desenvolvimento de produto
+\item Formação de recursos humanos
+\item Estratégias de marketing para manter mix de produção uniforme
+\end{itemize}
+
+\end{frame}
+
+
+\begin{frame}{Gestão de projetos}
+
+\begin{block}{Programa}
+Coleção de projetos.
+\end{block}
+
+Exemplo de programas:
+\begin{itemize}
+% \item Programa de desenvolvimento profissional.
+\item Programas de sustentabilidade (HP): Economia circular, Projeto Resíduo Zero, Projeto Smartwaste com tecnologia RFID (Identificação por radio frequência). 
+\item Programa de desenvolvimento profissional (Embraer):  planejamento de vida, planejamento financeiro, cuidados preventivos com a saúde, gerenciamento da carreira e construção do projeto de vida.
+\item Programas habitacionais do governo: produção ou Aquisição de Unidades Habitacionais; Produção ou Aquisição de Lotes Urbanizados; e Requalificação de Imóveis.
+\end{itemize}
+
+
+\end{frame}
+
+\begin{frame}{Gestão de projetos}
+
+Gestão de projetos é uma disciplina de gestão formal através da qual os projetos são planejados e executados de acordo com um processo sistemático
+
+% Geralmente é necessário fazer um {\it trade-offs} entre resultados, tempos e recursos na gestão do projeto 
+
+ \begin{center}
+                
+                \end{center}
+                Processo completo:
+                \begin{itemize}
+                \item Definição e organização do projeto
+                \item Planejamento do projeto
+                \item Gerenciamento e controle do projeto
+                \end{itemize}
+                
+                \begin{center}
+                \includegraphics[width=2in]{./figuras/projetos.jpg}
+                \end{center}
+
+\end{frame}
+
+\begin{frame}{Definição e Organização do projeto}
+Questões chaves:
+
+\begin{itemize}
+\item Designe, por escrito, um gerente de projeto;
+\item Descreva, por escrito, a função, autoridade e responsabilidades do gerente do projeto;
+\item Identifique e designe as funções e responsabilidades da equipe do projeto;
+\item Elabore e distribua uma lista de participantes da equipe do projeto.
+\end{itemize}
+Exemplos de projetos:
+\begin{itemize}
+\item Organização de uma festa de final de ano (Final de semana inteiro).
+\item Implatação de um sistema integrado de informação. 
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{Planejamento de projeto: Desenvolvimento da estrutura analítica do trabalho (WBS)}
+Questões chaves:
+
+\begin{itemize}
+\item Identificação de {\bf todas} as tarefas.
+\item Determinação de quanto tempo estas tarefas levam para serem executados.
+\item Designar responsáveis (com as devidas qualificações) para cada tarefa.
+% \item 
+\end{itemize}
+Exemplos de projetos:
+\begin{itemize}
+\item Organização de uma festa de final de ano (Final de semana inteiro).
+\item Implatação de um sistema integrado de informação. 
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Planejamento de projeto: Desenvolvimento do cronograma}
+Questões chaves:
+
+\begin{itemize}
+\item Identificar as dependências de cada atividade.
+\item Criar um diagrama de rede (PERT).
+\item Criar um gráfico de Gantt (representação do cronograma).
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Planejamento de projeto: Desenvolvimento do cronograma}
+\begin{center}
+\begin{tabular}{llll} \hline
+& Tarefas & Precedência & Duração (minutos) \\ \hline
+1 & Adquirir a carne & -- & 20\\
+2 & Adquirir o tempero & -- & 6 \\
+3 & Adquirir o carvão & -- & 10 \\
+4 & Temperar a carne & 1, 2 & 5 \\
+5 & Acender a churrasqueira & 3 & 20 \\
+6 & Assar a carne & 4, 5 & 20 \\
+7 & Servir a carne & 6 & 4 \\ \hline
+\end{tabular}
+\end{center}
+
+Construir um diagrama de precedências - PERT (Quadro).
+
+
+\end{frame}
+
+
+\begin{frame}{Planejamento de projeto: Desenvolvimento do cronograma}
+
+\begin{block}{Método do caminho crítico - CPM}
+Visa definir qual a duração mínima do projeto, levando em consideração as relações de dependências
+e a duração de cada uma das atividades e encontrar o caminho crítico.
+\end{block}
+
+\begin{itemize}
+\item DCI: Data mais cedo de início
+\item DCT: Data mais cedo de término
+\item DTI:Data mais tarde de início
+\item DTT: Data mais tarde de término
+\end{itemize}
+
+Relações entre eles:
+\begin{itemize}
+\item DCT = DCI + Duração
+\item DTI = DTT - Duração
+\item Folga = DTI - DCI
+\end{itemize}
+
+\end{frame}
+
+
+\begin{frame}{Planejamento de projeto: Desenvolvimento do cronograma}
+
+\begin{block}{Caminho crítico}
+Sequência de atividades partindo do início até a atividade fim com folga nula.
+\end{block}
+
+Apresentar o gráfico de Gantt considerando a data mais cedo de início e representando a folga (Quadro).
+\end{frame}
+
+\begin{frame}{Planejamento de projetos: Análise de recursos}
+Questões chaves:
+
+\begin{itemize}
+\item Será que algum recurso está com carga de trabalho desproporcional?
+\item Existe algum recurso subutilizado ou sobrecarregado?
+\item É possível minimizar o problema, usando as folgas do cronograma?
+\item Existe algum recurso sendo afetado por trabalho paralelo?
+\item Todos os proprietários de tarefas possuem as habilidades necessárias para desempenhar o trabalho?
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Gerenciamento e controle do projeto}
+Questões chaves:
+\begin{itemize}
+\item Quão frequentemente as informações sobre o status serão coletadas?
+\item Como isto será feito?
+\item Quais informações serão monitoradas?
+\item Quais decisões serão tomadas?
+\item Quais ações serão executadas?
+\item Como serão comunicadas estas decisões e ações?
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Exercício}
+
+Um projeto foi definido contendo as seguintes atividades, durações e predecessoras:
+
+\begin{tabular}{ccc}
+\hline
+Atividades & Duração (em dias) & Atividades precedentes \\ \hline
+A & 1 & -- \\
+B & 4 & A \\
+C & 3 & A \\
+D & 7 & A \\
+E & 6 & B \\
+F & 2 & C, D \\
+G & 7 & E, F \\
+H & 9 & D \\
+I & 4 & G, H \\ \hline
+\end{tabular}
+\begin{itemize}
+\item Produza um diagrama PERT, mostrando o caminho crítico do projeto.
+\item Apresente um gráfico de gantt com início das atividades o mais cedo possível.
+\item Determine as folgas  de cada atividade.
+\item Que aconteceria se a atividade F fosse revisada para levar 4 dias ao invés de 2?
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Bibliografia}
+\begin{itemize}
+\item CORRÊA, H. L.; CORRÊA, C. A. Administração da produção e operações. 2. ed. São Paulo: Atlas, 2011.
+\item
+    DIAS, Marco Aurélio P. Planejamento e controle da produção: princípios, conceitos e gestão/ Marco Aurélio P. Dias. – 5ª ed.- 4. reimpr.- São Paulo: Atlas, 2009.
+
+\item SLACK, N.; CHAMBERS, S.; JOHNSTON, R. Administração da produção. 2. ed. São Paulo: Atlas, 2002.
+\end{itemize}
+\end{frame}
+\end{document}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+

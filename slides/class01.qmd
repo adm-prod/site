@@ -27,7 +27,9 @@ format:
       - dark
       - slides.scss
     incremental: true
-    multiplex: true
+    multiplex: 
+      id: '28403ac4f6ab5ba3'
+      secret: '1707956220635294495'    
     transition: fade
     slide-number: c/t
     width: 1600
@@ -41,7 +43,11 @@ format:
     margin-left: 1em
     scrollable: true
     preview-links: auto
-    chalkboard: true
+    chalkboard:
+      theme: whiteboard
+      boardmarker-width: 5
+      buttons: true
+      #src: drawings.json
     highlight-style: github
     code-fold: true
 editor: source
@@ -64,96 +70,236 @@ library(countdown)
 
 ## Agenda
 
-::: {.nonincremental}
-- Objetivos de aprendizagem 
-- Função produção
-- Fluxo de informações e materiais
-- Divisão do horizonte de planejamento
-- Objetivos de produção
-- Classificação de sistemas produtivos
-- Fluxos de informações e materiais
+::: nonincremental
+-   Objetivos de aprendizagem
+-   Função produção
+-   Fluxo de informações e materiais
+-   Divisão do horizonte de planejamento
+-   Objetivos de produção
+-   Classificação de sistemas produtivos
+-   Fluxos de informações e materiais
 :::
 
 ## Objetivos de aprendizagem
-Espera-se que ao final desta aula o aluno compreenda:   
 
-::: {.midi}
-- O conceito de função produção.  
-- Objetivos da produção.  
-- Divisão do horizonte de planejamento (longo prazo, médio prazo e curto prazo).  
-- Fluxo de informações e materiais.  
-- Diferentes tipos de leiaute (layout).  
-- Tipos de sistema de produção: sistema contínuo, produção em massa, produção intermitente por lotes, produção por projeto.  
+Espera-se que ao final desta aula o aluno compreenda:
+
+::: midi
+-   O conceito de função produção.\
+-   Objetivos da produção.\
+-   Divisão do horizonte de planejamento (longo prazo, médio prazo e curto prazo).\
+-   Fluxo de informações e materiais.\
+-   Diferentes tipos de leiaute (layout).\
+-   Tipos de sistema de produção: sistema contínuo, produção em massa, produção intermitente por lotes, produção por projeto.\
 :::
 
----
+------------------------------------------------------------------------
 
-::: {.huge}
+::: huge
 Para que e a quem servem as organizações?
 :::
 
-`r countdown(minutes = 0, seconds = 42, left = 0, right = 0, padding = "50px", margin = "5%", font_size = "6em", play_sound = TRUE)`
-
+`r countdown(minutes = 5, seconds = 00, left = 0, right = 0, padding = "50px", margin = "5%", font_size = "6em", play_sound = TRUE)`
 
 ## Função produção
 
-::: {.poll}
-**Função desenvolvimento de produto/serviço**   
-Responsável por desenvolver novos produtos e serviços ou modificá-los
-para gerar futuros pedidos dos clientes [Slack et al., 2009].   
+::: poll
+**Função desenvolvimento de produto/serviço**\
+Responsável por desenvolver novos produtos e serviços ou modificá-los para gerar futuros pedidos dos clientes \[Slack et al., 2009\].
 
-
-**Função marketing (que inclui vendas)**   
-Responsável por comunicar os produtos e serviços da organização a seus mercados para gerar pedidos de serviços e produtos dos clientes [Slack et al., 2009].
+**Função marketing (que inclui vendas)**\
+Responsável por comunicar os produtos e serviços da organização a seus mercados para gerar pedidos de serviços e produtos dos clientes \[Slack et al., 2009\].
 :::
 
 ## Função Produção
 
-::: {.question}
-**Função produção**    
-Responsável pela criação e entrega de serviços e produtos com base nos pedidos do cliente [Slack et al., 2009].
+::: question
+**Função produção**\
+Responsável pela criação e entrega de serviços e produtos com base nos pedidos do cliente \[Slack et al., 2009\].
 :::
 
----
+------------------------------------------------------------------------
 
-::: {.huge}
+::: huge
 Qual a relação da Função Produção com a Engenharia de Materiais???
 :::
 
-
 ## Fluxo de informações e materiais
+
+![Fluxo de informações - PCP](/images/adm_prod/unidade01/pcp3.jpg){#fig-ppc .lightbox .caption fig-alt="Fonte: [Tubino, 2000]" fig-align="center"}
+
+## O que é planejamento?
+
+. . .
+
+::: poll
+Planejamento é a formalização do que se pretende que aconteça em determinado momento futuro (SLACK et al, 2002).
+:::
 
 ## Divisão do horizonte de planejamento
 
-## Objetivos de produção
+![Fluxo de informações - PCP](/images/adm_prod/unidade01/horizonte.png){#fig-horizonte .lightbox .caption fig-alt="Fonte: [Chiavenato, 2004]" fig-align="center" width="700"}
 
-## Classificação de sistemas produtivos
+## Divisão do horizonte de planejamento
 
-## Fluxos de informações e materiais
+▶ Nível estratégico - Longo prazo (meses ou trimestre como alcance de anos) – Planejar como a produção dará suporte a uma vantagem competitiva
 
-## Aquecimento
+. . .
 
-1. Escreva uma pergunta sobre seu entendimento preliminar de **ciência aberta** no ChatGPT.   
-Exemplo: "Assuma que você é um pesquisador do CEFET_MG em campos das ciências sociais aplicadas. O que é Ciência Aberta?" 
+▶ Nível tático - Médio prazo (semanas com abrangências em meses) – Planejar o uso da capacidade instalada
 
-2. Copie e cole no [Padlet](https://padlet.com/renataoliveira/ci-ncia-aberta-e-em-colabora-o-dhb0fd7faebyahdd) da disciplina. [Tempo](https://apps.garrickadenbuie.com/countdown/?_inputs_&time=%2220%3A00%22&update_every=%2210%22&warn_time=%225%3A00%22)
+. . .
 
-3. Vamos discutir
+▶ Nível operacional - Curto prazo (dias para a semana em curso) – Operar o sistema montado
 
-## Question
-
-
-::: {.question}
-
-teste
-
+::: notes
+Speaker notes go here.
 :::
 
-## Perguntas e respostas
+## Objetivos de produção
 
-- O que é e por que fazer ciência em colaboração?
-- Qual a diferença entre Ciência Aberta e 'ciência'?
-- A Ciência Aberta excluí as Ciências Socias e Humanas?
-- A Ciência Aberta conduz ao uso indevido ou incompreensão da investigação?
-- A Ciência Aberta irá provocar uma sobrecarga de informação?
+| Critérios             | Descrição                                                                                           |
+|-------------------|-----------------------------------------------------|
+| Custo                 | Produzir bens/serviços a um custo mais baixo do que a concorrência                                  |
+| Qualidade             | Produzir bens/serviços com desempenho de qualidade mais alto do que a concorrência                  |
+| Desempenho de entrega | Ter confiabilidade e velocidade nos prazos de entrega dos bens/serviços melhores que a concorrência |
+| Flexibilidade         | Ser capaz de reagir de forma rápida a eventos repentinos e inesperados.                             |
+| Ético-social          | Produzir bens/serviços respeitando a ética nos negócios e a sociedade em geral.                     |
 
+## Leadtime - definição
+
+::: poll
+O **leadtime de produção** é o tempo que decorre desde o início da produção de um item até a conclusão da produção, que compreende a soma dos tempos de:\
+- Processamento.\
+- Transporte.\
+- Inspeção.\
+- Espera.
+:::
+
+## Diferentes tipos de leiaute (layout).
+
+::: poll
+**Layout**, ou arranjo físico, corresponde ao posicionamento de máquinas, equipamentos e pessoa. Tipos:\
+- Posicional.\
+- Em linha ou por produto.\
+- Funcional.\
+- Celular.
+:::
+
+## Diferentes tipos de leiaute (layout).
+
+### Posicional
+
+## Diferentes tipos de leiaute (layout).
+
+### Em linha ou por produto
+
+## Diferentes tipos de leiaute (layout).
+
+### Funcional
+
+## Diferentes tipos de leiaute (layout).
+
+### celular
+
+## Classificação dos sistemas produtivos
+
+Os processos contínuos envolvem a produção de bens ou serviços que não podem ser identificados individualmente, enquanto os processos discretos envolvem a produção de bens ou serviços que podem ser isolados, em lotes ou unidades, particularizando-os uns dos outros \[Tubino, 2000\].
+
+## Classificação dos sistemas produtivos
+
+▶ Contínuo
+
+. . .
+
+▶ Discreto\
+- repetitivo em massa.\
+- repetitivo em lotes.\
+- por projeto.
+
+## Classificação dos sistemas produtivos
+
+### Produção contínua
+::: {.midi}
+::: columns
+::: {.column width="70%"}
+**Características**\
+- Alta uniformidade na produção e demanda de bens ou serviços, favorecendo a automatização\
+- Inexistência ou pouco de flexibilidade no sistema\
+- Alto investimento em equipamentos e instalações\
+- A mão-de-obra é empregada apenas para a condução e manutenção das instalações
+:::
+
+::: {.column width="30%"}
+
+**Exemplos**\
+Mineração\
+Produção de energia\
+Refinamento de petróleo
+:::
+:::
+:::
+
+## Classificação dos sistemas produtivos
+
+### Produção em massa
+::: {.midi}
+::: columns
+::: {.column width="70%"}
+**Características**\
+- Produção em grande escala de produtos altamente padronizados\
+- Demanda pelos produtos são estáveis, fazendo com que seus projetos tenham pouca alteração no curto prazo\
+- Estrutura produtiva altamente especializada e pouco flexível\
+:::
+
+::: {.column width="30%"}
+
+**Exemplos**\
+Montagem de automóveis\
+Fabricação de produtos têxteis\
+Abate e beneficiamento de aves, suínos, gado, etc.
+:::
+:::
+:::
+
+## Classificação dos sistemas produtivos
+
+### Produção em lotes
+::: {.midi}
+::: columns
+::: {.column width="70%"}
+**Características**\
+- Volume médio de bens ou serviços padronizados em lotes.  
+- Cada lote segue uma série de operações que necessita ser programada a medida que as operações anteriores forem realizadas.  
+- O sistema produtivo deve ser relativamente flexível, empregando equipamentos pouco especializados e mão-de-obra polivalente, visando atender diferentes pedidos dos clientes e flutuações da demanda.
+:::
+
+::: {.column width="30%"}
+
+**Exemplos**\
+Produção de eletrodomésticos.  
+Fabricação de produtos têxteis em pequena escala.  
+Produção de calçados.  
+Restaurantes
+:::
+:::
+:::
+
+## Classificação dos sistemas produtivos
+
+### Produção por projeto
+::: {.midi}
+::: columns
+::: {.column width="70%"}
+**Características**\
+- Os processos por projeto tem como finalidade o atendimento de uma necessidade específica dos cliente, com todas as suas atividades voltadas para esta meta.   
+- Os produtos têm uma data específica para serem concluídos e, uma vez concluídos, o sistema produtivo se volta para um novo projeto. São concebidos em estreita ligação com os clientes, de modo que suas especificações impõem uma organização dedicada ao projeto.    - - Exige-se alta flexibilidade dos recursos produtivos.
+:::
+
+::: {.column width="30%"}
+
+**Exemplos**\
+Navios, aviões, usinas hidroelétricas, etc., e na prestação de serviços específicos como agências de propaganda, escritórios de advocacia, arquitetura, etc.
+:::
+:::
+:::

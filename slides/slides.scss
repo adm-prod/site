@@ -221,6 +221,11 @@ details>summary {
   font-size: 100%;
 }
 
+.caption{
+   text-align: center;
+}
+
+
 /*Alternative two-column layouts*/
 
   /*Left 70% - Right 30% */
@@ -293,8 +298,15 @@ ul {
   font-size: 150%;
 }
 
+li {
+  list-style-type: square;
+  padding-left: 2em;
+  font-size: 100%;
+}
+
 ol {
   padding: 20px;
+  list-style-type: lower-roman;
 }
 
 /* Agenda */
